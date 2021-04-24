@@ -46,6 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Vista\FrmInicio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,14 +76,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="Vista\FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -102,33 +102,6 @@
     <Folder Include="DAO\" />
     <Folder Include="Model\" />
     <Folder Include="Negocio\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\a1a4052066d1ccfb471fe8492c321ab5.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\46139.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\e6c20ec105eaa6752c4f9d1f306eab66.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\e6c20ec105eaa6752c4f9d1f306eab66.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\kisspng-computer-icons-computer-network-system-administrat-personal-configuration-svg-png-icon-free-download-5c2efde600a146.7683610715465835260026.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\kisspng-computer-icons-computer-network-system-administrat-personal-configuration-svg-png-icon-free-download-5c2efde600a146.7683610715465835260026 %281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\kisspng-computer-icons-computer-network-system-administrat-personal-configuration-svg-png-icon-free-download-5c2efde600a146.7683610715465835260026 %282%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\1048947.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\kisspng-computer-icons-computer-network-system-administrat-personal-configuration-svg-png-icon-free-download-5c2efde600a146.7683610715465835260026 %282%291.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

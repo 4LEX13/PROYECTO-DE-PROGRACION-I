@@ -26,7 +26,8 @@ namespace ProyectoFinal_P1.Vista
 
         private void FrmLogin_Load(object sender, EventArgs e)
         {
-
+            Image image = Image.FromFile(@"E.png");
+            pictureBox1.Image = image;
 
         }
     }

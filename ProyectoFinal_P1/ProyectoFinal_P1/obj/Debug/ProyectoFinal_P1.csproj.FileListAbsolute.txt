@@ -10,3 +10,15 @@ C:\Users\carlj\Documents\GitHub\PROYECTO-DE-PROGRAMACION-I\ProyectoFinal_P1\Proy
 C:\Users\carlj\Documents\GitHub\PROYECTO-DE-PROGRAMACION-I\ProyectoFinal_P1\ProyectoFinal_P1\obj\Debug\ProyectoFinal_P1.pdb
 C:\Users\carlj\Documents\GitHub\PROYECTO-DE-PROGRAMACION-I\ProyectoFinal_P1\ProyectoFinal_P1\obj\Debug\ProyectoFinal_P1.Vista.FrmLogin.resources
 C:\Users\carlj\Documents\GitHub\PROYECTO-DE-PROGRAMACION-I\ProyectoFinal_P1\ProyectoFinal_P1\obj\Debug\ProyectoFinal_P1.Vista.FrmMenu.resources
+C:\Users\crobe\Documents\GitHub\PROYECTO-DE-PROGRAMACION-I\ProyectoFinal_P1\ProyectoFinal_P1\bin\Debug\ProyectoFinal_P1.exe.config
+C:\Users\crobe\Documents\GitHub\PROYECTO-DE-PROGRAMACION-I\ProyectoFinal_P1\ProyectoFinal_P1\bin\Debug\ProyectoFinal_P1.exe
+C:\Users\crobe\Documents\GitHub\PROYECTO-DE-PROGRAMACION-I\ProyectoFinal_P1\ProyectoFinal_P1\bin\Debug\ProyectoFinal_P1.pdb
+C:\Users\crobe\Documents\GitHub\PROYECTO-DE-PROGRAMACION-I\ProyectoFinal_P1\ProyectoFinal_P1\obj\Debug\ProyectoFinal_P1.csprojAssemblyReference.cache
+C:\Users\crobe\Documents\GitHub\PROYECTO-DE-PROGRAMACION-I\ProyectoFinal_P1\ProyectoFinal_P1\obj\Debug\ProyectoFinal_P1.Form1.resources
+C:\Users\crobe\Documents\GitHub\PROYECTO-DE-PROGRAMACION-I\ProyectoFinal_P1\ProyectoFinal_P1\obj\Debug\ProyectoFinal_P1.Properties.Resources.resources
+C:\Users\crobe\Documents\GitHub\PROYECTO-DE-PROGRAMACION-I\ProyectoFinal_P1\ProyectoFinal_P1\obj\Debug\ProyectoFinal_P1.Vista.FrmLogin.resources
+C:\Users\crobe\Documents\GitHub\PROYECTO-DE-PROGRAMACION-I\ProyectoFinal_P1\ProyectoFinal_P1\obj\Debug\ProyectoFinal_P1.Vista.FrmMenu.resources
+C:\Users\crobe\Documents\GitHub\PROYECTO-DE-PROGRAMACION-I\ProyectoFinal_P1\ProyectoFinal_P1\obj\Debug\ProyectoFinal_P1.csproj.GenerateResource.cache
+C:\Users\crobe\Documents\GitHub\PROYECTO-DE-PROGRAMACION-I\ProyectoFinal_P1\ProyectoFinal_P1\obj\Debug\ProyectoFinal_P1.csproj.CoreCompileInputs.cache
+C:\Users\crobe\Documents\GitHub\PROYECTO-DE-PROGRAMACION-I\ProyectoFinal_P1\ProyectoFinal_P1\obj\Debug\ProyectoFinal_P1.exe
+C:\Users\crobe\Documents\GitHub\PROYECTO-DE-PROGRAMACION-I\ProyectoFinal_P1\ProyectoFinal_P1\obj\Debug\ProyectoFinal_P1.pdb

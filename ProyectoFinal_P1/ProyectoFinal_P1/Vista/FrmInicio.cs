@@ -31,5 +31,14 @@ namespace ProyectoFinal_P1
             login.Show();
             this.Hide();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            Image image = Image.FromFile(@"A.png");
+            pictureBox1.Image = image;
+
+            Image image2 = Image.FromFile(@"P.png");
+            pictureBox2.Image = image2;
+        }
     }
 }
