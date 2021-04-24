@@ -121,6 +121,9 @@
   <data name="a1a4052066d1ccfb471fe8492c321ab5" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\a1a4052066d1ccfb471fe8492c321ab5.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="1048947" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1048947.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="kisspng-computer-icons-computer-network-system-administrat-personal-configuration-svg-png-icon-free-download-5c2efde600a146.7683610715465835260026 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\kisspng-computer-icons-computer-network-system-administrat-personal-configuration-svg-png-icon-free-download-5c2efde600a146.7683610715465835260026 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -139,7 +142,7 @@
   <data name="kisspng-computer-icons-computer-network-system-administrat-personal-configuration-svg-png-icon-free-download-5c2efde600a146.7683610715465835260026 (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\kisspng-computer-icons-computer-network-system-administrat-personal-configuration-svg-png-icon-free-download-5c2efde600a146.7683610715465835260026 (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="1048947" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\1048947.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="kisspng-computer-icons-computer-network-system-administrat-personal-configuration-svg-png-icon-free-download-5c2efde600a1461" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\kisspng-computer-icons-computer-network-system-administrat-personal-configuration-svg-png-icon-free-download-5c2efde600a146.7683610715465835260026 (2)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

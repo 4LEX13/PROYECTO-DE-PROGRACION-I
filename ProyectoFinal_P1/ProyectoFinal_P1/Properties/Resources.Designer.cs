@@ -142,5 +142,16 @@ namespace ProyectoFinal_P1.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap kisspng_computer_icons_computer_network_system_administrat_personal_configuration_svg_png_icon_free_download_5c2efde600a1461 {
+            get {
+                object obj = ResourceManager.GetObject("kisspng-computer-icons-computer-network-system-administrat-personal-configuration" +
+                        "-svg-png-icon-free-download-5c2efde600a1461", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
