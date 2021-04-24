@@ -53,7 +53,7 @@ namespace ProyectoFinal_P1
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::ProyectoFinal_P1.Properties.Resources.kisspng_computer_icons_computer_network_system_administrat_personal_configuration_svg_png_icon_free_download_5c2efde600a146_7683610715465835260026__2_;
+            this.pictureBox1.Image = global::ProyectoFinal_P1.Properties.Resources.kisspng_computer_icons_computer_network_system_administrat_personal_configuration_svg_png_icon_free_download_5c2efde600a1461;
             this.pictureBox1.Location = new System.Drawing.Point(3, 3);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(270, 267);

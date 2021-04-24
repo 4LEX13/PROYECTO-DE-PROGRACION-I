@@ -127,5 +127,8 @@
   <ItemGroup>
     <None Include="Resources\1048947.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kisspng-computer-icons-computer-network-system-administrat-personal-configuration-svg-png-icon-free-download-5c2efde600a146.7683610715465835260026 %282%291.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
