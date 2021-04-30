@@ -1,0 +1,16 @@
+C:\Users\crobe\Documents\GitHub\PROYECTO-DE-PROGRAMACION-I\ProyectoFinal\ProyectoFinal\bin\Debug\ProyectoFinal.exe.config
+C:\Users\crobe\Documents\GitHub\PROYECTO-DE-PROGRAMACION-I\ProyectoFinal\ProyectoFinal\bin\Debug\ProyectoFinal.exe
+C:\Users\crobe\Documents\GitHub\PROYECTO-DE-PROGRAMACION-I\ProyectoFinal\ProyectoFinal\bin\Debug\ProyectoFinal.pdb
+C:\Users\crobe\Documents\GitHub\PROYECTO-DE-PROGRAMACION-I\ProyectoFinal\ProyectoFinal\bin\Debug\EntityFramework.dll
+C:\Users\crobe\Documents\GitHub\PROYECTO-DE-PROGRAMACION-I\ProyectoFinal\ProyectoFinal\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\crobe\Documents\GitHub\PROYECTO-DE-PROGRAMACION-I\ProyectoFinal\ProyectoFinal\bin\Debug\EntityFramework.xml
+C:\Users\crobe\Documents\GitHub\PROYECTO-DE-PROGRAMACION-I\ProyectoFinal\ProyectoFinal\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\crobe\Documents\GitHub\PROYECTO-DE-PROGRAMACION-I\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.csprojAssemblyReference.cache
+C:\Users\crobe\Documents\GitHub\PROYECTO-DE-PROGRAMACION-I\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.Properties.Resources.resources
+C:\Users\crobe\Documents\GitHub\PROYECTO-DE-PROGRAMACION-I\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.Form1.resources
+C:\Users\crobe\Documents\GitHub\PROYECTO-DE-PROGRAMACION-I\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.VISTA.FrmLogin.resources
+C:\Users\crobe\Documents\GitHub\PROYECTO-DE-PROGRAMACION-I\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.csproj.GenerateResource.cache
+C:\Users\crobe\Documents\GitHub\PROYECTO-DE-PROGRAMACION-I\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.csproj.CoreCompileInputs.cache
+C:\Users\crobe\Documents\GitHub\PROYECTO-DE-PROGRAMACION-I\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.csproj.CopyComplete
+C:\Users\crobe\Documents\GitHub\PROYECTO-DE-PROGRAMACION-I\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.exe
+C:\Users\crobe\Documents\GitHub\PROYECTO-DE-PROGRAMACION-I\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.pdb
