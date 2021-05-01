@@ -35,3 +35,8 @@ C:\Users\carlj\Documents\GitHub\PROYECTO-DE-PROGRAMACION-I\ProyectoFinal\Proyect
 C:\Users\carlj\Documents\GitHub\PROYECTO-DE-PROGRAMACION-I\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.VISTA.FrmHorarios.resources
 C:\Users\carlj\Documents\GitHub\PROYECTO-DE-PROGRAMACION-I\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.VISTA.FrmConfiguracion.resources
 C:\Users\carlj\Documents\GitHub\PROYECTO-DE-PROGRAMACION-I\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.VISTA.FrmMPrincipal.resources
+C:\Users\crobe\Documents\GitHub\PROYECTO-DE-PROGRAMACION-I\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.VISTA.FrmConfiguracion.resources
+C:\Users\crobe\Documents\GitHub\PROYECTO-DE-PROGRAMACION-I\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.VISTA.FrmHorarios.resources
+C:\Users\crobe\Documents\GitHub\PROYECTO-DE-PROGRAMACION-I\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.VISTA.FrmMenu.resources
+C:\Users\crobe\Documents\GitHub\PROYECTO-DE-PROGRAMACION-I\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.VISTA.FrmMPrincipal.resources
+C:\Users\crobe\Documents\GitHub\PROYECTO-DE-PROGRAMACION-I\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.VISTA.FrmNotas.resources

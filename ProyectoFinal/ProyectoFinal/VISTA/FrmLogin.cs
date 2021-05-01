@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProyectoFinal.MODEL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -25,9 +26,62 @@ namespace ProyectoFinal.VISTA
 
         private void button1_Click(object sender, EventArgs e)
         {
-            FrmMenu menu = new FrmMenu();
-            menu.Show();
-            this.Hide();
+
+            String user = txtUsuario.Text;
+            String pass = txtPass.Text;
+
+            using (GestorEstudiantesEntities db = new GestorEstudiantesEntities())
+            {
+                var lg = from login in db.Usuarios
+                         where login.Nombre_User == txtUsuario.Text && login.Pass == txtPass.Text
+                         select login;
+
+                if (lg.Count() > 0)
+                {
+                    MessageBox.Show("BIENVENIDO");
+                    FrmMenu menu = new FrmMenu();
+                    menu.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Usuario o Password Incorrecta");
+                }
+            }
+
+
+
+
+            /*ClsDLoginUser clsDLog = new ClsDLoginUser();
+
+            List<Usuarios> Login = clsDLog.loginUser();
+
+            String user = txtUsuario.Text;
+            String pass = txtPass.Text;
+
+            foreach (var usuarios in Login)
+            {
+
+
+                if (user == usuarios.Nombre_User && pass == usuarios.Pass)
+                {
+
+                    FrmMenu menu = new FrmMenu();
+                    MessageBox.Show("Bienvenido");
+                    menu.Show();
+                    this.Hide();
+
+                }
+                else
+                {
+                    MessageBox.Show("Usuario o Password Incorrecta");
+                }*/
+
+
+
         }
+
+
+        
     }
 }
