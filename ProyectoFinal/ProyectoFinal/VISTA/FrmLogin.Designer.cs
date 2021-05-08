@@ -40,9 +40,9 @@ namespace ProyectoFinal.VISTA
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(87, 31);
+            this.pictureBox1.Location = new System.Drawing.Point(40, 51);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(181, 128);
+            this.pictureBox1.Size = new System.Drawing.Size(159, 108);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 12;
             this.pictureBox1.TabStop = false;
@@ -52,8 +52,9 @@ namespace ProyectoFinal.VISTA
             this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Modern No. 20", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button1.Location = new System.Drawing.Point(119, 399);
+            this.button1.Location = new System.Drawing.Point(344, 201);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(133, 44);
             this.button1.TabIndex = 11;
@@ -63,7 +64,7 @@ namespace ProyectoFinal.VISTA
             // 
             // txtPass
             // 
-            this.txtPass.Location = new System.Drawing.Point(87, 338);
+            this.txtPass.Location = new System.Drawing.Point(344, 136);
             this.txtPass.Name = "txtPass";
             this.txtPass.PasswordChar = '*';
             this.txtPass.Size = new System.Drawing.Size(200, 20);
@@ -71,7 +72,7 @@ namespace ProyectoFinal.VISTA
             // 
             // txtUsuario
             // 
-            this.txtUsuario.Location = new System.Drawing.Point(87, 255);
+            this.txtUsuario.Location = new System.Drawing.Point(344, 56);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(200, 20);
             this.txtUsuario.TabIndex = 9;
@@ -80,10 +81,11 @@ namespace ProyectoFinal.VISTA
             // 
             this.label2.AutoSize = true;
             this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label2.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(136, 310);
+            this.label2.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.Window;
+            this.label2.Location = new System.Drawing.Point(216, 136);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(107, 25);
+            this.label2.Size = new System.Drawing.Size(114, 23);
             this.label2.TabIndex = 8;
             this.label2.Text = "PASSWORD";
             // 
@@ -91,19 +93,21 @@ namespace ProyectoFinal.VISTA
             // 
             this.label1.AutoSize = true;
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(158, 227);
+            this.label1.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.Window;
+            this.label1.Location = new System.Drawing.Point(244, 51);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 25);
+            this.label1.Size = new System.Drawing.Size(61, 23);
             this.label1.TabIndex = 7;
             this.label1.Text = "USER";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // FrmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
-            this.ClientSize = new System.Drawing.Size(360, 482);
+            this.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.ClientSize = new System.Drawing.Size(568, 257);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txtPass);

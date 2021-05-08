@@ -105,6 +105,7 @@ namespace ProyectoFinal.VISTA
                 panelFormula.Tag = formula;
                 formula.Show();
                 formula.BringToFront();
+                formula.FormClosed += new FormClosedEventHandler(CloseForms);
             }
           
             else
@@ -113,8 +114,23 @@ namespace ProyectoFinal.VISTA
             }
         }
 
+        private void CloseForms(object sender, FormClosedEventArgs e)
+        {
+            if (Application.OpenForms["FrmMPrincipal"] == null)
+                btnPrincipal.BackColor = Color.FromArgb(176, 196, 222);
+
+            if (Application.OpenForms["FrmNotas"] == null)
+                btnNotas.BackColor = Color.FromArgb(176, 196, 222);
+            if (Application.OpenForms["FrmHorarios"] == null)
+                btnHorarios.BackColor = Color.FromArgb(176, 196, 222);
+            if (Application.OpenForms["FrmConfiguracion"] == null)
+                btnSetting.BackColor = Color.FromArgb(176, 196, 222);
+
+        }
+
+      
 
 
-    }
+        }
 
 }

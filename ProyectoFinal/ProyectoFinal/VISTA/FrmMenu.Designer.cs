@@ -33,6 +33,7 @@ namespace ProyectoFinal.VISTA
             this.panelformularios = new System.Windows.Forms.Panel();
             this.panelContenedor = new System.Windows.Forms.Panel();
             this.panelFormula = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panelMenu = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnPrincipal = new System.Windows.Forms.Button();
@@ -40,15 +41,15 @@ namespace ProyectoFinal.VISTA
             this.btnHorarios = new System.Windows.Forms.Button();
             this.btnNotas = new System.Windows.Forms.Button();
             this.panelTitulo = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.BtnRestaurar = new System.Windows.Forms.PictureBox();
             this.BtnCerrar = new System.Windows.Forms.PictureBox();
             this.BtnMinimizar = new System.Windows.Forms.PictureBox();
             this.BtnMaximizar = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.panelformularios.SuspendLayout();
             this.panelContenedor.SuspendLayout();
             this.panelFormula.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panelMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelTitulo.SuspendLayout();
@@ -56,7 +57,6 @@ namespace ProyectoFinal.VISTA
             ((System.ComponentModel.ISupportInitialize)(this.BtnCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnMaximizar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panelformularios
@@ -92,6 +92,17 @@ namespace ProyectoFinal.VISTA
             this.panelFormula.Size = new System.Drawing.Size(669, 413);
             this.panelFormula.TabIndex = 2;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(120, 3);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(400, 400);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
+            // 
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.SystemColors.WindowFrame;
@@ -108,6 +119,7 @@ namespace ProyectoFinal.VISTA
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(47, 26);
             this.pictureBox1.Name = "pictureBox1";
@@ -118,6 +130,7 @@ namespace ProyectoFinal.VISTA
             // 
             // btnPrincipal
             // 
+            this.btnPrincipal.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnPrincipal.FlatAppearance.BorderSize = 0;
             this.btnPrincipal.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.btnPrincipal.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
@@ -132,11 +145,12 @@ namespace ProyectoFinal.VISTA
             this.btnPrincipal.TabIndex = 3;
             this.btnPrincipal.Text = "Principal";
             this.btnPrincipal.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnPrincipal.UseVisualStyleBackColor = true;
+            this.btnPrincipal.UseVisualStyleBackColor = false;
             this.btnPrincipal.Click += new System.EventHandler(this.btnPrincipal_Click);
             // 
             // btnSetting
             // 
+            this.btnSetting.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnSetting.FlatAppearance.BorderSize = 0;
             this.btnSetting.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.btnSetting.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
@@ -156,6 +170,7 @@ namespace ProyectoFinal.VISTA
             // 
             // btnHorarios
             // 
+            this.btnHorarios.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnHorarios.FlatAppearance.BorderSize = 0;
             this.btnHorarios.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.btnHorarios.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
@@ -175,6 +190,7 @@ namespace ProyectoFinal.VISTA
             // 
             // btnNotas
             // 
+            this.btnNotas.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnNotas.FlatAppearance.BorderSize = 0;
             this.btnNotas.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.btnNotas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
@@ -206,6 +222,16 @@ namespace ProyectoFinal.VISTA
             this.panelTitulo.Size = new System.Drawing.Size(873, 40);
             this.panelTitulo.TabIndex = 0;
             this.panelTitulo.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelTitulo_MouseMove);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Schoolbook", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(3, 7);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(247, 30);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Gestor estudiantes";
             // 
             // BtnRestaurar
             // 
@@ -256,26 +282,6 @@ namespace ProyectoFinal.VISTA
             this.BtnMaximizar.TabStop = false;
             this.BtnMaximizar.Click += new System.EventHandler(this.BtnMaximizar_Click);
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(135, 6);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(400, 400);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Schoolbook", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(6, 6);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(247, 30);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Gestor estudiantes";
-            // 
             // FrmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -290,6 +296,7 @@ namespace ProyectoFinal.VISTA
             this.panelContenedor.ResumeLayout(false);
             this.panelFormula.ResumeLayout(false);
             this.panelFormula.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panelMenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelTitulo.ResumeLayout(false);
@@ -298,7 +305,6 @@ namespace ProyectoFinal.VISTA
             ((System.ComponentModel.ISupportInitialize)(this.BtnCerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnMaximizar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -25,6 +25,8 @@ namespace ProyectoFinal
 
             Image image2 = Image.FromFile(@"P.png");
             pictureBox2.Image = image2;
+
+          
         }
 
         private void btnAdminsitrador_Click(object sender, EventArgs e)
