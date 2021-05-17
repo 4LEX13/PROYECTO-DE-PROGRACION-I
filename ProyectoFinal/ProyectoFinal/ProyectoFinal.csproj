@@ -146,6 +146,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="VISTA\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -199,6 +200,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="bin\Debug\user.png" />
+    <None Include="bin\Debug\password.png" />
+    <None Include="bin\Debug\pass.png" />
+    <None Include="bin\Debug\us.png" />
     <Content Include="MODEL\Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Model1.Context.cs</LastGenOutput>
