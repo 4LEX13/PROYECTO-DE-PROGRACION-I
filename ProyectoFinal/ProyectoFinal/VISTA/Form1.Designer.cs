@@ -125,7 +125,7 @@ namespace ProyectoFinal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(68)))), ((int)(((byte)(106)))));
             this.ClientSize = new System.Drawing.Size(737, 454);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel2);

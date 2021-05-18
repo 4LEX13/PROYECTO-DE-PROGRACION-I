@@ -13,6 +13,8 @@ namespace ProyectoFinal.VISTA
 {
     public partial class FrmLogin : Form
     {
+        string user = "";
+        string pass = "";
         public FrmLogin()
         {
             InitializeComponent();
@@ -22,9 +24,22 @@ namespace ProyectoFinal.VISTA
         {
             Image image = Image.FromFile(@"E.png");
             pictureBox1.Image = image;
+
+            txtUsuario.Text = "Introduzca el usuario";
+            txtUsuario.ForeColor = Color.Gray;
+            txtPass.Text = "Introduzca la contraseña";
+            txtPass.ForeColor = Color.Gray;
+
         }
 
-        private void button1_Click(object sender, EventArgs e)
+      
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnAcceder_Click(object sender, EventArgs e)
         {
 
             String user = txtUsuario.Text;
@@ -38,7 +53,7 @@ namespace ProyectoFinal.VISTA
 
                 if (lg.Count() > 0)
                 {
-                    MessageBox.Show("BIENVENIDO");
+                    MessageBox.Show("Bienvenido" + user);
                     FrmMenu menu = new FrmMenu();
                     menu.Show();
                     this.Hide();
@@ -78,12 +93,65 @@ namespace ProyectoFinal.VISTA
                 }*/
 
 
-
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void txtUsuario_Enter(object sender, EventArgs e)
         {
-            Application.Exit();
+            txtUsuario.Text = "";
+            txtUsuario.ForeColor = Color.White;
+        }
+
+        private void txtUsuario_Leave(object sender, EventArgs e)
+        {
+            user = txtUsuario.Text;
+            if (user.Equals("Introduzca el usuario"))
+            {
+
+                txtUsuario.Text = "Introduzca el usuario";
+                txtUsuario.ForeColor = Color.Gray;
+            
+
+            }
+            else
+            {
+                if (user.Equals(""))
+                {
+                    txtUsuario.Text = "Introduzca el usuario";
+                    txtUsuario.ForeColor = Color.Gray;
+
+                }
+       
+
+            }
+        }
+
+        private void txtPass_Enter(object sender, EventArgs e)
+        {
+            txtPass.Text = "";
+            txtPass.ForeColor = Color.White;
+        }
+
+        private void txtPass_Leave(object sender, EventArgs e)
+        {
+            pass = txtPass.Text;
+            if (pass.Equals("Introduzca la contraseña"))
+            {
+
+                txtPass.Text = "Introduzca la contraseña";
+                txtPass.ForeColor = Color.Gray;
+
+
+            }
+            else
+            {
+                if (pass.Equals(""))
+                {
+                    txtPass.Text = "Introduzca la contraseña";
+                    txtPass.ForeColor = Color.Gray;
+
+                }
+
+            }
         }
     }
 }

@@ -89,6 +89,15 @@ namespace ProyectoFinal.VISTA
 
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
 
+        private void btnCerrarSesion_Click(object sender, EventArgs e)
+        {
+            FrmLogin regresar = new FrmLogin();
+            this.Hide();
+            MessageBox.Show("Sesión cerrada correctamente");
+            regresar.Show();
+            
+
+        }
 
         private void AbrirFormulario<MiForm>() where MiForm : Form, new()
         {

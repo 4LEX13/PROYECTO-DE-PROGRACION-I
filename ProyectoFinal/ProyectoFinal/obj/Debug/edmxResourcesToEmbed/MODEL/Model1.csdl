@@ -10,5 +10,78 @@
   </EntityType>
   <EntityContainer Name="GestorEstudiantesEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Usuarios" EntityType="Self.Usuarios" />
+    <EntitySet Name="Alumnos" EntityType="GestorEstudiantesModel.Alumnos" />
+    <EntitySet Name="Docente" EntityType="GestorEstudiantesModel.Docente" />
+    <EntitySet Name="Materias" EntityType="GestorEstudiantesModel.Materias" />
+    <EntitySet Name="Notas" EntityType="GestorEstudiantesModel.Notas" />
+    <AssociationSet Name="FK__Notas__alumnoid___4E88ABD4" Association="GestorEstudiantesModel.FK__Notas__alumnoid___4E88ABD4">
+      <End Role="Alumnos" EntitySet="Alumnos" />
+      <End Role="Notas" EntitySet="Notas" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Notas__materiaid__4D94879B" Association="GestorEstudiantesModel.FK__Notas__materiaid__4D94879B">
+      <End Role="Materias" EntitySet="Materias" />
+      <End Role="Notas" EntitySet="Notas" />
+    </AssociationSet>
   </EntityContainer>
+  <EntityType Name="Alumnos">
+    <Key>
+      <PropertyRef Name="alumnoid" />
+    </Key>
+    <Property Name="alumnoid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Apellidos" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Notas" Relationship="GestorEstudiantesModel.FK__Notas__alumnoid___4E88ABD4" FromRole="Alumnos" ToRole="Notas" />
+  </EntityType>
+  <EntityType Name="Docente">
+    <Key>
+      <PropertyRef Name="docenteid" />
+    </Key>
+    <Property Name="docenteid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="apellido" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Materias">
+    <Key>
+      <PropertyRef Name="materiaid" />
+    </Key>
+    <Property Name="materiaid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Notas" Relationship="GestorEstudiantesModel.FK__Notas__materiaid__4D94879B" FromRole="Materias" ToRole="Notas" />
+  </EntityType>
+  <EntityType Name="Notas">
+    <Key>
+      <PropertyRef Name="notaid" />
+    </Key>
+    <Property Name="notaid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="periodo" Type="Int32" />
+    <Property Name="nota" Type="Decimal" Precision="5" Scale="2" />
+    <Property Name="materiaid_fk" Type="Int32" />
+    <Property Name="alumnoid_fk" Type="Int32" />
+    <NavigationProperty Name="Alumnos" Relationship="GestorEstudiantesModel.FK__Notas__alumnoid___4E88ABD4" FromRole="Notas" ToRole="Alumnos" />
+    <NavigationProperty Name="Materias" Relationship="GestorEstudiantesModel.FK__Notas__materiaid__4D94879B" FromRole="Notas" ToRole="Materias" />
+  </EntityType>
+  <Association Name="FK__Notas__alumnoid___4E88ABD4">
+    <End Type="GestorEstudiantesModel.Alumnos" Role="Alumnos" Multiplicity="0..1" />
+    <End Type="GestorEstudiantesModel.Notas" Role="Notas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Alumnos">
+        <PropertyRef Name="alumnoid" />
+      </Principal>
+      <Dependent Role="Notas">
+        <PropertyRef Name="alumnoid_fk" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Notas__materiaid__4D94879B">
+    <End Type="GestorEstudiantesModel.Materias" Role="Materias" Multiplicity="0..1" />
+    <End Type="GestorEstudiantesModel.Notas" Role="Notas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Materias">
+        <PropertyRef Name="materiaid" />
+      </Principal>
+      <Dependent Role="Notas">
+        <PropertyRef Name="materiaid_fk" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
 </Schema>

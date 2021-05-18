@@ -26,5 +26,9 @@ namespace ProyectoFinal.MODEL
         }
     
         public virtual DbSet<Usuarios> Usuarios { get; set; }
+        public virtual DbSet<Alumnos> Alumnos { get; set; }
+        public virtual DbSet<Docente> Docente { get; set; }
+        public virtual DbSet<Materias> Materias { get; set; }
+        public virtual DbSet<Notas> Notas { get; set; }
     }
 }

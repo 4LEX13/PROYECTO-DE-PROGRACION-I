@@ -1,5 +1,38 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="GestorEstudiantesModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Alumnos">
+    <Key>
+      <PropertyRef Name="alumnoid" />
+    </Key>
+    <Property Name="alumnoid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="50" />
+    <Property Name="Apellidos" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Docente">
+    <Key>
+      <PropertyRef Name="docenteid" />
+    </Key>
+    <Property Name="docenteid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="50" />
+    <Property Name="apellido" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Materias">
+    <Key>
+      <PropertyRef Name="materiaid" />
+    </Key>
+    <Property Name="materiaid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Notas">
+    <Key>
+      <PropertyRef Name="notaid" />
+    </Key>
+    <Property Name="notaid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="periodo" Type="int" />
+    <Property Name="nota" Type="decimal" Precision="5" Scale="2" />
+    <Property Name="materiaid_fk" Type="int" />
+    <Property Name="alumnoid_fk" Type="int" />
+  </EntityType>
   <EntityType Name="Usuarios">
     <Key>
       <PropertyRef Name="Id_Usuarios" />
@@ -8,7 +41,43 @@
     <Property Name="Nombre_User" Type="varchar" MaxLength="100" />
     <Property Name="Pass" Type="varchar" MaxLength="100" />
   </EntityType>
+  <Association Name="FK__Notas__alumnoid___4E88ABD4">
+    <End Role="Alumnos" Type="Self.Alumnos" Multiplicity="0..1" />
+    <End Role="Notas" Type="Self.Notas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Alumnos">
+        <PropertyRef Name="alumnoid" />
+      </Principal>
+      <Dependent Role="Notas">
+        <PropertyRef Name="alumnoid_fk" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Notas__materiaid__4D94879B">
+    <End Role="Materias" Type="Self.Materias" Multiplicity="0..1" />
+    <End Role="Notas" Type="Self.Notas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Materias">
+        <PropertyRef Name="materiaid" />
+      </Principal>
+      <Dependent Role="Notas">
+        <PropertyRef Name="materiaid_fk" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <EntityContainer Name="GestorEstudiantesModelStoreContainer">
+    <EntitySet Name="Alumnos" EntityType="Self.Alumnos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Docente" EntityType="Self.Docente" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Materias" EntityType="Self.Materias" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Notas" EntityType="Self.Notas" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Usuarios" EntityType="Self.Usuarios" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__Notas__alumnoid___4E88ABD4" Association="Self.FK__Notas__alumnoid___4E88ABD4">
+      <End Role="Alumnos" EntitySet="Alumnos" />
+      <End Role="Notas" EntitySet="Notas" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Notas__materiaid__4D94879B" Association="Self.FK__Notas__materiaid__4D94879B">
+      <End Role="Materias" EntitySet="Materias" />
+      <End Role="Notas" EntitySet="Notas" />
+    </AssociationSet>
   </EntityContainer>
 </Schema>

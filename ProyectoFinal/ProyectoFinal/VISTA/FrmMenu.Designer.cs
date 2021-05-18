@@ -35,6 +35,7 @@ namespace ProyectoFinal.VISTA
             this.panelFormula = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.btnCerrarSesion = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnPrincipal = new System.Windows.Forms.Button();
             this.btnSetting = new System.Windows.Forms.Button();
@@ -94,18 +95,21 @@ namespace ProyectoFinal.VISTA
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(120, 3);
+            this.pictureBox2.Location = new System.Drawing.Point(14, -40);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(400, 400);
+            this.pictureBox2.Size = new System.Drawing.Size(630, 522);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
             // 
             // panelMenu
             // 
-            this.panelMenu.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(68)))), ((int)(((byte)(106)))));
+            this.panelMenu.Controls.Add(this.btnCerrarSesion);
             this.panelMenu.Controls.Add(this.pictureBox1);
             this.panelMenu.Controls.Add(this.btnPrincipal);
             this.panelMenu.Controls.Add(this.btnSetting);
@@ -117,9 +121,25 @@ namespace ProyectoFinal.VISTA
             this.panelMenu.Size = new System.Drawing.Size(204, 413);
             this.panelMenu.TabIndex = 1;
             // 
+            // btnCerrarSesion
+            // 
+            this.btnCerrarSesion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnCerrarSesion.FlatAppearance.BorderSize = 0;
+            this.btnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrarSesion.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCerrarSesion.ForeColor = System.Drawing.Color.White;
+            this.btnCerrarSesion.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrarSesion.Image")));
+            this.btnCerrarSesion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCerrarSesion.Location = new System.Drawing.Point(3, 366);
+            this.btnCerrarSesion.Name = "btnCerrarSesion";
+            this.btnCerrarSesion.Size = new System.Drawing.Size(178, 44);
+            this.btnCerrarSesion.TabIndex = 5;
+            this.btnCerrarSesion.Text = "Cerrar sesión";
+            this.btnCerrarSesion.UseVisualStyleBackColor = true;
+            this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
+            // 
             // pictureBox1
             // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(47, 26);
             this.pictureBox1.Name = "pictureBox1";
@@ -135,13 +155,13 @@ namespace ProyectoFinal.VISTA
             this.btnPrincipal.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.btnPrincipal.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
             this.btnPrincipal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPrincipal.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPrincipal.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.btnPrincipal.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrincipal.ForeColor = System.Drawing.Color.White;
             this.btnPrincipal.Image = ((System.Drawing.Image)(resources.GetObject("btnPrincipal.Image")));
             this.btnPrincipal.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPrincipal.Location = new System.Drawing.Point(15, 156);
+            this.btnPrincipal.Location = new System.Drawing.Point(6, 156);
             this.btnPrincipal.Name = "btnPrincipal";
-            this.btnPrincipal.Size = new System.Drawing.Size(186, 43);
+            this.btnPrincipal.Size = new System.Drawing.Size(195, 43);
             this.btnPrincipal.TabIndex = 3;
             this.btnPrincipal.Text = "Principal";
             this.btnPrincipal.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -155,8 +175,8 @@ namespace ProyectoFinal.VISTA
             this.btnSetting.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.btnSetting.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
             this.btnSetting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSetting.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSetting.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.btnSetting.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSetting.ForeColor = System.Drawing.Color.White;
             this.btnSetting.Image = ((System.Drawing.Image)(resources.GetObject("btnSetting.Image")));
             this.btnSetting.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSetting.Location = new System.Drawing.Point(6, 299);
@@ -175,8 +195,8 @@ namespace ProyectoFinal.VISTA
             this.btnHorarios.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.btnHorarios.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
             this.btnHorarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHorarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHorarios.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.btnHorarios.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHorarios.ForeColor = System.Drawing.Color.White;
             this.btnHorarios.Image = ((System.Drawing.Image)(resources.GetObject("btnHorarios.Image")));
             this.btnHorarios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnHorarios.Location = new System.Drawing.Point(12, 249);
@@ -195,8 +215,8 @@ namespace ProyectoFinal.VISTA
             this.btnNotas.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.btnNotas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
             this.btnNotas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNotas.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNotas.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.btnNotas.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNotas.ForeColor = System.Drawing.Color.White;
             this.btnNotas.Image = ((System.Drawing.Image)(resources.GetObject("btnNotas.Image")));
             this.btnNotas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnNotas.Location = new System.Drawing.Point(11, 205);
@@ -210,7 +230,7 @@ namespace ProyectoFinal.VISTA
             // 
             // panelTitulo
             // 
-            this.panelTitulo.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.panelTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(68)))), ((int)(((byte)(106)))));
             this.panelTitulo.Controls.Add(this.label1);
             this.panelTitulo.Controls.Add(this.BtnRestaurar);
             this.panelTitulo.Controls.Add(this.BtnCerrar);
@@ -227,6 +247,7 @@ namespace ProyectoFinal.VISTA
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Schoolbook", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(3, 7);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(247, 30);
@@ -327,5 +348,6 @@ namespace ProyectoFinal.VISTA
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnCerrarSesion;
     }
 }

@@ -29,7 +29,7 @@ namespace ProyectoFinal.VISTA
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnAcceder = new System.Windows.Forms.Button();
             this.txtPass = new System.Windows.Forms.TextBox();
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -45,21 +45,21 @@ namespace ProyectoFinal.VISTA
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // btnAcceder
             // 
-            this.button1.BackColor = System.Drawing.Color.Silver;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.DimGray;
-            this.button1.Location = new System.Drawing.Point(70, 418);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(236, 44);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "ACCEDER";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnAcceder.BackColor = System.Drawing.Color.Silver;
+            this.btnAcceder.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.btnAcceder.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
+            this.btnAcceder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAcceder.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAcceder.ForeColor = System.Drawing.Color.DimGray;
+            this.btnAcceder.Location = new System.Drawing.Point(70, 404);
+            this.btnAcceder.Name = "btnAcceder";
+            this.btnAcceder.Size = new System.Drawing.Size(236, 44);
+            this.btnAcceder.TabIndex = 11;
+            this.btnAcceder.Text = "ACCEDER";
+            this.btnAcceder.UseVisualStyleBackColor = false;
+            this.btnAcceder.Click += new System.EventHandler(this.btnAcceder_Click);
             // 
             // txtPass
             // 
@@ -69,20 +69,23 @@ namespace ProyectoFinal.VISTA
             this.txtPass.ForeColor = System.Drawing.Color.Silver;
             this.txtPass.Location = new System.Drawing.Point(101, 283);
             this.txtPass.Name = "txtPass";
-            this.txtPass.PasswordChar = '*';
             this.txtPass.Size = new System.Drawing.Size(205, 18);
             this.txtPass.TabIndex = 10;
+            this.txtPass.Enter += new System.EventHandler(this.txtPass_Enter);
+            this.txtPass.Leave += new System.EventHandler(this.txtPass_Leave);
             // 
             // txtUsuario
             // 
             this.txtUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(68)))), ((int)(((byte)(106)))));
             this.txtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtUsuario.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsuario.ForeColor = System.Drawing.Color.Silver;
+            this.txtUsuario.ForeColor = System.Drawing.Color.Gray;
             this.txtUsuario.Location = new System.Drawing.Point(101, 196);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(205, 18);
             this.txtUsuario.TabIndex = 9;
+            this.txtUsuario.Enter += new System.EventHandler(this.txtUsuario_Enter);
+            this.txtUsuario.Leave += new System.EventHandler(this.txtUsuario_Leave);
             // 
             // label1
             // 
@@ -156,7 +159,7 @@ namespace ProyectoFinal.VISTA
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Gray;
-            this.label2.Location = new System.Drawing.Point(151, 493);
+            this.label2.Location = new System.Drawing.Point(150, 481);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(69, 21);
             this.label2.TabIndex = 19;
@@ -168,7 +171,7 @@ namespace ProyectoFinal.VISTA
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(68)))), ((int)(((byte)(106)))));
-            this.ClientSize = new System.Drawing.Size(378, 570);
+            this.ClientSize = new System.Drawing.Size(382, 523);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.panel2);
@@ -177,7 +180,7 @@ namespace ProyectoFinal.VISTA
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnAcceder);
             this.Controls.Add(this.txtPass);
             this.Controls.Add(this.txtUsuario);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -196,7 +199,7 @@ namespace ProyectoFinal.VISTA
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnAcceder;
         private System.Windows.Forms.TextBox txtPass;
         private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.Label label1;
