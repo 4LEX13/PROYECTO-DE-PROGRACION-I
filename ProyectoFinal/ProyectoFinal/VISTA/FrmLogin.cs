@@ -25,11 +25,7 @@ namespace ProyectoFinal.VISTA
             Image image = Image.FromFile(@"E.png");
             pictureBox1.Image = image;
 
-            txtUsuario.Text = "Introduzca el usuario";
-            txtUsuario.ForeColor = Color.Gray;
-            txtPass.Text = "Introduzca la contraseña";
-            txtPass.ForeColor = Color.Gray;
-
+           
         }
 
       
@@ -56,6 +52,7 @@ namespace ProyectoFinal.VISTA
                     MessageBox.Show("Bienvenido" + user);
                     FrmMenu menu = new FrmMenu();
                     menu.Show();
+                    menu.FormClosed += CerrarSesion;
                     this.Hide();
                 }
                 else
@@ -97,61 +94,54 @@ namespace ProyectoFinal.VISTA
 
         private void txtUsuario_Enter(object sender, EventArgs e)
         {
-            txtUsuario.Text = "";
-            txtUsuario.ForeColor = Color.White;
+            if (txtUsuario.Text =="Usuario"){
+                txtUsuario.Text = "";
+                txtUsuario.ForeColor = Color.LightGray;
+
+            }
         }
 
         private void txtUsuario_Leave(object sender, EventArgs e)
         {
-            user = txtUsuario.Text;
-            if (user.Equals("Introduzca el usuario"))
+            if (txtUsuario.Text == "")
             {
-
-                txtUsuario.Text = "Introduzca el usuario";
-                txtUsuario.ForeColor = Color.Gray;
-            
-
-            }
-            else
-            {
-                if (user.Equals(""))
-                {
-                    txtUsuario.Text = "Introduzca el usuario";
-                    txtUsuario.ForeColor = Color.Gray;
-
-                }
-       
+                txtUsuario.Text = "Usuario";
+                txtUsuario.ForeColor = Color.DimGray;
 
             }
         }
 
         private void txtPass_Enter(object sender, EventArgs e)
         {
-            txtPass.Text = "";
-            txtPass.ForeColor = Color.White;
+            if (txtPass.Text == "Contraseña")
+            {
+                txtPass.Text = "";
+                txtPass.ForeColor = Color.LightGray;
+                txtPass.UseSystemPasswordChar = true;
+            }
         }
 
         private void txtPass_Leave(object sender, EventArgs e)
         {
-            pass = txtPass.Text;
-            if (pass.Equals("Introduzca la contraseña"))
+
+            if (txtPass.Text == "")
             {
-
-                txtPass.Text = "Introduzca la contraseña";
-                txtPass.ForeColor = Color.Gray;
-
+                txtPass.Text = "Contraseña";
+                txtPass.ForeColor = Color.DimGray;
+                txtPass.UseSystemPasswordChar = false;
 
             }
-            else
-            {
-                if (pass.Equals(""))
-                {
-                    txtPass.Text = "Introduzca la contraseña";
-                    txtPass.ForeColor = Color.Gray;
+        }
 
-                }
+        private void CerrarSesion(object sender, FormClosedEventArgs e)
+        {
+            txtPass.Text = "Contraseña";
+            txtPass.UseSystemPasswordChar = false;
+            txtUsuario.Text = "Usuario";
+            txtPass.ForeColor = Color.DimGray;
+            txtUsuario.ForeColor = Color.DimGray;
 
-            }
+            this.Show();
         }
     }
 }

@@ -12,6 +12,11 @@
           <Property Name="alumnoid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="nombre" Type="varchar" MaxLength="50" />
           <Property Name="Apellidos" Type="varchar" MaxLength="100" />
+          <Property Name="nacimiento" Type="date" />
+          <Property Name="dirreccion" Type="varchar" MaxLength="75" />
+          <Property Name="representante" Type="varchar" MaxLength="100" />
+          <Property Name="contacto1" Type="varchar" MaxLength="25" />
+          <Property Name="correo" Type="varchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="Docente">
           <Key>
@@ -120,6 +125,11 @@
           <Property Name="nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Apellidos" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Notas" Relationship="GestorEstudiantesModel.FK__Notas__alumnoid___4E88ABD4" FromRole="Alumnos" ToRole="Notas" />
+          <Property Name="nacimiento" Type="DateTime" Precision="0" />
+          <Property Name="dirreccion" Type="String" MaxLength="75" FixedLength="false" Unicode="false" />
+          <Property Name="representante" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="contacto1" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="correo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="Docente">
           <Key>
@@ -191,6 +201,11 @@
           <EntitySetMapping Name="Alumnos">
             <EntityTypeMapping TypeName="GestorEstudiantesModel.Alumnos">
               <MappingFragment StoreEntitySet="Alumnos">
+                <ScalarProperty Name="correo" ColumnName="correo" />
+                <ScalarProperty Name="contacto1" ColumnName="contacto1" />
+                <ScalarProperty Name="representante" ColumnName="representante" />
+                <ScalarProperty Name="dirreccion" ColumnName="dirreccion" />
+                <ScalarProperty Name="nacimiento" ColumnName="nacimiento" />
                 <ScalarProperty Name="Apellidos" ColumnName="Apellidos" />
                 <ScalarProperty Name="nombre" ColumnName="nombre" />
                 <ScalarProperty Name="alumnoid" ColumnName="alumnoid" />

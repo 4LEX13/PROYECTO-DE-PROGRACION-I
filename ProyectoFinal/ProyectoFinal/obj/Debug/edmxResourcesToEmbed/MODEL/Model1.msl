@@ -13,6 +13,11 @@
     <EntitySetMapping Name="Alumnos">
       <EntityTypeMapping TypeName="GestorEstudiantesModel.Alumnos">
         <MappingFragment StoreEntitySet="Alumnos">
+          <ScalarProperty Name="correo" ColumnName="correo" />
+          <ScalarProperty Name="contacto1" ColumnName="contacto1" />
+          <ScalarProperty Name="representante" ColumnName="representante" />
+          <ScalarProperty Name="dirreccion" ColumnName="dirreccion" />
+          <ScalarProperty Name="nacimiento" ColumnName="nacimiento" />
           <ScalarProperty Name="Apellidos" ColumnName="Apellidos" />
           <ScalarProperty Name="nombre" ColumnName="nombre" />
           <ScalarProperty Name="alumnoid" ColumnName="alumnoid" />

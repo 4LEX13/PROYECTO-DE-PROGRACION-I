@@ -31,6 +31,11 @@
     <Property Name="nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="Apellidos" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="Notas" Relationship="GestorEstudiantesModel.FK__Notas__alumnoid___4E88ABD4" FromRole="Alumnos" ToRole="Notas" />
+    <Property Name="nacimiento" Type="DateTime" Precision="0" />
+    <Property Name="dirreccion" Type="String" MaxLength="75" FixedLength="false" Unicode="false" />
+    <Property Name="representante" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="contacto1" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="correo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="Docente">
     <Key>

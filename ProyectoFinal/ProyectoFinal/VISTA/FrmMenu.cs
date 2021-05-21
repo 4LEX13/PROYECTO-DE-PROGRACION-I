@@ -91,11 +91,9 @@ namespace ProyectoFinal.VISTA
 
         private void btnCerrarSesion_Click(object sender, EventArgs e)
         {
-            FrmLogin regresar = new FrmLogin();
-            this.Hide();
-            MessageBox.Show("Sesión cerrada correctamente");
-            regresar.Show();
-            
+            if (MessageBox.Show("¿Estás seguro que quieres cerrar sesión?", "ALERTA",
+            MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                this.Close();
 
         }
 

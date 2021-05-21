@@ -23,6 +23,11 @@ namespace ProyectoFinal.MODEL
         public int alumnoid { get; set; }
         public string nombre { get; set; }
         public string Apellidos { get; set; }
+        public Nullable<System.DateTime> nacimiento { get; set; }
+        public string dirreccion { get; set; }
+        public string representante { get; set; }
+        public string contacto1 { get; set; }
+        public string correo { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Notas> Notas { get; set; }

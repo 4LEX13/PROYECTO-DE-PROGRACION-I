@@ -66,11 +66,12 @@ namespace ProyectoFinal.VISTA
             this.txtPass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(68)))), ((int)(((byte)(106)))));
             this.txtPass.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPass.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPass.ForeColor = System.Drawing.Color.Silver;
+            this.txtPass.ForeColor = System.Drawing.Color.Gray;
             this.txtPass.Location = new System.Drawing.Point(101, 283);
             this.txtPass.Name = "txtPass";
             this.txtPass.Size = new System.Drawing.Size(205, 18);
             this.txtPass.TabIndex = 10;
+            this.txtPass.Text = "Contraseña";
             this.txtPass.Enter += new System.EventHandler(this.txtPass_Enter);
             this.txtPass.Leave += new System.EventHandler(this.txtPass_Leave);
             // 
@@ -84,6 +85,7 @@ namespace ProyectoFinal.VISTA
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(205, 18);
             this.txtUsuario.TabIndex = 9;
+            this.txtUsuario.Text = "Usuario";
             this.txtUsuario.Enter += new System.EventHandler(this.txtUsuario_Enter);
             this.txtUsuario.Leave += new System.EventHandler(this.txtUsuario_Leave);
             // 

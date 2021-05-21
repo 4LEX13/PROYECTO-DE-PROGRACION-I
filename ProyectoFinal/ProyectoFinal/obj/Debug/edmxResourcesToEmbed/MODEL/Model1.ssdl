@@ -7,6 +7,11 @@
     <Property Name="alumnoid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="nombre" Type="varchar" MaxLength="50" />
     <Property Name="Apellidos" Type="varchar" MaxLength="100" />
+    <Property Name="nacimiento" Type="date" />
+    <Property Name="dirreccion" Type="varchar" MaxLength="75" />
+    <Property Name="representante" Type="varchar" MaxLength="100" />
+    <Property Name="contacto1" Type="varchar" MaxLength="25" />
+    <Property Name="correo" Type="varchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="Docente">
     <Key>

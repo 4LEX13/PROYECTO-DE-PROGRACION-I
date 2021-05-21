@@ -33,15 +33,15 @@ namespace ProyectoFinal.VISTA
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelMenuPrincial = new System.Windows.Forms.Panel();
             this.btnClassrom = new System.Windows.Forms.Button();
             this.btnDocentes = new System.Windows.Forms.Button();
             this.btnAulas = new System.Windows.Forms.Button();
             this.btmAlumos = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            this.panelMenuPrincial.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panelMenuPrincial.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -77,6 +77,16 @@ namespace ProyectoFinal.VISTA
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 0;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(35, 62);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(186, 183);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            // 
             // panelMenuPrincial
             // 
             this.panelMenuPrincial.BackColor = System.Drawing.Color.White;
@@ -94,7 +104,7 @@ namespace ProyectoFinal.VISTA
             // btnClassrom
             // 
             this.btnClassrom.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnClassrom.BackColor = System.Drawing.SystemColors.GrayText;
+            this.btnClassrom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(68)))), ((int)(((byte)(106)))));
             this.btnClassrom.FlatAppearance.BorderSize = 0;
             this.btnClassrom.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray;
             this.btnClassrom.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
@@ -115,7 +125,7 @@ namespace ProyectoFinal.VISTA
             // btnDocentes
             // 
             this.btnDocentes.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnDocentes.BackColor = System.Drawing.SystemColors.GrayText;
+            this.btnDocentes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(68)))), ((int)(((byte)(106)))));
             this.btnDocentes.FlatAppearance.BorderSize = 0;
             this.btnDocentes.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray;
             this.btnDocentes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
@@ -136,7 +146,7 @@ namespace ProyectoFinal.VISTA
             // btnAulas
             // 
             this.btnAulas.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnAulas.BackColor = System.Drawing.SystemColors.GrayText;
+            this.btnAulas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(68)))), ((int)(((byte)(106)))));
             this.btnAulas.FlatAppearance.BorderSize = 0;
             this.btnAulas.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray;
             this.btnAulas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
@@ -157,7 +167,7 @@ namespace ProyectoFinal.VISTA
             // btmAlumos
             // 
             this.btmAlumos.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btmAlumos.BackColor = System.Drawing.SystemColors.GrayText;
+            this.btmAlumos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(68)))), ((int)(((byte)(106)))));
             this.btmAlumos.FlatAppearance.BorderSize = 0;
             this.btmAlumos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray;
             this.btmAlumos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
@@ -175,16 +185,6 @@ namespace ProyectoFinal.VISTA
             this.btmAlumos.UseVisualStyleBackColor = false;
             this.btmAlumos.Click += new System.EventHandler(this.btmAlumos_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(35, 62);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(186, 183);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            // 
             // FrmMPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -196,8 +196,8 @@ namespace ProyectoFinal.VISTA
             this.Text = "FrmMPrincipal";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panelMenuPrincial.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panelMenuPrincial.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
