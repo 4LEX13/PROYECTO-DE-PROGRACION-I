@@ -17,5 +17,11 @@ namespace ProyectoFinal.MODEL
         public int docenteid { get; set; }
         public string nombre { get; set; }
         public string apellido { get; set; }
+        public string dui { get; set; }
+        public Nullable<System.DateTime> nacimiento { get; set; }
+        public string dirreccion { get; set; }
+        public string telefono { get; set; }
+        public string email { get; set; }
+        public Nullable<System.DateTime> fechaRegistro { get; set; }
     }
 }

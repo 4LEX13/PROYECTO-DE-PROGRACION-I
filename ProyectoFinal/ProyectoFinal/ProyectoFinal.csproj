@@ -59,6 +59,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAO\ClsDAlumnos.cs" />
+    <Compile Include="DAO\ClsDDocentes.cs" />
     <Compile Include="MODEL\Alumnos.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -69,6 +70,9 @@
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="MODEL\Notas.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MODEL\Usuarios.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="VISTA\Form1.cs">
@@ -91,9 +95,6 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Model1.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="MODEL\Usuarios.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -120,6 +121,12 @@
     </Compile>
     <Compile Include="VISTA\FrmConfiguracion.Designer.cs">
       <DependentUpon>FrmConfiguracion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VISTA\FrmDocente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VISTA\FrmDocente.Designer.cs">
+      <DependentUpon>FrmDocente.cs</DependentUpon>
     </Compile>
     <Compile Include="VISTA\FrmHorarios.cs">
       <SubType>Form</SubType>
@@ -175,6 +182,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="VISTA\FrmConfiguracion.resx">
       <DependentUpon>FrmConfiguracion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VISTA\FrmDocente.resx">
+      <DependentUpon>FrmDocente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VISTA\FrmHorarios.resx">
       <DependentUpon>FrmHorarios.cs</DependentUpon>

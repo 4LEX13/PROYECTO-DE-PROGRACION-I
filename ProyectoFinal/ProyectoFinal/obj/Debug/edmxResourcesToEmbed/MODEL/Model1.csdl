@@ -1,24 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="GestorEstudiantesModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-  <EntityType Name="Usuarios">
-    <Key>
-      <PropertyRef Name="Id_Usuarios" />
-    </Key>
-    <Property Name="Id_Usuarios" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Nombre_User" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-    <Property Name="Pass" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-  </EntityType>
   <EntityContainer Name="GestorEstudiantesEntities" annotation:LazyLoadingEnabled="true">
-    <EntitySet Name="Usuarios" EntityType="Self.Usuarios" />
     <EntitySet Name="Alumnos" EntityType="GestorEstudiantesModel.Alumnos" />
     <EntitySet Name="Docente" EntityType="GestorEstudiantesModel.Docente" />
     <EntitySet Name="Materias" EntityType="GestorEstudiantesModel.Materias" />
     <EntitySet Name="Notas" EntityType="GestorEstudiantesModel.Notas" />
-    <AssociationSet Name="FK__Notas__alumnoid___4E88ABD4" Association="GestorEstudiantesModel.FK__Notas__alumnoid___4E88ABD4">
+    <EntitySet Name="Usuarios" EntityType="GestorEstudiantesModel.Usuarios" />
+    <AssociationSet Name="FK__Notas__alumnoid___3E52440B" Association="GestorEstudiantesModel.FK__Notas__alumnoid___3E52440B">
       <End Role="Alumnos" EntitySet="Alumnos" />
       <End Role="Notas" EntitySet="Notas" />
     </AssociationSet>
-    <AssociationSet Name="FK__Notas__materiaid__4D94879B" Association="GestorEstudiantesModel.FK__Notas__materiaid__4D94879B">
+    <AssociationSet Name="FK__Notas__materiaid__3D5E1FD2" Association="GestorEstudiantesModel.FK__Notas__materiaid__3D5E1FD2">
       <End Role="Materias" EntitySet="Materias" />
       <End Role="Notas" EntitySet="Notas" />
     </AssociationSet>
@@ -30,12 +22,12 @@
     <Property Name="alumnoid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="Apellidos" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-    <NavigationProperty Name="Notas" Relationship="GestorEstudiantesModel.FK__Notas__alumnoid___4E88ABD4" FromRole="Alumnos" ToRole="Notas" />
     <Property Name="nacimiento" Type="DateTime" Precision="0" />
     <Property Name="dirreccion" Type="String" MaxLength="75" FixedLength="false" Unicode="false" />
     <Property Name="representante" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
     <Property Name="contacto1" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
     <Property Name="correo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Notas" Relationship="GestorEstudiantesModel.FK__Notas__alumnoid___3E52440B" FromRole="Alumnos" ToRole="Notas" />
   </EntityType>
   <EntityType Name="Docente">
     <Key>
@@ -44,6 +36,12 @@
     <Property Name="docenteid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="apellido" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="dui" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="nacimiento" Type="DateTime" Precision="0" />
+    <Property Name="dirreccion" Type="String" MaxLength="75" FixedLength="false" Unicode="false" />
+    <Property Name="telefono" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="fechaRegistro" Type="DateTime" Precision="0" />
   </EntityType>
   <EntityType Name="Materias">
     <Key>
@@ -51,7 +49,7 @@
     </Key>
     <Property Name="materiaid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <NavigationProperty Name="Notas" Relationship="GestorEstudiantesModel.FK__Notas__materiaid__4D94879B" FromRole="Materias" ToRole="Notas" />
+    <NavigationProperty Name="Notas" Relationship="GestorEstudiantesModel.FK__Notas__materiaid__3D5E1FD2" FromRole="Materias" ToRole="Notas" />
   </EntityType>
   <EntityType Name="Notas">
     <Key>
@@ -62,10 +60,18 @@
     <Property Name="nota" Type="Decimal" Precision="5" Scale="2" />
     <Property Name="materiaid_fk" Type="Int32" />
     <Property Name="alumnoid_fk" Type="Int32" />
-    <NavigationProperty Name="Alumnos" Relationship="GestorEstudiantesModel.FK__Notas__alumnoid___4E88ABD4" FromRole="Notas" ToRole="Alumnos" />
-    <NavigationProperty Name="Materias" Relationship="GestorEstudiantesModel.FK__Notas__materiaid__4D94879B" FromRole="Notas" ToRole="Materias" />
+    <NavigationProperty Name="Alumnos" Relationship="GestorEstudiantesModel.FK__Notas__alumnoid___3E52440B" FromRole="Notas" ToRole="Alumnos" />
+    <NavigationProperty Name="Materias" Relationship="GestorEstudiantesModel.FK__Notas__materiaid__3D5E1FD2" FromRole="Notas" ToRole="Materias" />
   </EntityType>
-  <Association Name="FK__Notas__alumnoid___4E88ABD4">
+  <EntityType Name="Usuarios">
+    <Key>
+      <PropertyRef Name="Id_Usuarios" />
+    </Key>
+    <Property Name="Id_Usuarios" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre_User" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Pass" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <Association Name="FK__Notas__alumnoid___3E52440B">
     <End Type="GestorEstudiantesModel.Alumnos" Role="Alumnos" Multiplicity="0..1" />
     <End Type="GestorEstudiantesModel.Notas" Role="Notas" Multiplicity="*" />
     <ReferentialConstraint>
@@ -77,7 +83,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Notas__materiaid__4D94879B">
+  <Association Name="FK__Notas__materiaid__3D5E1FD2">
     <End Type="GestorEstudiantesModel.Materias" Role="Materias" Multiplicity="0..1" />
     <End Type="GestorEstudiantesModel.Notas" Role="Notas" Multiplicity="*" />
     <ReferentialConstraint>
