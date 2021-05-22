@@ -13,6 +13,8 @@ namespace ProyectoFinal.VISTA
 {
     public partial class FrmLogin : Form
     {
+        string user = "";
+        string pass = "";
         public FrmLogin()
         {
             InitializeComponent();
@@ -22,9 +24,18 @@ namespace ProyectoFinal.VISTA
         {
             Image image = Image.FromFile(@"E.png");
             pictureBox1.Image = image;
+
+           
         }
 
-        private void button1_Click(object sender, EventArgs e)
+      
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnAcceder_Click(object sender, EventArgs e)
         {
 
             String user = txtUsuario.Text;
@@ -38,9 +49,10 @@ namespace ProyectoFinal.VISTA
 
                 if (lg.Count() > 0)
                 {
-                    MessageBox.Show("BIENVENIDO");
+                    MessageBox.Show("Bienvenido" + user);
                     FrmMenu menu = new FrmMenu();
                     menu.Show();
+                    menu.FormClosed += CerrarSesion;
                     this.Hide();
                 }
                 else
@@ -78,10 +90,58 @@ namespace ProyectoFinal.VISTA
                 }*/
 
 
-
         }
 
+        private void txtUsuario_Enter(object sender, EventArgs e)
+        {
+            if (txtUsuario.Text =="Usuario"){
+                txtUsuario.Text = "";
+                txtUsuario.ForeColor = Color.LightGray;
 
-        
+            }
+        }
+
+        private void txtUsuario_Leave(object sender, EventArgs e)
+        {
+            if (txtUsuario.Text == "")
+            {
+                txtUsuario.Text = "Usuario";
+                txtUsuario.ForeColor = Color.DimGray;
+
+            }
+        }
+
+        private void txtPass_Enter(object sender, EventArgs e)
+        {
+            if (txtPass.Text == "Contraseña")
+            {
+                txtPass.Text = "";
+                txtPass.ForeColor = Color.LightGray;
+                txtPass.UseSystemPasswordChar = true;
+            }
+        }
+
+        private void txtPass_Leave(object sender, EventArgs e)
+        {
+
+            if (txtPass.Text == "")
+            {
+                txtPass.Text = "Contraseña";
+                txtPass.ForeColor = Color.DimGray;
+                txtPass.UseSystemPasswordChar = false;
+
+            }
+        }
+
+        private void CerrarSesion(object sender, FormClosedEventArgs e)
+        {
+            txtPass.Text = "Contraseña";
+            txtPass.UseSystemPasswordChar = false;
+            txtUsuario.Text = "Usuario";
+            txtPass.ForeColor = Color.DimGray;
+            txtUsuario.ForeColor = Color.DimGray;
+
+            this.Show();
+        }
     }
 }

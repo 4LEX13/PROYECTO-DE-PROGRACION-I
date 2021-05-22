@@ -89,6 +89,13 @@ namespace ProyectoFinal.VISTA
 
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
 
+        private void btnCerrarSesion_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("¿Estás seguro que quieres cerrar sesión?", "ALERTA",
+            MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                this.Close();
+
+        }
 
         private void AbrirFormulario<MiForm>() where MiForm : Form, new()
         {
@@ -105,6 +112,7 @@ namespace ProyectoFinal.VISTA
                 panelFormula.Tag = formula;
                 formula.Show();
                 formula.BringToFront();
+                formula.FormClosed += new FormClosedEventHandler(CloseForms);
             }
           
             else
@@ -113,8 +121,23 @@ namespace ProyectoFinal.VISTA
             }
         }
 
+        private void CloseForms(object sender, FormClosedEventArgs e)
+        {
+            if (Application.OpenForms["FrmMPrincipal"] == null)
+                btnPrincipal.BackColor = Color.FromArgb(176, 196, 222);
+
+            if (Application.OpenForms["FrmNotas"] == null)
+                btnNotas.BackColor = Color.FromArgb(176, 196, 222);
+            if (Application.OpenForms["FrmHorarios"] == null)
+                btnHorarios.BackColor = Color.FromArgb(176, 196, 222);
+            if (Application.OpenForms["FrmConfiguracion"] == null)
+                btnSetting.BackColor = Color.FromArgb(176, 196, 222);
+
+        }
+
+      
 
 
-    }
+        }
 
 }

@@ -45,11 +45,11 @@ namespace ProyectoFinal
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Modern No. 20", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.LightGray;
-            this.label1.Location = new System.Drawing.Point(183, 35);
+            this.label1.Location = new System.Drawing.Point(158, 34);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(345, 27);
+            this.label1.Size = new System.Drawing.Size(410, 25);
             this.label1.TabIndex = 5;
             this.label1.Text = "CÓMO QUIERES INICIAR SECIÓN";
             // 
@@ -73,13 +73,15 @@ namespace ProyectoFinal
             // 
             // btnProfesor
             // 
+            this.btnProfesor.FlatAppearance.BorderSize = 0;
             this.btnProfesor.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.btnProfesor.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
             this.btnProfesor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProfesor.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProfesor.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.btnProfesor.Location = new System.Drawing.Point(98, 276);
+            this.btnProfesor.Location = new System.Drawing.Point(3, 263);
             this.btnProfesor.Name = "btnProfesor";
-            this.btnProfesor.Size = new System.Drawing.Size(113, 35);
+            this.btnProfesor.Size = new System.Drawing.Size(280, 48);
             this.btnProfesor.TabIndex = 0;
             this.btnProfesor.Text = "PROFESOR";
             this.btnProfesor.UseVisualStyleBackColor = true;
@@ -96,22 +98,24 @@ namespace ProyectoFinal
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox1.Location = new System.Drawing.Point(0, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(270, 254);
+            this.pictureBox1.Size = new System.Drawing.Size(273, 254);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
             // btnAdminsitrador
             // 
+            this.btnAdminsitrador.FlatAppearance.BorderSize = 0;
             this.btnAdminsitrador.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.btnAdminsitrador.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
             this.btnAdminsitrador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdminsitrador.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdminsitrador.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.btnAdminsitrador.Location = new System.Drawing.Point(80, 276);
+            this.btnAdminsitrador.Location = new System.Drawing.Point(3, 263);
             this.btnAdminsitrador.Name = "btnAdminsitrador";
-            this.btnAdminsitrador.Size = new System.Drawing.Size(113, 35);
+            this.btnAdminsitrador.Size = new System.Drawing.Size(270, 48);
             this.btnAdminsitrador.TabIndex = 3;
             this.btnAdminsitrador.Text = "ADMINISTRADOR";
             this.btnAdminsitrador.UseVisualStyleBackColor = true;
@@ -121,8 +125,8 @@ namespace ProyectoFinal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(68)))), ((int)(((byte)(106)))));
+            this.ClientSize = new System.Drawing.Size(737, 454);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
