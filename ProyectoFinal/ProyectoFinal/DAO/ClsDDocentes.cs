@@ -36,9 +36,9 @@ namespace ProyectoFinal.DAO
 
                     userList.nombre = user.nombre;
                     userList.apellido = user.apellido;
-                    userList.dirreccion = user.dirreccion;
                     userList.dui = user.dui;
                     userList.nacimiento = user.nacimiento;
+                    userList.dirreccion = user.dirreccion;
                     userList.email = user.email;
                     userList.telefono = user.telefono;
 
@@ -93,11 +93,12 @@ namespace ProyectoFinal.DAO
 
                     userList.nombre = user.nombre;
                     userList.apellido = user.apellido;
-                    userList.dirreccion = user.dirreccion;
                     userList.dui = user.dui;
                     userList.nacimiento = user.nacimiento;
+                    userList.dirreccion = user.dirreccion;
                     userList.email = user.email;
                     userList.telefono = user.telefono;
+                   
                     db.SaveChanges();
                 }
 

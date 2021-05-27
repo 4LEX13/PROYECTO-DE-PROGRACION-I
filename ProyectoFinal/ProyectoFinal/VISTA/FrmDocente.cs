@@ -45,7 +45,7 @@ namespace ProyectoFinal.VISTA
 
                 foreach (var iteracion in Lista)
                 {
-                    dgvDocente.Rows.Add(iteracion.docenteid,iteracion.nombre, iteracion.apellido, iteracion.dui, iteracion.nacimiento, iteracion.dirreccion, iteracion.telefono);
+                    dgvDocente.Rows.Add(iteracion.docenteid,iteracion.nombre, iteracion.apellido, iteracion.dui, iteracion.nacimiento, iteracion.dirreccion, iteracion.telefono, iteracion.fechaRegistro);
                 }
             }
 
@@ -63,10 +63,13 @@ namespace ProyectoFinal.VISTA
             ClsDDocentes clsDUserList = new ClsDDocentes();
             Docente userList = new Docente();
             userList.nombre = txtNombreDocente.Text;
-            userList.dirreccion = txtDireccion.Text;
-            userList.nacimiento = dtpFecha.Value;
+            userList.apellido = txtApellidoDocente.Text;
             userList.dui = txtDui.Text;
+            userList.nacimiento = dtpFecha.Value;
+            userList.dirreccion = txtDireccion.Text;
             userList.email = txtEmail.Text;
+            userList.telefono = txtTelefono.Text;
+          
 
             clsDUserList.SaveDatosUser(userList);
 
@@ -93,8 +96,8 @@ namespace ProyectoFinal.VISTA
 
         private void btnEliminarDocente_Click(object sender, EventArgs e)
         {
-            ClsDAlumnos user = new ClsDAlumnos();
-            user.deleteAlumno(Convert.ToInt32(txtIdDocente.Text));
+            ClsDDocentes user = new ClsDDocentes();
+            user.deleteDocente(Convert.ToInt32(txtIdDocente.Text));
 
             Carga();
             clear();
