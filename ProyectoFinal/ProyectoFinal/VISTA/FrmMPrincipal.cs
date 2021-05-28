@@ -31,6 +31,8 @@ namespace ProyectoFinal.VISTA
 
         private void btnDocentes_Click(object sender, EventArgs e)
         {
+            FrmDocente docente = new FrmDocente();
+            docente.Show();
 
         }
 

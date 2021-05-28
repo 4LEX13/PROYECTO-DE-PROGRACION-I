@@ -27,9 +27,9 @@ namespace ProyectoFinal.VISTA
             txtIdDocente.Clear();
             txtNombreDocente.Clear();
             txtApellidoDocente.Clear();
-            txtDireccion.Clear();
-            txtTelefono.Clear();
             txtDui.Clear();
+            txtGenero.Clear();
+            txtTelefono.Clear();
             txtEmail.Clear();
             dtpFecha.Value = DateTime.Now.Date;
 
@@ -38,39 +38,36 @@ namespace ProyectoFinal.VISTA
         void Carga()
         {
 
-            //dgvDocente.Rows.Clear();
-            //using (GestorEstudiantesEntities db = new GestorEstudiantesEntities())
-            //{
-            //    var Lista = db.Docente.ToList();
+            dgvDocente.Rows.Clear();
+            using (AdministracionEscolarEntities db = new AdministracionEscolarEntities())
+            {
+                var Lista = db.Maestro.ToList();
 
-            //    foreach (var iteracion in Lista)
-            //    {
-            //        dgvDocente.Rows.Add(iteracion.docenteid, iteracion.nombre, iteracion.apellido, iteracion.dui, iteracion.nacimiento, iteracion.dirreccion, iteracion.telefono, iteracion.email);
-            //    }
-            //}
+                foreach (var listadoMaestro in Lista)
+                {
+                    dgvDocente.Rows.Add(listadoMaestro.maestroId, listadoMaestro.nombre, listadoMaestro.apellido, listadoMaestro.identificacion, listadoMaestro.genero , listadoMaestro.fechaNacimiento,  listadoMaestro.contacto, listadoMaestro.correo, listadoMaestro.activo, listadoMaestro.fechaRegistro);
+                }
+            }
         }
 
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
+     
 
         private void btnRegistarDocente_Click(object sender, EventArgs e)
         {
 
-            //ClsDDocentes clsDUserList = new ClsDDocentes();
-            //Docente userList = new Docente();
-            //userList.nombre = txtNombreDocente.Text;
-            //userList.apellido = txtApellidoDocente.Text;
-            //userList.dui = txtDui.Text;
-            //userList.nacimiento = dtpFecha.Value;
-            //userList.dirreccion = txtDireccion.Text;
-            //userList.email = txtEmail.Text;
-            //userList.telefono = txtTelefono.Text;
-          
+            ClsDDocentes clsDUserList = new ClsDDocentes();
+            Maestro MaestroRegistrar = new Maestro();
+            MaestroRegistrar.nombre = txtNombreDocente.Text;
+            MaestroRegistrar.apellido = txtApellidoDocente.Text;
+            MaestroRegistrar.identificacion = txtDui.Text;
+            MaestroRegistrar.genero = txtGenero.Text;
+            MaestroRegistrar.fechaNacimiento = dtpFecha.Value;
+            MaestroRegistrar.correo = txtEmail.Text;
+            MaestroRegistrar.contacto = txtTelefono.Text;
+            MaestroRegistrar.activo = rvSi.Checked == true ? 1 : 2;
 
-            //clsDUserList.SaveDatosUser(userList);
+            clsDUserList.SaveDatosUser(MaestroRegistrar);
 
             Carga();
             clear();
@@ -79,15 +76,18 @@ namespace ProyectoFinal.VISTA
 
         private void btnModificarDocente_Click(object sender, EventArgs e)
         {
-            //ClsDDocentes clsDUserList = new ClsDDocentes();
-            //Docente userList = new Docente();
-            //userList.nombre = txtNombreDocente.Text;
-            //userList.dirreccion = txtDireccion.Text;
-            //userList.nacimiento = dtpFecha.Value;
-            //userList.dui = txtDui.Text;
-            //userList.email = txtEmail.Text;
+            ClsDDocentes clsDUserList = new ClsDDocentes();
+            Maestro maestroUpdate = new Maestro();
+            maestroUpdate.nombre = txtNombreDocente.Text;
+            maestroUpdate.apellido = txtApellidoDocente.Text;
+            maestroUpdate.identificacion = txtDui.Text;
+            maestroUpdate.genero = txtGenero.Text;
+            maestroUpdate.fechaNacimiento = dtpFecha.Value;
+            maestroUpdate.correo = txtEmail.Text;
+            maestroUpdate.contacto = txtTelefono.Text;
+            maestroUpdate.activo = rvSi.Checked == true ? 1 : 2;
 
-            //clsDUserList.SaveDatosUser(userList);
+            clsDUserList.SaveDatosUser(maestroUpdate);
 
             Carga();
             clear();
@@ -95,8 +95,8 @@ namespace ProyectoFinal.VISTA
 
         private void btnEliminarDocente_Click(object sender, EventArgs e)
         {
-            //ClsDDocentes user = new ClsDDocentes();
-            //user.deleteDocente(Convert.ToInt32(txtIdDocente.Text));
+            ClsDDocentes user = new ClsDDocentes();
+            user.deleteDocente(Convert.ToInt32(txtIdDocente.Text));
 
             Carga();
             clear();
@@ -108,21 +108,23 @@ namespace ProyectoFinal.VISTA
             String Nombre = dgvDocente.CurrentRow.Cells[1].Value.ToString();
             String apellido = dgvDocente.CurrentRow.Cells[2].Value.ToString();
             String dui = dgvDocente.CurrentRow.Cells[3].Value.ToString();
-            String nacimiento = dgvDocente.CurrentRow.Cells[4].Value.ToString();
-            //String nacimiento = dgvAlumnos.CurrentRow.Cells[5].Value.ToString();
-            String direecion = dgvDocente.CurrentRow.Cells[5].Value.ToString();
+            String genero = dgvDocente.CurrentRow.Cells[4].Value.ToString();
+            String nacimiento = dgvDocente.CurrentRow.Cells[5].Value.ToString();
             String email = dgvDocente.CurrentRow.Cells[6].Value.ToString();
             String telefono = dgvDocente.CurrentRow.Cells[7].Value.ToString();
-            String registro = dgvDocente.CurrentRow.Cells[8].Value.ToString();
+            //string activo = dgvDocente.CurrentRow.Cells[8].Value.ToString();
+           
+
 
             txtIdDocente.Text = idDocente;
             txtNombreDocente.Text = Nombre;
             txtApellidoDocente.Text = apellido;
             txtDui.Text = dui;
-            dtpFecha.Value = default;
-            txtDireccion.Text = direecion;
+            txtGenero.Text = genero;
+            dtpFecha.Text = nacimiento;      
             txtEmail.Text = email;
             txtTelefono.Text = telefono;
+             
 
         }
 
@@ -132,22 +134,21 @@ namespace ProyectoFinal.VISTA
             String Nombre = dgvDocente.CurrentRow.Cells[1].Value.ToString();
             String apellido = dgvDocente.CurrentRow.Cells[2].Value.ToString();
             String dui = dgvDocente.CurrentRow.Cells[3].Value.ToString();
-            String nacimiento = dgvDocente.CurrentRow.Cells[4].Value.ToString();
-            //String nacimiento = dgvAlumnos.CurrentRow.Cells[5].Value.ToString();
-            String direecion = dgvDocente.CurrentRow.Cells[5].Value.ToString();
+            String genero = dgvDocente.CurrentRow.Cells[4].Value.ToString();
+            String nacimiento = dgvDocente.CurrentRow.Cells[5].Value.ToString();
             String email = dgvDocente.CurrentRow.Cells[6].Value.ToString();
             String telefono = dgvDocente.CurrentRow.Cells[7].Value.ToString();
-            String registro = dgvDocente.CurrentRow.Cells[8].Value.ToString();
+            //string activo = dgvDocente.CurrentRow.Cells[8].Value.ToString();
+
 
             txtIdDocente.Text = idDocente;
             txtNombreDocente.Text = Nombre;
             txtApellidoDocente.Text = apellido;
             txtDui.Text = dui;
-            dtpFecha.Value = default;
-            txtDireccion.Text = direecion;
+            txtGenero.Text = genero;
+            dtpFecha.Text = nacimiento;
             txtEmail.Text = email;
             txtTelefono.Text = telefono;
-
         }
     }
 }
