@@ -24,7 +24,7 @@ namespace ProyectoFinal.VISTA
 
             txtIdAlumos.Clear();
             txtNombreAlumno.Clear();
-            txtApellidoPaterno.Clear();
+            txtApellidoAlumno.Clear();
             txtDireccion.Clear();
             txtRepresentante.Clear();
             txtContacto.Clear();
@@ -110,7 +110,7 @@ namespace ProyectoFinal.VISTA
 
             txtIdAlumos.Text = idAlumnos;
             txtNombreAlumno.Text = nombre;
-            txtApellidoPaterno.Text = Apellido;
+            txtApellidoAlumno.Text = Apellido;
             txtDireccion.Text = direccion;
             txtRepresentante.Text = representante;
             //dtpFecha.Value = default;
@@ -134,7 +134,7 @@ namespace ProyectoFinal.VISTA
 
             txtIdAlumos.Text = idAlumnos;
             txtNombreAlumno.Text = nombre;
-            txtApellidoPaterno.Text = Apellido;
+            txtApellidoAlumno.Text = Apellido;
             txtDireccion.Text = direccion;
             txtRepresentante.Text = representante;
             txtContacto.Text = contacto;

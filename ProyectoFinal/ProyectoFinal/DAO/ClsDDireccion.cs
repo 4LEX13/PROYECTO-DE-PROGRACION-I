@@ -9,7 +9,7 @@ namespace ProyectoFinal.DAO
     class ClsDDireccion
     {
 
-        public List<Direccion> cargarDatoUserList()
+        public List<Direccion> cargarDireccion()
 
         {
             List<Direccion> Lista;
@@ -25,7 +25,7 @@ namespace ProyectoFinal.DAO
         }
 
 
-        public void SaveDatosUser(Direccion user)
+        public void SaveDireccion(Direccion user)
         {
             try
             {
@@ -56,7 +56,7 @@ namespace ProyectoFinal.DAO
 
 
 
-        public void deleteDocente(int ID)
+        public void deleteDireccion(int ID)
         {
             try
             {
@@ -78,7 +78,7 @@ namespace ProyectoFinal.DAO
             }
         }
 
-        public void ModificarDocente(Direccion direccion)
+        public void ModificarDireccion(Direccion direccion)
         {
             try
             {

@@ -37,27 +37,14 @@ namespace ProyectoFinal.VISTA
             this.txtDepartamento = new System.Windows.Forms.TextBox();
             this.txtMunicipio = new System.Windows.Forms.TextBox();
             this.txtRecidencia = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.btnBuscarA = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.dgvDocente = new System.Windows.Forms.DataGridView();
-            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnEliminarDocente = new System.Windows.Forms.Button();
             this.btnModificarDocente = new System.Windows.Forms.Button();
             this.btnRegistarDocente = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.rvSi = new System.Windows.Forms.RadioButton();
+            this.rbSi = new System.Windows.Forms.RadioButton();
             this.rbNo = new System.Windows.Forms.RadioButton();
             this.txtIdDireccion = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -77,6 +64,22 @@ namespace ProyectoFinal.VISTA
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtFiltro = new System.Windows.Forms.TextBox();
+            this.btnBuscarA = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDocente)).BeginInit();
@@ -87,8 +90,8 @@ namespace ProyectoFinal.VISTA
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(68)))), ((int)(((byte)(106)))));
+            this.panel1.Controls.Add(this.txtFiltro);
             this.panel1.Controls.Add(this.groupBox2);
-            this.panel1.Controls.Add(this.comboBox1);
             this.panel1.Controls.Add(this.btnBuscarA);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.dgvDocente);
@@ -151,42 +154,24 @@ namespace ProyectoFinal.VISTA
             // 
             // txtDepartamento
             // 
-            this.txtDepartamento.Location = new System.Drawing.Point(152, 139);
+            this.txtDepartamento.Location = new System.Drawing.Point(141, 137);
             this.txtDepartamento.Name = "txtDepartamento";
             this.txtDepartamento.Size = new System.Drawing.Size(208, 20);
             this.txtDepartamento.TabIndex = 2;
             // 
             // txtMunicipio
             // 
-            this.txtMunicipio.Location = new System.Drawing.Point(152, 91);
+            this.txtMunicipio.Location = new System.Drawing.Point(141, 90);
             this.txtMunicipio.Name = "txtMunicipio";
             this.txtMunicipio.Size = new System.Drawing.Size(208, 20);
             this.txtMunicipio.TabIndex = 1;
             // 
             // txtRecidencia
             // 
-            this.txtRecidencia.Location = new System.Drawing.Point(152, 44);
+            this.txtRecidencia.Location = new System.Drawing.Point(141, 40);
             this.txtRecidencia.Name = "txtRecidencia";
             this.txtRecidencia.Size = new System.Drawing.Size(208, 20);
             this.txtRecidencia.TabIndex = 0;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(804, 324);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(287, 21);
-            this.comboBox1.TabIndex = 25;
-            // 
-            // btnBuscarA
-            // 
-            this.btnBuscarA.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnBuscarA.Location = new System.Drawing.Point(1116, 322);
-            this.btnBuscarA.Name = "btnBuscarA";
-            this.btnBuscarA.Size = new System.Drawing.Size(75, 23);
-            this.btnBuscarA.TabIndex = 24;
-            this.btnBuscarA.Text = "Buscar";
-            this.btnBuscarA.UseVisualStyleBackColor = true;
             // 
             // label2
             // 
@@ -213,6 +198,9 @@ namespace ProyectoFinal.VISTA
             this.Column10,
             this.Column4,
             this.Column11,
+            this.Column12,
+            this.Column13,
+            this.Column14,
             this.Column7,
             this.Column6,
             this.Column5,
@@ -223,74 +211,6 @@ namespace ProyectoFinal.VISTA
             this.dgvDocente.Size = new System.Drawing.Size(1179, 269);
             this.dgvDocente.TabIndex = 22;
             this.dgvDocente.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDocente_CellClick);
-            this.dgvDocente.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDocente_CellContentClick);
-            // 
-            // Column9
-            // 
-            this.Column9.HeaderText = "Id";
-            this.Column9.Name = "Column9";
-            this.Column9.ReadOnly = true;
-            this.Column9.Visible = false;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Nombre";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Apellido";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Dui";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column10
-            // 
-            this.Column10.HeaderText = "Genero";
-            this.Column10.Name = "Column10";
-            this.Column10.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Fecha de nacimiento";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            // 
-            // Column11
-            // 
-            this.Column11.HeaderText = "Dirreccion";
-            this.Column11.Name = "Column11";
-            this.Column11.ReadOnly = true;
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "Telefono";
-            this.Column7.Name = "Column7";
-            this.Column7.ReadOnly = true;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Email";
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Activo";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            // 
-            // Column8
-            // 
-            this.Column8.HeaderText = "Fecha de registro";
-            this.Column8.Name = "Column8";
-            this.Column8.ReadOnly = true;
             // 
             // btnEliminarDocente
             // 
@@ -364,7 +284,7 @@ namespace ProyectoFinal.VISTA
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.rvSi);
+            this.groupBox3.Controls.Add(this.rbSi);
             this.groupBox3.Controls.Add(this.rbNo);
             this.groupBox3.Location = new System.Drawing.Point(535, 142);
             this.groupBox3.Name = "groupBox3";
@@ -372,17 +292,17 @@ namespace ProyectoFinal.VISTA
             this.groupBox3.TabIndex = 27;
             this.groupBox3.TabStop = false;
             // 
-            // rvSi
+            // rbSi
             // 
-            this.rvSi.AutoSize = true;
-            this.rvSi.ForeColor = System.Drawing.Color.White;
-            this.rvSi.Location = new System.Drawing.Point(14, 19);
-            this.rvSi.Name = "rvSi";
-            this.rvSi.Size = new System.Drawing.Size(34, 17);
-            this.rvSi.TabIndex = 46;
-            this.rvSi.TabStop = true;
-            this.rvSi.Text = "Si";
-            this.rvSi.UseVisualStyleBackColor = true;
+            this.rbSi.AutoSize = true;
+            this.rbSi.ForeColor = System.Drawing.Color.White;
+            this.rbSi.Location = new System.Drawing.Point(14, 19);
+            this.rbSi.Name = "rbSi";
+            this.rbSi.Size = new System.Drawing.Size(34, 17);
+            this.rbSi.TabIndex = 46;
+            this.rbSi.TabStop = true;
+            this.rbSi.Text = "Si";
+            this.rbSi.UseVisualStyleBackColor = true;
             // 
             // rbNo
             // 
@@ -398,7 +318,7 @@ namespace ProyectoFinal.VISTA
             // 
             // txtIdDireccion
             // 
-            this.txtIdDireccion.Location = new System.Drawing.Point(649, 9);
+            this.txtIdDireccion.Location = new System.Drawing.Point(28, 9);
             this.txtIdDireccion.Name = "txtIdDireccion";
             this.txtIdDireccion.Size = new System.Drawing.Size(34, 20);
             this.txtIdDireccion.TabIndex = 49;
@@ -560,6 +480,109 @@ namespace ProyectoFinal.VISTA
             this.label1.TabIndex = 0;
             this.label1.Text = "REGISTRAR DOCENTE";
             // 
+            // Column9
+            // 
+            this.Column9.HeaderText = "Id";
+            this.Column9.Name = "Column9";
+            this.Column9.ReadOnly = true;
+            this.Column9.Visible = false;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Nombre";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Apellido";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Dui";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column10
+            // 
+            this.Column10.HeaderText = "Genero";
+            this.Column10.Name = "Column10";
+            this.Column10.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Fecha de nacimiento";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // Column11
+            // 
+            this.Column11.HeaderText = "idDireccion";
+            this.Column11.Name = "Column11";
+            this.Column11.ReadOnly = true;
+            this.Column11.Visible = false;
+            // 
+            // Column12
+            // 
+            this.Column12.HeaderText = "Recidencia";
+            this.Column12.Name = "Column12";
+            this.Column12.ReadOnly = true;
+            // 
+            // Column13
+            // 
+            this.Column13.HeaderText = "Municipio";
+            this.Column13.Name = "Column13";
+            this.Column13.ReadOnly = true;
+            // 
+            // Column14
+            // 
+            this.Column14.HeaderText = "Departamento";
+            this.Column14.Name = "Column14";
+            this.Column14.ReadOnly = true;
+            // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "Telefono";
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Email";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Activo";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            // 
+            // Column8
+            // 
+            this.Column8.HeaderText = "Fecha de registro";
+            this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
+            // 
+            // txtFiltro
+            // 
+            this.txtFiltro.Location = new System.Drawing.Point(795, 325);
+            this.txtFiltro.Name = "txtFiltro";
+            this.txtFiltro.Size = new System.Drawing.Size(298, 20);
+            this.txtFiltro.TabIndex = 27;
+            // 
+            // btnBuscarA
+            // 
+            this.btnBuscarA.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnBuscarA.Location = new System.Drawing.Point(1116, 322);
+            this.btnBuscarA.Name = "btnBuscarA";
+            this.btnBuscarA.Size = new System.Drawing.Size(75, 23);
+            this.btnBuscarA.TabIndex = 24;
+            this.btnBuscarA.Text = "Buscar";
+            this.btnBuscarA.UseVisualStyleBackColor = true;
+            // 
             // FrmDocente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -603,8 +626,6 @@ namespace ProyectoFinal.VISTA
         private System.Windows.Forms.Button btnRegistarDocente;
         private System.Windows.Forms.TextBox txtIdDocente;
         private System.Windows.Forms.DataGridView dgvDocente;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button btnBuscarA;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label12;
@@ -618,7 +639,8 @@ namespace ProyectoFinal.VISTA
         private System.Windows.Forms.TextBox txtIdDireccion;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.RadioButton rbNo;
-        private System.Windows.Forms.RadioButton rvSi;
+        private System.Windows.Forms.RadioButton rbSi;
+        private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
@@ -626,10 +648,14 @@ namespace ProyectoFinal.VISTA
         private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column14;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
-        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.TextBox txtFiltro;
+        private System.Windows.Forms.Button btnBuscarA;
     }
 }
