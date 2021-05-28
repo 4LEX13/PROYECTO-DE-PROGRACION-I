@@ -35,28 +35,41 @@ namespace ProyectoFinal.VISTA
 
         }
 
+        //void Carga()
+        //{
+
+        //    dgvDocente.Rows.Clear();
+        //    using (AdministracionEscolarEntities db = new AdministracionEscolarEntities())
+        //    {
+        //        var Lista = db.Maestro.ToList();
+
+        //        foreach (var listadoMaestro in Lista)
+        //        {
+        //            dgvDocente.Rows.Add(listadoMaestro.maestroId, listadoMaestro.nombre, listadoMaestro.apellido, listadoMaestro.identificacion, listadoMaestro.genero , listadoMaestro.fechaNacimiento,  listadoMaestro.contacto, listadoMaestro.correo, listadoMaestro.activo, listadoMaestro.fechaRegistro);
+        //        }
+        //    }
+        //}
         void Carga()
         {
-
             dgvDocente.Rows.Clear();
-            using (AdministracionEscolarEntities db = new AdministracionEscolarEntities())
-            {
-                var Lista = db.Maestro.ToList();
+            ClsDMaestro clsDMaestro = new ClsDMaestro();
+            List<Maestro> Lista = clsDMaestro.cargarMaestros();
 
-                foreach (var listadoMaestro in Lista)
-                {
-                    dgvDocente.Rows.Add(listadoMaestro.maestroId, listadoMaestro.nombre, listadoMaestro.apellido, listadoMaestro.identificacion, listadoMaestro.genero , listadoMaestro.fechaNacimiento,  listadoMaestro.contacto, listadoMaestro.correo, listadoMaestro.activo, listadoMaestro.fechaRegistro);
-                }
+            foreach (var listadoMaestro in Lista)
+            {
+                dgvDocente.Rows.Add(listadoMaestro.maestroId, listadoMaestro.nombre, listadoMaestro.apellido, 
+                    listadoMaestro.identificacion, listadoMaestro.genero, listadoMaestro.fechaNacimiento,listadoMaestro.direccionFk, listadoMaestro.contacto, 
+                    listadoMaestro.correo, listadoMaestro.activo, listadoMaestro.fechaRegistro);
             }
         }
 
 
-     
+
 
         private void btnRegistarDocente_Click(object sender, EventArgs e)
         {
 
-            ClsDDocentes clsDUserList = new ClsDDocentes();
+            ClsDMaestro clsDUserList = new ClsDMaestro();
             Maestro MaestroRegistrar = new Maestro();
             MaestroRegistrar.nombre = txtNombreDocente.Text;
             MaestroRegistrar.apellido = txtApellidoDocente.Text;
@@ -76,7 +89,7 @@ namespace ProyectoFinal.VISTA
 
         private void btnModificarDocente_Click(object sender, EventArgs e)
         {
-            ClsDDocentes clsDUserList = new ClsDDocentes();
+            ClsDMaestro clsDUserList = new ClsDMaestro();
             Maestro maestroUpdate = new Maestro();
             maestroUpdate.nombre = txtNombreDocente.Text;
             maestroUpdate.apellido = txtApellidoDocente.Text;
@@ -95,7 +108,7 @@ namespace ProyectoFinal.VISTA
 
         private void btnEliminarDocente_Click(object sender, EventArgs e)
         {
-            ClsDDocentes user = new ClsDDocentes();
+            ClsDMaestro user = new ClsDMaestro();
             user.deleteDocente(Convert.ToInt32(txtIdDocente.Text));
 
             Carga();

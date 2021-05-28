@@ -7,21 +7,20 @@ using System.Threading.Tasks;
 
 namespace ProyectoFinal.DAO
 {
-    class ClsDDocentes
+    class ClsDMaestro
     {
-        public List<Maestro> cargarDatoUserList()
+        public List<Maestro> cargarMaestros()
 
         {
-            List<Maestro> maestros;
+            List<Maestro> Lista = new List<Maestro>();
 
             using (AdministracionEscolarEntities db = new AdministracionEscolarEntities())
             {
-                maestros = db.Maestro.ToList();
-
+                Lista = db.Maestro.ToList();
 
             }
 
-            return maestros;
+            return Lista;
         }
 
         public void SaveDatosUser(Maestro maestro)
