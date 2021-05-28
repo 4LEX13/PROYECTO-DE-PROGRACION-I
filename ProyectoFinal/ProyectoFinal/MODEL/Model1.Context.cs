@@ -13,10 +13,10 @@ namespace ProyectoFinal.MODEL
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class GestorEstudiantesEntities : DbContext
+    public partial class AdministracionEscolarEntities : DbContext
     {
-        public GestorEstudiantesEntities()
-            : base("name=GestorEstudiantesEntities")
+        public AdministracionEscolarEntities()
+            : base("name=AdministracionEscolarEntities")
         {
         }
     
@@ -25,10 +25,6 @@ namespace ProyectoFinal.MODEL
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Alumnos> Alumnos { get; set; }
-        public virtual DbSet<Docente> Docente { get; set; }
-        public virtual DbSet<Materias> Materias { get; set; }
-        public virtual DbSet<Notas> Notas { get; set; }
-        public virtual DbSet<Usuarios> Usuarios { get; set; }
+        public virtual DbSet<Usuario> Usuario { get; set; }
     }
 }

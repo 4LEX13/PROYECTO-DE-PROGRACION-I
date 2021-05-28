@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using ProyectoFinal.MODEL;
 namespace ProyectoFinal.VISTA
 {
     public partial class FrmLogin : Form
@@ -41,10 +41,10 @@ namespace ProyectoFinal.VISTA
             String user = txtUsuario.Text;
             String pass = txtPass.Text;
 
-            using (GestorEstudiantesEntities db = new GestorEstudiantesEntities())
+            using (AdministracionEscolarEntities db = new AdministracionEscolarEntities())
             {
-                var lg = from login in db.Usuarios
-                         where login.Nombre_User == txtUsuario.Text && login.Pass == txtPass.Text
+                var lg = from login in db.Usuario
+                         where login.correo_Usuario == txtUsuario.Text && login.contrasena == txtPass.Text
                          select login;
 
                 if (lg.Count() > 0)

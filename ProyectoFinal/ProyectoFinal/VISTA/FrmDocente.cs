@@ -45,10 +45,9 @@ namespace ProyectoFinal.VISTA
 
                 foreach (var iteracion in Lista)
                 {
-                    dgvDocente.Rows.Add(iteracion.docenteid,iteracion.nombre, iteracion.apellido, iteracion.dui, iteracion.nacimiento, iteracion.dirreccion, iteracion.telefono, iteracion.fechaRegistro);
+                    dgvDocente.Rows.Add(iteracion.docenteid, iteracion.nombre, iteracion.apellido, iteracion.dui, iteracion.nacimiento, iteracion.dirreccion, iteracion.telefono, iteracion.email);
                 }
             }
-
         }
 
 

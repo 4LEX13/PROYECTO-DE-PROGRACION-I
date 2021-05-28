@@ -4,14 +4,8 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="2ef5fa33f2ce45ffae17ecc7a2846148" Name="Diagram1">
-        <EntityTypeShape EntityType="GestorEstudiantesModel.Alumnos" Width="1.5" PointX="0.75" PointY="4.75" />
-        <EntityTypeShape EntityType="GestorEstudiantesModel.Docente" Width="1.5" PointX="2.75" PointY="4.75" />
-        <EntityTypeShape EntityType="GestorEstudiantesModel.Materias" Width="1.5" PointX="0.75" PointY="1.375" />
-        <EntityTypeShape EntityType="GestorEstudiantesModel.Notas" Width="1.5" PointX="3" PointY="1" />
-        <EntityTypeShape EntityType="GestorEstudiantesModel.Usuarios" Width="1.5" PointX="4.75" PointY="4.75" />
-        <AssociationConnector Association="GestorEstudiantesModel.FK__Notas__alumnoid___3E52440B" />
-        <AssociationConnector Association="GestorEstudiantesModel.FK__Notas__materiaid__3D5E1FD2" />
+      <Diagram DiagramId="8ce918f4f4164a9e90f0a88cc6099c7f" Name="Diagram1">
+        <EntityTypeShape EntityType="AdministracionEscolarModel.Usuario" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

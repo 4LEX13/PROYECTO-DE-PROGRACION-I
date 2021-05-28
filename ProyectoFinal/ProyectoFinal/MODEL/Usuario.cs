@@ -12,18 +12,11 @@ namespace ProyectoFinal.MODEL
     using System;
     using System.Collections.Generic;
     
-    public partial class Materias
+    public partial class Usuario
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Materias()
-        {
-            this.Notas = new HashSet<Notas>();
-        }
-    
-        public int materiaid { get; set; }
-        public string nombre { get; set; }
-    
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Notas> Notas { get; set; }
+        public int usuarioId { get; set; }
+        public string correo_Usuario { get; set; }
+        public string contrasena { get; set; }
+        public string tipo_Rol { get; set; }
     }
 }
