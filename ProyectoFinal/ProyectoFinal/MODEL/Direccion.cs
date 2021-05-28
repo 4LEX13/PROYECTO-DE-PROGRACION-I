@@ -12,24 +12,23 @@ namespace ProyectoFinal.MODEL
     using System;
     using System.Collections.Generic;
     
-    public partial class Alumnos
+    public partial class Direccion
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Alumnos()
+        public Direccion()
         {
-            this.Notas = new HashSet<Notas>();
+            this.Alumno = new HashSet<Alumno>();
+            this.Maestro = new HashSet<Maestro>();
         }
     
-        public int alumnoid { get; set; }
-        public string nombre { get; set; }
-        public string Apellidos { get; set; }
-        public Nullable<System.DateTime> nacimiento { get; set; }
-        public string dirreccion { get; set; }
-        public string representante { get; set; }
-        public string contacto1 { get; set; }
-        public string correo { get; set; }
+        public int direccionId { get; set; }
+        public string residencia { get; set; }
+        public string municipio { get; set; }
+        public string departamento { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Notas> Notas { get; set; }
+        public virtual ICollection<Alumno> Alumno { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Maestro> Maestro { get; set; }
     }
 }

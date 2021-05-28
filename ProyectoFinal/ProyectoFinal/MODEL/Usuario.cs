@@ -12,10 +12,11 @@ namespace ProyectoFinal.MODEL
     using System;
     using System.Collections.Generic;
     
-    public partial class Usuarios
+    public partial class Usuario
     {
-        public int Id_Usuarios { get; set; }
-        public string Nombre_User { get; set; }
-        public string Pass { get; set; }
+        public int usuarioId { get; set; }
+        public string correo_Usuario { get; set; }
+        public string contrasena { get; set; }
+        public string tipo_Rol { get; set; }
     }
 }

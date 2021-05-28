@@ -12,15 +12,16 @@ namespace ProyectoFinal.MODEL
     using System;
     using System.Collections.Generic;
     
-    public partial class Notas
+    public partial class Encargado
     {
-        public int notaid { get; set; }
-        public Nullable<int> periodo { get; set; }
-        public Nullable<decimal> nota { get; set; }
-        public Nullable<int> materiaid_fk { get; set; }
-        public Nullable<int> alumnoid_fk { get; set; }
+        public int encargadoId { get; set; }
+        public Nullable<int> alumnoFk { get; set; }
+        public string nombre { get; set; }
+        public string apellido { get; set; }
+        public string identificacion { get; set; }
+        public string contacto { get; set; }
+        public string correo { get; set; }
     
-        public virtual Alumnos Alumnos { get; set; }
-        public virtual Materias Materias { get; set; }
+        public virtual Alumno Alumno { get; set; }
     }
 }

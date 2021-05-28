@@ -1,60 +1,70 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="GestorEstudiantesModelStoreContainer" CdmEntityContainer="GestorEstudiantesEntities">
-    <EntitySetMapping Name="Alumnos">
-      <EntityTypeMapping TypeName="GestorEstudiantesModel.Alumnos">
-        <MappingFragment StoreEntitySet="Alumnos">
-          <ScalarProperty Name="correo" ColumnName="correo" />
-          <ScalarProperty Name="contacto1" ColumnName="contacto1" />
-          <ScalarProperty Name="representante" ColumnName="representante" />
-          <ScalarProperty Name="dirreccion" ColumnName="dirreccion" />
-          <ScalarProperty Name="nacimiento" ColumnName="nacimiento" />
-          <ScalarProperty Name="Apellidos" ColumnName="Apellidos" />
-          <ScalarProperty Name="nombre" ColumnName="nombre" />
-          <ScalarProperty Name="alumnoid" ColumnName="alumnoid" />
+  <EntityContainerMapping StorageEntityContainer="AdministracionEscolarModelStoreContainer" CdmEntityContainer="AdministracionEscolarEntities">
+    <EntitySetMapping Name="Usuario">
+      <EntityTypeMapping TypeName="AdministracionEscolarModel.Usuario">
+        <MappingFragment StoreEntitySet="Usuario">
+          <ScalarProperty Name="usuarioId" ColumnName="usuarioId" />
+          <ScalarProperty Name="correo_Usuario" ColumnName="correo_Usuario" />
+          <ScalarProperty Name="contrasena" ColumnName="contrasena" />
+          <ScalarProperty Name="tipo_Rol" ColumnName="tipo_Rol" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Docente">
-      <EntityTypeMapping TypeName="GestorEstudiantesModel.Docente">
-        <MappingFragment StoreEntitySet="Docente">
+    <EntitySetMapping Name="Alumno">
+      <EntityTypeMapping TypeName="AdministracionEscolarModel.Alumno">
+        <MappingFragment StoreEntitySet="Alumno">
           <ScalarProperty Name="fechaRegistro" ColumnName="fechaRegistro" />
-          <ScalarProperty Name="email" ColumnName="email" />
-          <ScalarProperty Name="telefono" ColumnName="telefono" />
-          <ScalarProperty Name="dirreccion" ColumnName="dirreccion" />
-          <ScalarProperty Name="nacimiento" ColumnName="nacimiento" />
-          <ScalarProperty Name="dui" ColumnName="dui" />
+          <ScalarProperty Name="activo" ColumnName="activo" />
+          <ScalarProperty Name="correo" ColumnName="correo" />
+          <ScalarProperty Name="contacto" ColumnName="contacto" />
+          <ScalarProperty Name="direccionFk" ColumnName="direccionFk" />
+          <ScalarProperty Name="fechaNacimiento" ColumnName="fechaNacimiento" />
+          <ScalarProperty Name="genero" ColumnName="genero" />
+          <ScalarProperty Name="apellidoMaterno" ColumnName="apellidoMaterno" />
+          <ScalarProperty Name="apellidoPaterno" ColumnName="apellidoPaterno" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="alumnoId" ColumnName="alumnoId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Direccion">
+      <EntityTypeMapping TypeName="AdministracionEscolarModel.Direccion">
+        <MappingFragment StoreEntitySet="Direccion">
+          <ScalarProperty Name="departamento" ColumnName="departamento" />
+          <ScalarProperty Name="municipio" ColumnName="municipio" />
+          <ScalarProperty Name="residencia" ColumnName="residencia" />
+          <ScalarProperty Name="direccionId" ColumnName="direccionId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Encargado">
+      <EntityTypeMapping TypeName="AdministracionEscolarModel.Encargado">
+        <MappingFragment StoreEntitySet="Encargado">
+          <ScalarProperty Name="correo" ColumnName="correo" />
+          <ScalarProperty Name="contacto" ColumnName="contacto" />
+          <ScalarProperty Name="identificacion" ColumnName="identificacion" />
           <ScalarProperty Name="apellido" ColumnName="apellido" />
           <ScalarProperty Name="nombre" ColumnName="nombre" />
-          <ScalarProperty Name="docenteid" ColumnName="docenteid" />
+          <ScalarProperty Name="alumnoFk" ColumnName="alumnoFk" />
+          <ScalarProperty Name="encargadoId" ColumnName="encargadoId" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Materias">
-      <EntityTypeMapping TypeName="GestorEstudiantesModel.Materias">
-        <MappingFragment StoreEntitySet="Materias">
+    <EntitySetMapping Name="Maestro">
+      <EntityTypeMapping TypeName="AdministracionEscolarModel.Maestro">
+        <MappingFragment StoreEntitySet="Maestro">
+          <ScalarProperty Name="fechaRegistro" ColumnName="fechaRegistro" />
+          <ScalarProperty Name="activo" ColumnName="activo" />
+          <ScalarProperty Name="correo" ColumnName="correo" />
+          <ScalarProperty Name="contacto" ColumnName="contacto" />
+          <ScalarProperty Name="direccionFk" ColumnName="direccionFk" />
+          <ScalarProperty Name="fechaNacimiento" ColumnName="fechaNacimiento" />
+          <ScalarProperty Name="genero" ColumnName="genero" />
+          <ScalarProperty Name="identificacion" ColumnName="identificacion" />
+          <ScalarProperty Name="apellido" ColumnName="apellido" />
           <ScalarProperty Name="nombre" ColumnName="nombre" />
-          <ScalarProperty Name="materiaid" ColumnName="materiaid" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Notas">
-      <EntityTypeMapping TypeName="GestorEstudiantesModel.Notas">
-        <MappingFragment StoreEntitySet="Notas">
-          <ScalarProperty Name="alumnoid_fk" ColumnName="alumnoid_fk" />
-          <ScalarProperty Name="materiaid_fk" ColumnName="materiaid_fk" />
-          <ScalarProperty Name="nota" ColumnName="nota" />
-          <ScalarProperty Name="periodo" ColumnName="periodo" />
-          <ScalarProperty Name="notaid" ColumnName="notaid" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Usuarios">
-      <EntityTypeMapping TypeName="GestorEstudiantesModel.Usuarios">
-        <MappingFragment StoreEntitySet="Usuarios">
-          <ScalarProperty Name="Pass" ColumnName="Pass" />
-          <ScalarProperty Name="Nombre_User" ColumnName="Nombre_User" />
-          <ScalarProperty Name="Id_Usuarios" ColumnName="Id_Usuarios" />
+          <ScalarProperty Name="maestroId" ColumnName="maestroId" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

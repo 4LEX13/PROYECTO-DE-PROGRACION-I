@@ -66,3 +66,13 @@ C:\Users\kevin\Documents\GitHub\PROYECTO-DE-PROGRAMACION-I\ProyectoFinal\Proyect
 C:\Users\kevin\Documents\GitHub\PROYECTO-DE-PROGRAMACION-I\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.VISTA.FrmAulas.resources
 C:\Users\kevin\Documents\GitHub\PROYECTO-DE-PROGRAMACION-I\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.VISTA.FrmClassroom.resources
 C:\Users\kevin\Documents\GitHub\PROYECTO-DE-PROGRAMACION-I\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.VISTA.FrmDocente.resources
+C:\Users\carlj\Documents\GitHub\PROYECTO-DE-PROGRAMACION-I\ProyectoFinal\ProyectoFinal\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\carlj\Documents\GitHub\PROYECTO-DE-PROGRAMACION-I\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.VISTA.FrmAlumosMenuPrincipal.resources
+C:\Users\carlj\Documents\GitHub\PROYECTO-DE-PROGRAMACION-I\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.VISTA.FrmAulas.resources
+C:\Users\carlj\Documents\GitHub\PROYECTO-DE-PROGRAMACION-I\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.VISTA.FrmClassroom.resources
+C:\Users\carlj\Documents\GitHub\PROYECTO-DE-PROGRAMACION-I\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.VISTA.FrmDocente.resources
+C:\Users\crobe\Documents\GitHub\PROYECTO-DE-PROGRAMACION-I\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.VISTA.FrmAlumosMenuPrincipal.resources
+C:\Users\crobe\Documents\GitHub\PROYECTO-DE-PROGRAMACION-I\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.VISTA.FrmAulas.resources
+C:\Users\crobe\Documents\GitHub\PROYECTO-DE-PROGRAMACION-I\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.VISTA.FrmClassroom.resources
+C:\Users\crobe\Documents\GitHub\PROYECTO-DE-PROGRAMACION-I\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.VISTA.FrmDocente.resources
+C:\Users\crobe\Documents\GitHub\PROYECTO-DE-PROGRAMACION-I\ProyectoFinal\ProyectoFinal\bin\Debug\FontAwesome.Sharp.dll

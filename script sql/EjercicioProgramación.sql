@@ -1,68 +1,60 @@
 use master;
-drop database if exists  GestorEstudiantes
-create database GestorEstudiantes
+drop database if exists  AdministracionEscolar
+create database AdministracionEscolar
 go
-use GestorEstudiantes
+use AdministracionEscolar
 go
 
+create table Usuario(
+usuarioId int primary key identity not null,
+correo_Usuario varchar(50)unique,
+contrasena varchar(50),
+tipo_Rol varchar (50)
+);
 
-create table Usuarios(
-
-Id_Usuarios int not null primary key identity,
-Nombre_User varchar(100),
-Pass varchar(100)
+create table Direccion(
+direccionId int primary key identity not null,
+residencia varchar(100),
+municipio varchar(50),
+departamento varchar(50)
 
 );
 
-Create table Alumnos(
- 
-    alumnoid int not null IDENTITY PRIMARY KEY,
-    nombre varchar(50),
-	Apellidos varchar(100),
-    --carreraid_fk int references Carreras(carreraid)
+create table Alumno(
+alumnoId int primary key identity not null,
+nombre varchar(75),
+apellidoPaterno varchar(50),
+apellidoMaterno varchar(50),
+genero varchar(25),
+fechaNacimiento date,
+direccionFk int references Direccion(direccionId),
+contacto varchar(25) default('ninguno'),
+correo varchar(50) default('ninguno'),
+activo int,
+fechaRegistro date default getdate()
 );
 
-
-create table Materias(
-    materiaid int not null IDENTITY PRIMARY KEY,
-    nombre varchar(50)
-    
-);
- 
-create table Notas(
- 
-    notaid int not null IDENTITY PRIMARY KEY,
-    periodo int,
-    nota DECIMAL(5,2),
-	materiaid_fk int references Materias(materiaid),
-    alumnoid_fk int REFERENCES Alumnos(alumnoid) -- integridad referencial
-
-	);
-
-create table Docente(
-    docenteid int not null IDENTITY PRIMARY KEY,
-    nombre varchar(50),
-    apellido varchar(50),
-    --grado_fk int REFERENCES Alumnos(alumnoid)
+create table Encargado (
+encargadoId int primary key identity not null,
+alumnoFk int references Alumno(alumnoId),
+nombre varchar(75),
+apellido varchar(75),
+identificacion varchar(25),
+contacto varchar(25),
+correo varchar(50) default('ninguno')
 );
 
+create table Maestro(
+maestroId int primary key identity not null,
+nombre varchar(75),
+apellido varchar(75),
+identificacion varchar(25),
+genero varchar(25),
+fechaNacimiento date,
+direccionFk int references Direccion(direccionId),
+contacto varchar(25),
+correo varchar(75) ,
+activo int,
+fechaRegistro date default getdate()
+);
 
-
-Insert into Alumnos(nombre,Apellidos) values  ('Josue','guardado'),
-                                            ('Ana','Menjivar'),
-                                            ('Fernando','Tejada'),
-                                            ('Rosa','Perez');
-
- Insert into Materias(nombre) values  ('Matematica'),('Sociales'),('Ciencias'),('Lenguaje');
-Insert into Notas values(1,6,1,1),(2,6.5,1,1),(3,8,1,1);
-                     
-          
-select * from Notas
-insert into Usuarios  values ('Jose','prueba1'),
-                            ('Admin','123'),
-					        ('Carmen','145')
-
-
---Select b.nombre alumno,b.Apellidos alumno,c.nombre materia,a.periodo,a.nota from notas a 
---inner join alumnos b on a.alumnoid_fk=b.alumnoid
---inner join Materias c on a.materiaid_fk=c.materiaid

@@ -68,7 +68,7 @@ namespace ProyectoFinal.VISTA
             this.panelformularios.Location = new System.Drawing.Point(0, 0);
             this.panelformularios.Margin = new System.Windows.Forms.Padding(2);
             this.panelformularios.Name = "panelformularios";
-            this.panelformularios.Size = new System.Drawing.Size(873, 453);
+            this.panelformularios.Size = new System.Drawing.Size(1181, 667);
             this.panelformularios.TabIndex = 3;
             // 
             // panelContenedor
@@ -80,7 +80,7 @@ namespace ProyectoFinal.VISTA
             this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContenedor.Location = new System.Drawing.Point(0, 0);
             this.panelContenedor.Name = "panelContenedor";
-            this.panelContenedor.Size = new System.Drawing.Size(873, 453);
+            this.panelContenedor.Size = new System.Drawing.Size(1181, 667);
             this.panelContenedor.TabIndex = 0;
             // 
             // panelFormula
@@ -90,7 +90,7 @@ namespace ProyectoFinal.VISTA
             this.panelFormula.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelFormula.Location = new System.Drawing.Point(204, 40);
             this.panelFormula.Name = "panelFormula";
-            this.panelFormula.Size = new System.Drawing.Size(669, 413);
+            this.panelFormula.Size = new System.Drawing.Size(977, 627);
             this.panelFormula.TabIndex = 2;
             // 
             // pictureBox2
@@ -101,8 +101,8 @@ namespace ProyectoFinal.VISTA
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(14, -40);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(630, 522);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox2.Size = new System.Drawing.Size(938, 736);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
             // 
@@ -118,7 +118,7 @@ namespace ProyectoFinal.VISTA
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 40);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(204, 413);
+            this.panelMenu.Size = new System.Drawing.Size(204, 627);
             this.panelMenu.TabIndex = 1;
             // 
             // btnCerrarSesion
@@ -126,11 +126,11 @@ namespace ProyectoFinal.VISTA
             this.btnCerrarSesion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnCerrarSesion.FlatAppearance.BorderSize = 0;
             this.btnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrarSesion.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCerrarSesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCerrarSesion.ForeColor = System.Drawing.Color.White;
             this.btnCerrarSesion.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrarSesion.Image")));
             this.btnCerrarSesion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCerrarSesion.Location = new System.Drawing.Point(3, 366);
+            this.btnCerrarSesion.Location = new System.Drawing.Point(3, 580);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
             this.btnCerrarSesion.Size = new System.Drawing.Size(178, 44);
             this.btnCerrarSesion.TabIndex = 5;
@@ -155,11 +155,11 @@ namespace ProyectoFinal.VISTA
             this.btnPrincipal.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.btnPrincipal.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
             this.btnPrincipal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPrincipal.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrincipal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPrincipal.ForeColor = System.Drawing.Color.White;
             this.btnPrincipal.Image = ((System.Drawing.Image)(resources.GetObject("btnPrincipal.Image")));
             this.btnPrincipal.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPrincipal.Location = new System.Drawing.Point(6, 156);
+            this.btnPrincipal.Location = new System.Drawing.Point(9, 211);
             this.btnPrincipal.Name = "btnPrincipal";
             this.btnPrincipal.Size = new System.Drawing.Size(195, 43);
             this.btnPrincipal.TabIndex = 3;
@@ -175,11 +175,11 @@ namespace ProyectoFinal.VISTA
             this.btnSetting.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.btnSetting.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
             this.btnSetting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSetting.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSetting.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSetting.ForeColor = System.Drawing.Color.White;
             this.btnSetting.Image = ((System.Drawing.Image)(resources.GetObject("btnSetting.Image")));
             this.btnSetting.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSetting.Location = new System.Drawing.Point(6, 299);
+            this.btnSetting.Location = new System.Drawing.Point(6, 530);
             this.btnSetting.Name = "btnSetting";
             this.btnSetting.Size = new System.Drawing.Size(192, 44);
             this.btnSetting.TabIndex = 1;
@@ -195,11 +195,11 @@ namespace ProyectoFinal.VISTA
             this.btnHorarios.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.btnHorarios.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
             this.btnHorarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHorarios.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHorarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHorarios.ForeColor = System.Drawing.Color.White;
             this.btnHorarios.Image = ((System.Drawing.Image)(resources.GetObject("btnHorarios.Image")));
             this.btnHorarios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHorarios.Location = new System.Drawing.Point(12, 249);
+            this.btnHorarios.Location = new System.Drawing.Point(8, 304);
             this.btnHorarios.Name = "btnHorarios";
             this.btnHorarios.Size = new System.Drawing.Size(192, 44);
             this.btnHorarios.TabIndex = 1;
@@ -215,11 +215,11 @@ namespace ProyectoFinal.VISTA
             this.btnNotas.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.btnNotas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
             this.btnNotas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNotas.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNotas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNotas.ForeColor = System.Drawing.Color.White;
             this.btnNotas.Image = ((System.Drawing.Image)(resources.GetObject("btnNotas.Image")));
             this.btnNotas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNotas.Location = new System.Drawing.Point(11, 205);
+            this.btnNotas.Location = new System.Drawing.Point(6, 260);
             this.btnNotas.Name = "btnNotas";
             this.btnNotas.Size = new System.Drawing.Size(186, 38);
             this.btnNotas.TabIndex = 0;
@@ -239,18 +239,18 @@ namespace ProyectoFinal.VISTA
             this.panelTitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTitulo.Location = new System.Drawing.Point(0, 0);
             this.panelTitulo.Name = "panelTitulo";
-            this.panelTitulo.Size = new System.Drawing.Size(873, 40);
+            this.panelTitulo.Size = new System.Drawing.Size(1181, 40);
             this.panelTitulo.TabIndex = 0;
             this.panelTitulo.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelTitulo_MouseMove);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Schoolbook", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(3, 7);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(247, 30);
+            this.label1.Size = new System.Drawing.Size(232, 29);
             this.label1.TabIndex = 1;
             this.label1.Text = "Gestor estudiantes";
             // 
@@ -259,7 +259,7 @@ namespace ProyectoFinal.VISTA
             this.BtnRestaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnRestaurar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnRestaurar.Image = ((System.Drawing.Image)(resources.GetObject("BtnRestaurar.Image")));
-            this.BtnRestaurar.Location = new System.Drawing.Point(832, 12);
+            this.BtnRestaurar.Location = new System.Drawing.Point(1140, 12);
             this.BtnRestaurar.Name = "BtnRestaurar";
             this.BtnRestaurar.Size = new System.Drawing.Size(16, 16);
             this.BtnRestaurar.TabIndex = 0;
@@ -272,7 +272,7 @@ namespace ProyectoFinal.VISTA
             this.BtnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("BtnCerrar.Image")));
-            this.BtnCerrar.Location = new System.Drawing.Point(854, 12);
+            this.BtnCerrar.Location = new System.Drawing.Point(1162, 12);
             this.BtnCerrar.Name = "BtnCerrar";
             this.BtnCerrar.Size = new System.Drawing.Size(16, 16);
             this.BtnCerrar.TabIndex = 0;
@@ -284,7 +284,7 @@ namespace ProyectoFinal.VISTA
             this.BtnMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("BtnMinimizar.Image")));
-            this.BtnMinimizar.Location = new System.Drawing.Point(810, 12);
+            this.BtnMinimizar.Location = new System.Drawing.Point(1118, 12);
             this.BtnMinimizar.Name = "BtnMinimizar";
             this.BtnMinimizar.Size = new System.Drawing.Size(16, 16);
             this.BtnMinimizar.TabIndex = 0;
@@ -296,7 +296,7 @@ namespace ProyectoFinal.VISTA
             this.BtnMaximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnMaximizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnMaximizar.Image = ((System.Drawing.Image)(resources.GetObject("BtnMaximizar.Image")));
-            this.BtnMaximizar.Location = new System.Drawing.Point(832, 12);
+            this.BtnMaximizar.Location = new System.Drawing.Point(1140, 12);
             this.BtnMaximizar.Name = "BtnMaximizar";
             this.BtnMaximizar.Size = new System.Drawing.Size(16, 16);
             this.BtnMaximizar.TabIndex = 0;
@@ -307,7 +307,7 @@ namespace ProyectoFinal.VISTA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(873, 453);
+            this.ClientSize = new System.Drawing.Size(1181, 667);
             this.Controls.Add(this.panelformularios);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmMenu";
@@ -316,7 +316,6 @@ namespace ProyectoFinal.VISTA
             this.panelformularios.ResumeLayout(false);
             this.panelContenedor.ResumeLayout(false);
             this.panelFormula.ResumeLayout(false);
-            this.panelFormula.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panelMenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

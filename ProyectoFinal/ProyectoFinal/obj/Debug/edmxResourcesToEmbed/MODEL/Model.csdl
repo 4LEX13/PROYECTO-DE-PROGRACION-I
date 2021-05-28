@@ -1,33 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="AdministracionEscolarModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-  <EntityType Name="Usuario">
-    <Key>
-      <PropertyRef Name="usuarioId" />
-    </Key>
-    <Property Name="usuarioId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="correo_Usuario" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="contrasena" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="tipo_Rol" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-  </EntityType>
-  <EntityContainer Name="AdministracionEscolarEntities" annotation:LazyLoadingEnabled="true">
-    <EntitySet Name="Usuario" EntityType="Self.Usuario" />
-    <EntitySet Name="Alumno" EntityType="AdministracionEscolarModel.Alumno" />
-    <EntitySet Name="Direccion" EntityType="AdministracionEscolarModel.Direccion" />
-    <EntitySet Name="Encargado" EntityType="AdministracionEscolarModel.Encargado" />
-    <EntitySet Name="Maestro" EntityType="AdministracionEscolarModel.Maestro" />
-    <AssociationSet Name="FK__Alumno__direccio__29572725" Association="AdministracionEscolarModel.FK__Alumno__direccio__29572725">
-      <End Role="Direccion" EntitySet="Direccion" />
-      <End Role="Alumno" EntitySet="Alumno" />
-    </AssociationSet>
-    <AssociationSet Name="FK__Encargado__alumn__2F10007B" Association="AdministracionEscolarModel.FK__Encargado__alumn__2F10007B">
-      <End Role="Alumno" EntitySet="Alumno" />
-      <End Role="Encargado" EntitySet="Encargado" />
-    </AssociationSet>
-    <AssociationSet Name="FK__Maestro__direcci__32E0915F" Association="AdministracionEscolarModel.FK__Maestro__direcci__32E0915F">
-      <End Role="Direccion" EntitySet="Direccion" />
-      <End Role="Maestro" EntitySet="Maestro" />
-    </AssociationSet>
-  </EntityContainer>
   <EntityType Name="Alumno">
     <Key>
       <PropertyRef Name="alumnoId" />
@@ -43,8 +15,8 @@
     <Property Name="correo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="activo" Type="Int32" />
     <Property Name="fechaRegistro" Type="DateTime" Precision="0" />
-    <NavigationProperty Name="Direccion" Relationship="AdministracionEscolarModel.FK__Alumno__direccio__29572725" FromRole="Alumno" ToRole="Direccion" />
-    <NavigationProperty Name="Encargado" Relationship="AdministracionEscolarModel.FK__Encargado__alumn__2F10007B" FromRole="Alumno" ToRole="Encargado" />
+    <NavigationProperty Name="Direccion" Relationship="Self.FK__Alumno__direccio__29572725" FromRole="Alumno" ToRole="Direccion" />
+    <NavigationProperty Name="Encargado" Relationship="Self.FK__Encargado__alumn__2F10007B" FromRole="Alumno" ToRole="Encargado" />
   </EntityType>
   <EntityType Name="Direccion">
     <Key>
@@ -54,8 +26,8 @@
     <Property Name="residencia" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
     <Property Name="municipio" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="departamento" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <NavigationProperty Name="Alumno" Relationship="AdministracionEscolarModel.FK__Alumno__direccio__29572725" FromRole="Direccion" ToRole="Alumno" />
-    <NavigationProperty Name="Maestro" Relationship="AdministracionEscolarModel.FK__Maestro__direcci__32E0915F" FromRole="Direccion" ToRole="Maestro" />
+    <NavigationProperty Name="Alumno" Relationship="Self.FK__Alumno__direccio__29572725" FromRole="Direccion" ToRole="Alumno" />
+    <NavigationProperty Name="Maestro" Relationship="Self.FK__Maestro__direcci__32E0915F" FromRole="Direccion" ToRole="Maestro" />
   </EntityType>
   <EntityType Name="Encargado">
     <Key>
@@ -68,7 +40,7 @@
     <Property Name="identificacion" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
     <Property Name="contacto" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
     <Property Name="correo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <NavigationProperty Name="Alumno" Relationship="AdministracionEscolarModel.FK__Encargado__alumn__2F10007B" FromRole="Encargado" ToRole="Alumno" />
+    <NavigationProperty Name="Alumno" Relationship="Self.FK__Encargado__alumn__2F10007B" FromRole="Encargado" ToRole="Alumno" />
   </EntityType>
   <EntityType Name="Maestro">
     <Key>
@@ -85,11 +57,20 @@
     <Property Name="correo" Type="String" MaxLength="75" FixedLength="false" Unicode="false" />
     <Property Name="activo" Type="Int32" />
     <Property Name="fechaRegistro" Type="DateTime" Precision="0" />
-    <NavigationProperty Name="Direccion" Relationship="AdministracionEscolarModel.FK__Maestro__direcci__32E0915F" FromRole="Maestro" ToRole="Direccion" />
+    <NavigationProperty Name="Direccion" Relationship="Self.FK__Maestro__direcci__32E0915F" FromRole="Maestro" ToRole="Direccion" />
+  </EntityType>
+  <EntityType Name="Usuario">
+    <Key>
+      <PropertyRef Name="usuarioId" />
+    </Key>
+    <Property Name="usuarioId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="correo_Usuario" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="contrasena" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="tipo_Rol" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
   </EntityType>
   <Association Name="FK__Alumno__direccio__29572725">
-    <End Type="AdministracionEscolarModel.Direccion" Role="Direccion" Multiplicity="0..1" />
-    <End Type="AdministracionEscolarModel.Alumno" Role="Alumno" Multiplicity="*" />
+    <End Role="Direccion" Type="Self.Direccion" Multiplicity="0..1" />
+    <End Role="Alumno" Type="Self.Alumno" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Direccion">
         <PropertyRef Name="direccionId" />
@@ -100,8 +81,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK__Encargado__alumn__2F10007B">
-    <End Type="AdministracionEscolarModel.Alumno" Role="Alumno" Multiplicity="0..1" />
-    <End Type="AdministracionEscolarModel.Encargado" Role="Encargado" Multiplicity="*" />
+    <End Role="Alumno" Type="Self.Alumno" Multiplicity="0..1" />
+    <End Role="Encargado" Type="Self.Encargado" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Alumno">
         <PropertyRef Name="alumnoId" />
@@ -112,8 +93,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK__Maestro__direcci__32E0915F">
-    <End Type="AdministracionEscolarModel.Direccion" Role="Direccion" Multiplicity="0..1" />
-    <End Type="AdministracionEscolarModel.Maestro" Role="Maestro" Multiplicity="*" />
+    <End Role="Direccion" Type="Self.Direccion" Multiplicity="0..1" />
+    <End Role="Maestro" Type="Self.Maestro" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Direccion">
         <PropertyRef Name="direccionId" />
@@ -123,4 +104,23 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <EntityContainer Name="AdministracionEscolarEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Alumno" EntityType="Self.Alumno" />
+    <EntitySet Name="Direccion" EntityType="Self.Direccion" />
+    <EntitySet Name="Encargado" EntityType="Self.Encargado" />
+    <EntitySet Name="Maestro" EntityType="Self.Maestro" />
+    <EntitySet Name="Usuario" EntityType="Self.Usuario" />
+    <AssociationSet Name="FK__Alumno__direccio__29572725" Association="Self.FK__Alumno__direccio__29572725">
+      <End Role="Direccion" EntitySet="Direccion" />
+      <End Role="Alumno" EntitySet="Alumno" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Encargado__alumn__2F10007B" Association="Self.FK__Encargado__alumn__2F10007B">
+      <End Role="Alumno" EntitySet="Alumno" />
+      <End Role="Encargado" EntitySet="Encargado" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Maestro__direcci__32E0915F" Association="Self.FK__Maestro__direcci__32E0915F">
+      <End Role="Direccion" EntitySet="Direccion" />
+      <End Role="Maestro" EntitySet="Maestro" />
+    </AssociationSet>
+  </EntityContainer>
 </Schema>

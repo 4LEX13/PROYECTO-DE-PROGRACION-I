@@ -12,16 +12,20 @@ namespace ProyectoFinal.MODEL
     using System;
     using System.Collections.Generic;
     
-    public partial class Docente
+    public partial class Maestro
     {
-        public int docenteid { get; set; }
+        public int maestroId { get; set; }
         public string nombre { get; set; }
         public string apellido { get; set; }
-        public string dui { get; set; }
-        public Nullable<System.DateTime> nacimiento { get; set; }
-        public string dirreccion { get; set; }
-        public string telefono { get; set; }
-        public string email { get; set; }
+        public string identificacion { get; set; }
+        public string genero { get; set; }
+        public Nullable<System.DateTime> fechaNacimiento { get; set; }
+        public Nullable<int> direccionFk { get; set; }
+        public string contacto { get; set; }
+        public string correo { get; set; }
+        public Nullable<int> activo { get; set; }
         public Nullable<System.DateTime> fechaRegistro { get; set; }
+    
+        public virtual Direccion Direccion { get; set; }
     }
 }
