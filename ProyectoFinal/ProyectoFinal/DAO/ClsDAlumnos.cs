@@ -10,103 +10,103 @@ namespace ProyectoFinal.DAO
     {
 
 
-        public List<Alumnos> cargarDatoUserList()
+        //    public List<Alumnos> cargarDatoUserList()
 
-        {
-            List<Alumnos> Lista;
+        //    {
+        //        List<Alumnos> Lista;
 
-            using (GestorEstudiantesEntities db = new GestorEstudiantesEntities())
-            {
-                Lista = db.Alumnos.ToList();
-
-
-            }
-
-            return Lista;
-        }
+        //        using (GestorEstudiantesEntities db = new GestorEstudiantesEntities())
+        //        {
+        //            Lista = db.Alumnos.ToList();
 
 
-        public void SaveDatosUser(Alumnos user)
-        {
-            try
-            {
-                using (GestorEstudiantesEntities db = new GestorEstudiantesEntities())
-                {
+        //        }
 
-                    Alumnos userList = new Alumnos();
-
-                    userList.nombre = user.nombre;
-                    userList.Apellidos = user.Apellidos;
-                    userList.dirreccion = user.dirreccion;
-                    userList.representante = user.representante;
-                    userList.nacimiento = user.nacimiento;
-                    userList.contacto1 = user.contacto1;
-                    userList.correo = user.correo;
-
-                    db.Alumnos.Add(userList);
-                    db.SaveChanges();
+        //        return Lista;
+        //    }
 
 
+        //    public void SaveDatosUser(Alumnos user)
+        //    {
+        //        try
+        //        {
+        //            using (GestorEstudiantesEntities db = new GestorEstudiantesEntities())
+        //            {
 
-                }
+        //                Alumnos userList = new Alumnos();
 
-            }
-            catch (Exception ex)
-            {
+        //                userList.nombre = user.nombre;
+        //                userList.Apellidos = user.Apellidos;
+        //                userList.dirreccion = user.dirreccion;
+        //                userList.representante = user.representante;
+        //                userList.nacimiento = user.nacimiento;
+        //                userList.contacto1 = user.contacto1;
+        //                userList.correo = user.correo;
 
-            }
-        }
-
-        public void deleteAlumno(int ID)
-        {
-            try
-            {
-                using (GestorEstudiantesEntities db = new GestorEstudiantesEntities())
-                {
-                    int eliminar = Convert.ToInt32(ID);
-                    Alumnos userList = db.Alumnos.Where(x => x.alumnoid == eliminar).Select(x => x).FirstOrDefault();
-
-
-                    db.Alumnos.Remove(userList);
-                    db.SaveChanges();
+        //                db.Alumnos.Add(userList);
+        //                db.SaveChanges();
 
 
-                }
-            }
-            catch (Exception ex)
-            {
 
-            }
-        }
-        public void ModificarAlunmos(Alumnos user)
-        {
-            try
-            {
+        //            }
+
+        //        }
+        //        catch (Exception ex)
+        //        {
+
+        //        }
+        //    }
+
+        //    public void deleteAlumno(int ID)
+        //    {
+        //        try
+        //        {
+        //            using (GestorEstudiantesEntities db = new GestorEstudiantesEntities())
+        //            {
+        //                int eliminar = Convert.ToInt32(ID);
+        //                Alumnos userList = db.Alumnos.Where(x => x.alumnoid == eliminar).Select(x => x).FirstOrDefault();
 
 
-                using (GestorEstudiantesEntities db = new GestorEstudiantesEntities())
-                {
-
-                    int update = Convert.ToInt32(user.alumnoid);
-                    Alumnos userList = db.Alumnos.Where(x => x.alumnoid == update).Select(x => x).FirstOrDefault();
+        //                db.Alumnos.Remove(userList);
+        //                db.SaveChanges();
 
 
-                    userList.nombre = user.nombre;
-                    userList.Apellidos = user.Apellidos;
-                    userList.dirreccion = user.dirreccion;
-                    userList.representante= user.representante;
-                    userList.nacimiento = user.nacimiento;
-                    userList.contacto1 = user.contacto1;
-                    userList.correo = user.correo;
-                    db.SaveChanges();
-                }
+        //            }
+        //        }
+        //        catch (Exception ex)
+        //        {
 
-            }
-            catch (Exception ex)
-            {
+        //        }
+        //    }
+        //    public void ModificarAlunmos(Alumnos user)
+        //    {
+        //        try
+        //        {
 
-            }
-        }
+
+        //            using (GestorEstudiantesEntities db = new GestorEstudiantesEntities())
+        //            {
+
+        //                int update = Convert.ToInt32(user.alumnoid);
+        //                Alumnos userList = db.Alumnos.Where(x => x.alumnoid == update).Select(x => x).FirstOrDefault();
+
+
+        //                userList.nombre = user.nombre;
+        //                userList.Apellidos = user.Apellidos;
+        //                userList.dirreccion = user.dirreccion;
+        //                userList.representante= user.representante;
+        //                userList.nacimiento = user.nacimiento;
+        //                userList.contacto1 = user.contacto1;
+        //                userList.correo = user.correo;
+        //                db.SaveChanges();
+        //            }
+
+        //        }
+        //        catch (Exception ex)
+        //        {
+
+        //        }
+        //    }
 
 
     }

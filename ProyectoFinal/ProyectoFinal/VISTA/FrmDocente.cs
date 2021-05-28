@@ -38,16 +38,16 @@ namespace ProyectoFinal.VISTA
         void Carga()
         {
 
-            dgvDocente.Rows.Clear();
-            using (GestorEstudiantesEntities db = new GestorEstudiantesEntities())
-            {
-                var Lista = db.Docente.ToList();
+            //dgvDocente.Rows.Clear();
+            //using (GestorEstudiantesEntities db = new GestorEstudiantesEntities())
+            //{
+            //    var Lista = db.Docente.ToList();
 
-                foreach (var iteracion in Lista)
-                {
-                    dgvDocente.Rows.Add(iteracion.docenteid, iteracion.nombre, iteracion.apellido, iteracion.dui, iteracion.nacimiento, iteracion.dirreccion, iteracion.telefono, iteracion.email);
-                }
-            }
+            //    foreach (var iteracion in Lista)
+            //    {
+            //        dgvDocente.Rows.Add(iteracion.docenteid, iteracion.nombre, iteracion.apellido, iteracion.dui, iteracion.nacimiento, iteracion.dirreccion, iteracion.telefono, iteracion.email);
+            //    }
+            //}
         }
 
 
@@ -59,18 +59,18 @@ namespace ProyectoFinal.VISTA
         private void btnRegistarDocente_Click(object sender, EventArgs e)
         {
 
-            ClsDDocentes clsDUserList = new ClsDDocentes();
-            Docente userList = new Docente();
-            userList.nombre = txtNombreDocente.Text;
-            userList.apellido = txtApellidoDocente.Text;
-            userList.dui = txtDui.Text;
-            userList.nacimiento = dtpFecha.Value;
-            userList.dirreccion = txtDireccion.Text;
-            userList.email = txtEmail.Text;
-            userList.telefono = txtTelefono.Text;
+            //ClsDDocentes clsDUserList = new ClsDDocentes();
+            //Docente userList = new Docente();
+            //userList.nombre = txtNombreDocente.Text;
+            //userList.apellido = txtApellidoDocente.Text;
+            //userList.dui = txtDui.Text;
+            //userList.nacimiento = dtpFecha.Value;
+            //userList.dirreccion = txtDireccion.Text;
+            //userList.email = txtEmail.Text;
+            //userList.telefono = txtTelefono.Text;
           
 
-            clsDUserList.SaveDatosUser(userList);
+            //clsDUserList.SaveDatosUser(userList);
 
             Carga();
             clear();
@@ -79,15 +79,15 @@ namespace ProyectoFinal.VISTA
 
         private void btnModificarDocente_Click(object sender, EventArgs e)
         {
-            ClsDDocentes clsDUserList = new ClsDDocentes();
-            Docente userList = new Docente();
-            userList.nombre = txtNombreDocente.Text;
-            userList.dirreccion = txtDireccion.Text;
-            userList.nacimiento = dtpFecha.Value;
-            userList.dui = txtDui.Text;
-            userList.email = txtEmail.Text;
+            //ClsDDocentes clsDUserList = new ClsDDocentes();
+            //Docente userList = new Docente();
+            //userList.nombre = txtNombreDocente.Text;
+            //userList.dirreccion = txtDireccion.Text;
+            //userList.nacimiento = dtpFecha.Value;
+            //userList.dui = txtDui.Text;
+            //userList.email = txtEmail.Text;
 
-            clsDUserList.SaveDatosUser(userList);
+            //clsDUserList.SaveDatosUser(userList);
 
             Carga();
             clear();
@@ -95,8 +95,8 @@ namespace ProyectoFinal.VISTA
 
         private void btnEliminarDocente_Click(object sender, EventArgs e)
         {
-            ClsDDocentes user = new ClsDDocentes();
-            user.deleteDocente(Convert.ToInt32(txtIdDocente.Text));
+            //ClsDDocentes user = new ClsDDocentes();
+            //user.deleteDocente(Convert.ToInt32(txtIdDocente.Text));
 
             Carga();
             clear();

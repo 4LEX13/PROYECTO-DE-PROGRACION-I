@@ -25,6 +25,10 @@ namespace ProyectoFinal.MODEL
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<Alumno> Alumno { get; set; }
+        public virtual DbSet<Direccion> Direccion { get; set; }
+        public virtual DbSet<Encargado> Encargado { get; set; }
+        public virtual DbSet<Maestro> Maestro { get; set; }
         public virtual DbSet<Usuario> Usuario { get; set; }
     }
 }

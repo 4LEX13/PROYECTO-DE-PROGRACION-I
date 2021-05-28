@@ -8,7 +8,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ProyectoFinal.MODEL;
 namespace ProyectoFinal.VISTA
 {
     public partial class FrmLogin : Form
