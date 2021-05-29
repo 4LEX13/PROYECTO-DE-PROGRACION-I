@@ -10,103 +10,109 @@ namespace ProyectoFinal.DAO
     {
 
 
-        //    public List<Alumnos> cargarDatoUserList()
+        public List<Alumno> cargarAlumno ()
 
-        //    {
-        //        List<Alumnos> Lista;
+        {
+            List<Alumno> Lista;
 
-        //        using (GestorEstudiantesEntities db = new GestorEstudiantesEntities())
-        //        {
-        //            Lista = db.Alumnos.ToList();
-
-
-        //        }
-
-        //        return Lista;
-        //    }
+            using (AdministracionEscolarEntities db = new AdministracionEscolarEntities())
+            {
+                Lista = db.Alumno.ToList();
 
 
-        //    public void SaveDatosUser(Alumnos user)
-        //    {
-        //        try
-        //        {
-        //            using (GestorEstudiantesEntities db = new GestorEstudiantesEntities())
-        //            {
+            }
 
-        //                Alumnos userList = new Alumnos();
-
-        //                userList.nombre = user.nombre;
-        //                userList.Apellidos = user.Apellidos;
-        //                userList.dirreccion = user.dirreccion;
-        //                userList.representante = user.representante;
-        //                userList.nacimiento = user.nacimiento;
-        //                userList.contacto1 = user.contacto1;
-        //                userList.correo = user.correo;
-
-        //                db.Alumnos.Add(userList);
-        //                db.SaveChanges();
+            return Lista;
+        }
 
 
+        public void SaveAlumno(Alumno alumno)
+        {
+            try
+            {
+                using (AdministracionEscolarEntities db = new  AdministracionEscolarEntities())
+                {
 
-        //            }
+                    Alumno alumno1 = new Alumno();
 
-        //        }
-        //        catch (Exception ex)
-        //        {
+                    alumno1.nombre = alumno.nombre;
+                    alumno1.apellidoPaterno = alumno.apellidoPaterno;
+                    alumno1.apellidoMaterno = alumno.apellidoMaterno;
+                    alumno1.genero = alumno.genero;
+                    alumno1.fechaNacimiento = alumno.fechaNacimiento;
+                    alumno1.direccionFk = alumno.direccionFk;
+                    alumno1.contacto = alumno.contacto;
+                    alumno1.correo = alumno.correo;
+                    alumno1.activo = alumno.activo;
+                    alumno1.fechaRegistro = alumno.fechaRegistro;
 
-        //        }
-        //    }
-
-        //    public void deleteAlumno(int ID)
-        //    {
-        //        try
-        //        {
-        //            using (GestorEstudiantesEntities db = new GestorEstudiantesEntities())
-        //            {
-        //                int eliminar = Convert.ToInt32(ID);
-        //                Alumnos userList = db.Alumnos.Where(x => x.alumnoid == eliminar).Select(x => x).FirstOrDefault();
-
-
-        //                db.Alumnos.Remove(userList);
-        //                db.SaveChanges();
-
-
-        //            }
-        //        }
-        //        catch (Exception ex)
-        //        {
-
-        //        }
-        //    }
-        //    public void ModificarAlunmos(Alumnos user)
-        //    {
-        //        try
-        //        {
+                    db.Alumno.Add(alumno1);
+                    db.SaveChanges();
 
 
-        //            using (GestorEstudiantesEntities db = new GestorEstudiantesEntities())
-        //            {
 
-        //                int update = Convert.ToInt32(user.alumnoid);
-        //                Alumnos userList = db.Alumnos.Where(x => x.alumnoid == update).Select(x => x).FirstOrDefault();
+                }
+
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
+
+        public void deleteAlumno(int ID)
+        {
+            try
+            {
+                using (AdministracionEscolarEntities db = new AdministracionEscolarEntities ())
+                {
+                    int eliminar = Convert.ToInt32(ID);
+                    Alumno alumnoList = db.Alumno.Where(x => x.alumnoId == eliminar).Select(x => x).FirstOrDefault();
 
 
-        //                userList.nombre = user.nombre;
-        //                userList.Apellidos = user.Apellidos;
-        //                userList.dirreccion = user.dirreccion;
-        //                userList.representante= user.representante;
-        //                userList.nacimiento = user.nacimiento;
-        //                userList.contacto1 = user.contacto1;
-        //                userList.correo = user.correo;
-        //                db.SaveChanges();
-        //            }
+                    db.Alumno.Remove(alumnoList);
+                    db.SaveChanges();
 
-        //        }
-        //        catch (Exception ex)
-        //        {
 
-        //        }
-        //    }
+                }
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
+        public void ModificarAlunmos(Alumno alumno)
+        {
+            try
+            {
+
+
+                using (AdministracionEscolarEntities db = new AdministracionEscolarEntities())
+                {
+
+                    int update = Convert.ToInt32(alumno.alumnoId); 
+                    Alumno alumno1 = db.Alumno.Where(x => x.alumnoId == update).Select(x => x).FirstOrDefault();
+
+
+                    alumno1.nombre = alumno.nombre;
+                    alumno1.apellidoPaterno = alumno.apellidoPaterno;
+                    alumno1.apellidoMaterno = alumno.apellidoMaterno;
+                    alumno1.genero = alumno.genero;
+                    alumno1.fechaNacimiento = alumno.fechaNacimiento;
+                    alumno1.direccionFk = alumno.direccionFk;
+                    alumno1.contacto = alumno.contacto;
+                    alumno1.correo = alumno.correo;
+                    alumno1.activo = alumno.activo;
+                    alumno1.fechaRegistro = alumno.fechaRegistro;
+                    db.SaveChanges();
+                }
+
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
 
 
     }
