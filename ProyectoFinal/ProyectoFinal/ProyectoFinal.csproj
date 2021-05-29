@@ -58,7 +58,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DAO\ClsDEncargado.cs" />
     <Compile Include="DAO\ClsDAlumnos.cs" />
     <Compile Include="DAO\ClsDDireccion.cs" />
     <Compile Include="DAO\ClsDMaestro.cs" />

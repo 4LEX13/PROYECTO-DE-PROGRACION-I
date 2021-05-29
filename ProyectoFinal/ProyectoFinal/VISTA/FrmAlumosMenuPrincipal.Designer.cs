@@ -309,7 +309,7 @@ namespace ProyectoFinal.VISTA
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(434, 270);
+            this.label2.Location = new System.Drawing.Point(359, 268);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(82, 13);
             this.label2.TabIndex = 8;

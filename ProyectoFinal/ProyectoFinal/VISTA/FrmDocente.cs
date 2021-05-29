@@ -19,7 +19,29 @@ namespace ProyectoFinal.VISTA
             InitializeComponent();
             Carga();
             clear();
+            ultimoDireccion();
         }
+
+
+        void ultimoDireccion()
+        {
+
+            var consultarultimoDireccion = new ClsDDireccion();
+            int lista = 0;
+
+            foreach (var list in consultarultimoDireccion.cargarDireccion())
+            {
+                lista = list.direccionId;
+            }
+
+
+
+            lista++;
+            txtIdDireccion.Text = lista.ToString();
+
+        }
+
+
 
         void Carga()
         {
@@ -29,7 +51,7 @@ namespace ProyectoFinal.VISTA
             {
                 var Lista = (from maestro in bd.Maestro
                                 from direccion in bd.Direccion
-                                where maestro.direccionFk == direccion.direccionId && maestro.nombre.Contains(txtFiltro.Text)
+                                where maestro.direccionFk == direccion.direccionId && (maestro.nombre + maestro.apellido).Contains(txtFiltro.Text)
                              select new
                                 {
                                    maestro.maestroId, maestro.nombre,maestro.apellido,maestro.identificacion,maestro.genero,maestro.fechaNacimiento,direccion.direccionId,
@@ -124,12 +146,14 @@ namespace ProyectoFinal.VISTA
             maestroUpdate.identificacion = txtDui.Text;
             maestroUpdate.genero = txtGenero.Text;
             maestroUpdate.fechaNacimiento = dtpFecha.Value;
+            maestroUpdate.direccionFk = Convert.ToInt32 (txtIdDireccion.Text);
             maestroUpdate.correo = txtEmail.Text;
             maestroUpdate.contacto = txtTelefono.Text;
             maestroUpdate.activo = rbSi.Checked == true ? 1 : 2;
+            //maestroUpdate.fechaRegistro = DateTime.Now(fechaRegistro);
 
             direccion.ModificarDireccion(direccionRegistrar);
-            clsDUserList.SaveDatosUser(maestroUpdate);
+            clsDUserList.ModificarDocente(maestroUpdate);
 
             Carga();
             clear();
@@ -145,7 +169,7 @@ namespace ProyectoFinal.VISTA
             clear();
         }
 
-
+        public string fechaRegistro;
         private void dgvDocente_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             String idDocente = dgvDocente.CurrentRow.Cells[0].Value.ToString();
@@ -161,6 +185,7 @@ namespace ProyectoFinal.VISTA
             String telefono = dgvDocente.CurrentRow.Cells[10].Value.ToString();
             String email = dgvDocente.CurrentRow.Cells[11].Value.ToString();
             string activo = dgvDocente.CurrentRow.Cells[12].Value.ToString();
+            fechaRegistro = dgvDocente.CurrentRow.Cells[13].Value.ToString();
            
 
 
@@ -192,7 +217,9 @@ namespace ProyectoFinal.VISTA
             }
         }
 
-
-
+        private void txtFiltro_TextChanged(object sender, EventArgs e)
+        {
+            Carga();
+        }
     }
 }

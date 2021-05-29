@@ -19,6 +19,9 @@ namespace ProyectoFinal.VISTA
             Carga();
             clear();
         }
+
+
+
         void clear()
         {
 
