@@ -68,7 +68,7 @@ namespace ProyectoFinal.VISTA
             this.panelformularios.Location = new System.Drawing.Point(0, 0);
             this.panelformularios.Margin = new System.Windows.Forms.Padding(2);
             this.panelformularios.Name = "panelformularios";
-            this.panelformularios.Size = new System.Drawing.Size(1181, 667);
+            this.panelformularios.Size = new System.Drawing.Size(1321, 691);
             this.panelformularios.TabIndex = 3;
             // 
             // panelContenedor
@@ -80,7 +80,7 @@ namespace ProyectoFinal.VISTA
             this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContenedor.Location = new System.Drawing.Point(0, 0);
             this.panelContenedor.Name = "panelContenedor";
-            this.panelContenedor.Size = new System.Drawing.Size(1181, 667);
+            this.panelContenedor.Size = new System.Drawing.Size(1321, 691);
             this.panelContenedor.TabIndex = 0;
             // 
             // panelFormula
@@ -90,7 +90,7 @@ namespace ProyectoFinal.VISTA
             this.panelFormula.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelFormula.Location = new System.Drawing.Point(204, 40);
             this.panelFormula.Name = "panelFormula";
-            this.panelFormula.Size = new System.Drawing.Size(977, 627);
+            this.panelFormula.Size = new System.Drawing.Size(1117, 651);
             this.panelFormula.TabIndex = 2;
             // 
             // pictureBox2
@@ -101,7 +101,7 @@ namespace ProyectoFinal.VISTA
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(14, -40);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(938, 736);
+            this.pictureBox2.Size = new System.Drawing.Size(1078, 760);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
@@ -118,7 +118,7 @@ namespace ProyectoFinal.VISTA
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 40);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(204, 627);
+            this.panelMenu.Size = new System.Drawing.Size(204, 651);
             this.panelMenu.TabIndex = 1;
             // 
             // btnCerrarSesion
@@ -130,7 +130,7 @@ namespace ProyectoFinal.VISTA
             this.btnCerrarSesion.ForeColor = System.Drawing.Color.White;
             this.btnCerrarSesion.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrarSesion.Image")));
             this.btnCerrarSesion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCerrarSesion.Location = new System.Drawing.Point(3, 580);
+            this.btnCerrarSesion.Location = new System.Drawing.Point(3, 604);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
             this.btnCerrarSesion.Size = new System.Drawing.Size(178, 44);
             this.btnCerrarSesion.TabIndex = 5;
@@ -159,7 +159,7 @@ namespace ProyectoFinal.VISTA
             this.btnPrincipal.ForeColor = System.Drawing.Color.White;
             this.btnPrincipal.Image = ((System.Drawing.Image)(resources.GetObject("btnPrincipal.Image")));
             this.btnPrincipal.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPrincipal.Location = new System.Drawing.Point(9, 211);
+            this.btnPrincipal.Location = new System.Drawing.Point(9, 223);
             this.btnPrincipal.Name = "btnPrincipal";
             this.btnPrincipal.Size = new System.Drawing.Size(195, 43);
             this.btnPrincipal.TabIndex = 3;
@@ -179,7 +179,7 @@ namespace ProyectoFinal.VISTA
             this.btnSetting.ForeColor = System.Drawing.Color.White;
             this.btnSetting.Image = ((System.Drawing.Image)(resources.GetObject("btnSetting.Image")));
             this.btnSetting.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSetting.Location = new System.Drawing.Point(6, 530);
+            this.btnSetting.Location = new System.Drawing.Point(6, 542);
             this.btnSetting.Name = "btnSetting";
             this.btnSetting.Size = new System.Drawing.Size(192, 44);
             this.btnSetting.TabIndex = 1;
@@ -199,7 +199,7 @@ namespace ProyectoFinal.VISTA
             this.btnHorarios.ForeColor = System.Drawing.Color.White;
             this.btnHorarios.Image = ((System.Drawing.Image)(resources.GetObject("btnHorarios.Image")));
             this.btnHorarios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHorarios.Location = new System.Drawing.Point(8, 304);
+            this.btnHorarios.Location = new System.Drawing.Point(8, 316);
             this.btnHorarios.Name = "btnHorarios";
             this.btnHorarios.Size = new System.Drawing.Size(192, 44);
             this.btnHorarios.TabIndex = 1;
@@ -219,7 +219,7 @@ namespace ProyectoFinal.VISTA
             this.btnNotas.ForeColor = System.Drawing.Color.White;
             this.btnNotas.Image = ((System.Drawing.Image)(resources.GetObject("btnNotas.Image")));
             this.btnNotas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNotas.Location = new System.Drawing.Point(6, 260);
+            this.btnNotas.Location = new System.Drawing.Point(6, 272);
             this.btnNotas.Name = "btnNotas";
             this.btnNotas.Size = new System.Drawing.Size(186, 38);
             this.btnNotas.TabIndex = 0;
@@ -239,7 +239,7 @@ namespace ProyectoFinal.VISTA
             this.panelTitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTitulo.Location = new System.Drawing.Point(0, 0);
             this.panelTitulo.Name = "panelTitulo";
-            this.panelTitulo.Size = new System.Drawing.Size(1181, 40);
+            this.panelTitulo.Size = new System.Drawing.Size(1321, 40);
             this.panelTitulo.TabIndex = 0;
             this.panelTitulo.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelTitulo_MouseMove);
             // 
@@ -259,7 +259,7 @@ namespace ProyectoFinal.VISTA
             this.BtnRestaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnRestaurar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnRestaurar.Image = ((System.Drawing.Image)(resources.GetObject("BtnRestaurar.Image")));
-            this.BtnRestaurar.Location = new System.Drawing.Point(1140, 12);
+            this.BtnRestaurar.Location = new System.Drawing.Point(1280, 12);
             this.BtnRestaurar.Name = "BtnRestaurar";
             this.BtnRestaurar.Size = new System.Drawing.Size(16, 16);
             this.BtnRestaurar.TabIndex = 0;
@@ -272,7 +272,7 @@ namespace ProyectoFinal.VISTA
             this.BtnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("BtnCerrar.Image")));
-            this.BtnCerrar.Location = new System.Drawing.Point(1162, 12);
+            this.BtnCerrar.Location = new System.Drawing.Point(1302, 12);
             this.BtnCerrar.Name = "BtnCerrar";
             this.BtnCerrar.Size = new System.Drawing.Size(16, 16);
             this.BtnCerrar.TabIndex = 0;
@@ -284,7 +284,7 @@ namespace ProyectoFinal.VISTA
             this.BtnMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("BtnMinimizar.Image")));
-            this.BtnMinimizar.Location = new System.Drawing.Point(1118, 12);
+            this.BtnMinimizar.Location = new System.Drawing.Point(1258, 12);
             this.BtnMinimizar.Name = "BtnMinimizar";
             this.BtnMinimizar.Size = new System.Drawing.Size(16, 16);
             this.BtnMinimizar.TabIndex = 0;
@@ -296,7 +296,7 @@ namespace ProyectoFinal.VISTA
             this.BtnMaximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnMaximizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnMaximizar.Image = ((System.Drawing.Image)(resources.GetObject("BtnMaximizar.Image")));
-            this.BtnMaximizar.Location = new System.Drawing.Point(1140, 12);
+            this.BtnMaximizar.Location = new System.Drawing.Point(1280, 12);
             this.BtnMaximizar.Name = "BtnMaximizar";
             this.BtnMaximizar.Size = new System.Drawing.Size(16, 16);
             this.BtnMaximizar.TabIndex = 0;
@@ -307,12 +307,13 @@ namespace ProyectoFinal.VISTA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1181, 667);
+            this.ClientSize = new System.Drawing.Size(1321, 691);
             this.Controls.Add(this.panelformularios);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmMenu";
+            this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
             this.panelformularios.ResumeLayout(false);
             this.panelContenedor.ResumeLayout(false);
             this.panelFormula.ResumeLayout(false);

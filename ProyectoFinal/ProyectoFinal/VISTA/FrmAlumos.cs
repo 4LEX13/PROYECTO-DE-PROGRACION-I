@@ -11,9 +11,9 @@ using ProyectoFinal.MODEL;
 using ProyectoFinal.DAO;
 namespace ProyectoFinal.VISTA
 {
-    public partial class FrmAlumosMenuPrincipal : Form
+    public partial class FrmAlumos : Form
     {
-        public FrmAlumosMenuPrincipal()
+        public FrmAlumos()
         {
             InitializeComponent();
             Carga();
@@ -27,9 +27,9 @@ namespace ProyectoFinal.VISTA
 
             txtIdAlumos.Clear();
             txtNombreAlumno.Clear();
-            txtApellidoAlumno.Clear();
-            txtDireccion.Clear();
-            txtRepresentante.Clear();
+            txtApellidoPaterno.Clear();
+            txtApellidoMaterno.Clear();
+            txtGenero.Clear();
             txtContacto.Clear();
             txtCorreo.Clear();
            dtpFecha.Value = DateTime.Now.Date;
@@ -80,38 +80,38 @@ namespace ProyectoFinal.VISTA
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            ClsDAlumnos clsDUserList = new ClsDAlumnos();
-            Alumno userList = new Alumno();
-            userList.nombre = txtNombreAlumno.Text;
-            userList.Apellido = txtApellidoAlumno.Text;
-            userList.dirreccion = txtDireccion.Text;
-            userList.representante = txtRepresentante.Text;
-            userList.nacimiento = dtpFecha.Value;
-            userList.contacto1 = txtContacto.Text;
-            userList.correo = txtCorreo.Text;
+            //ClsDAlumnos clsDUserList = new ClsDAlumnos();
+            //Alumno userList = new Alumno();
+            //userList.nombre = txtNombreAlumno.Text;
+            //userList.Apellido = txtApellidoAlumno.Text;
+            //userList.dirreccion = txtDireccion.Text;
+            //userList.representante = txtRepresentante.Text;
+            //userList.nacimiento = dtpFecha.Value;
+            //userList.contacto1 = txtContacto.Text;
+            //userList.correo = txtCorreo.Text;
 
-            clsDUserList.SaveDatosUser(userList);
+            //clsDUserList.SaveDatosUser(userList);
 
-            Carga();
-            clear();
+            //Carga();
+            //clear();
         }
 
         private void btnRegistarAlumnos_Click_1(object sender, EventArgs e)
         {
-            ClsDAlumnos clsDUserList = new ClsDAlumnos();
-            Alumno userList = new Alumno();
-            userList.nombre = txtNombreAlumno.Text;
-            userList.Apellidos = txtApellidoAlumno.Text;
-            userList.dirreccion = txtDireccion.Text;
-            userList.representante = txtRepresentante.Text;
-            userList.nacimiento = dtpFecha.Value;
-            userList.contacto1 = txtContacto.Text;
-            userList.correo = txtCorreo.Text;
+            //ClsDAlumnos clsDUserList = new ClsDAlumnos();
+            //Alumno userList = new Alumno();
+            //userList.nombre = txtNombreAlumno.Text;
+            //userList.Apellidos = txtApellidoAlumno.Text;
+            //userList.dirreccion = txtDireccion.Text;
+            //userList.representante = txtRepresentante.Text;
+            //userList.nacimiento = dtpFecha.Value;
+            //userList.contacto1 = txtContacto.Text;
+            //userList.correo = txtCorreo.Text;
 
-            clsDUserList.SaveDatosUser(userList);
+            //clsDUserList.SaveDatosUser(userList);
 
-            Carga();
-            clear();
+            //Carga();
+            //clear();
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -137,9 +137,9 @@ namespace ProyectoFinal.VISTA
 
             txtIdAlumos.Text = idAlumnos;
             txtNombreAlumno.Text = nombre;
-            txtApellidoAlumno.Text = Apellido;
-            txtDireccion.Text = direccion;
-            txtRepresentante.Text = representante;
+            txtApellidoPaterno.Text = Apellido;
+            txtApellidoMaterno.Text = direccion;
+            txtGenero.Text = representante;
             dtpFecha.Value = default;
             txtContacto.Text = contacto;
             txtCorreo.Text = correo;
@@ -161,27 +161,12 @@ namespace ProyectoFinal.VISTA
 
             txtIdAlumos.Text = idAlumnos;
             txtNombreAlumno.Text = nombre;
-            txtApellidoAlumno.Text = Apellido;
-            txtDireccion.Text = direccion;
-            txtRepresentante.Text = representante;
+            txtApellidoPaterno.Text = Apellido;
+            txtApellidoMaterno.Text = direccion;
+            txtGenero.Text = representante;
             txtContacto.Text = contacto;
             txtCorreo.Text = correo;
 
-
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void btnBuscarA_Click(object sender, EventArgs e)
-        {
 
         }
     }

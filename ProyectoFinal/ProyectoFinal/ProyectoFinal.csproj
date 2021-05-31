@@ -99,11 +99,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="VISTA\FrmAlumosMenuPrincipal.cs">
+    <Compile Include="VISTA\FrmAlumos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="VISTA\FrmAlumosMenuPrincipal.Designer.cs">
-      <DependentUpon>FrmAlumosMenuPrincipal.cs</DependentUpon>
+    <Compile Include="VISTA\FrmAlumos.Designer.cs">
+      <DependentUpon>FrmAlumos.cs</DependentUpon>
     </Compile>
     <Compile Include="VISTA\FrmAulas.cs">
       <SubType>Form</SubType>
@@ -172,8 +172,8 @@
     <EmbeddedResource Include="VISTA\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="VISTA\FrmAlumosMenuPrincipal.resx">
-      <DependentUpon>FrmAlumosMenuPrincipal.cs</DependentUpon>
+    <EmbeddedResource Include="VISTA\FrmAlumos.resx">
+      <DependentUpon>FrmAlumos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VISTA\FrmAulas.resx">
       <DependentUpon>FrmAulas.cs</DependentUpon>

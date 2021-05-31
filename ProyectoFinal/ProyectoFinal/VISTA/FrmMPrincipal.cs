@@ -19,7 +19,7 @@ namespace ProyectoFinal.VISTA
 
         private void btmAlumos_Click(object sender, EventArgs e)
         {
-            FrmAlumosMenuPrincipal alumno = new FrmAlumosMenuPrincipal();
+            FrmAlumos alumno = new FrmAlumos();
             alumno.Show();
         }
 
