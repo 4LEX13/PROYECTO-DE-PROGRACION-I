@@ -40,28 +40,17 @@ namespace ProyectoFinal.VISTA
             this.txtRecidencia = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dgvDocente = new System.Windows.Forms.DataGridView();
-            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnEliminarDocente = new System.Windows.Forms.Button();
             this.btnModificarDocente = new System.Windows.Forms.Button();
             this.btnRegistarDocente = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dtpFechaDeRegistro = new System.Windows.Forms.DateTimePicker();
+            this.label14 = new System.Windows.Forms.Label();
+            this.cbxGenero = new System.Windows.Forms.ComboBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.rbSi = new System.Windows.Forms.RadioButton();
             this.rbNo = new System.Windows.Forms.RadioButton();
-            this.txtIdDireccion = new System.Windows.Forms.TextBox();
+            this.txtFkDireccion = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.txtIdDocente = new System.Windows.Forms.TextBox();
@@ -78,7 +67,21 @@ namespace ProyectoFinal.VISTA
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.cbxGenero = new System.Windows.Forms.ComboBox();
+            this.txtIdDireccion = new System.Windows.Forms.TextBox();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDocente)).BeginInit();
@@ -117,6 +120,7 @@ namespace ProyectoFinal.VISTA
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.txtIdDireccion);
             this.groupBox2.Controls.Add(this.label12);
             this.groupBox2.Controls.Add(this.label11);
             this.groupBox2.Controls.Add(this.label10);
@@ -228,6 +232,329 @@ namespace ProyectoFinal.VISTA
             this.dgvDocente.TabIndex = 22;
             this.dgvDocente.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDocente_CellClick);
             // 
+            // btnEliminarDocente
+            // 
+            this.btnEliminarDocente.FlatAppearance.BorderSize = 2;
+            this.btnEliminarDocente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminarDocente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminarDocente.ForeColor = System.Drawing.Color.White;
+            this.btnEliminarDocente.Location = new System.Drawing.Point(673, 268);
+            this.btnEliminarDocente.Name = "btnEliminarDocente";
+            this.btnEliminarDocente.Size = new System.Drawing.Size(105, 30);
+            this.btnEliminarDocente.TabIndex = 21;
+            this.btnEliminarDocente.Text = "Eliminar";
+            this.btnEliminarDocente.UseVisualStyleBackColor = true;
+            this.btnEliminarDocente.Click += new System.EventHandler(this.btnEliminarDocente_Click);
+            // 
+            // btnModificarDocente
+            // 
+            this.btnModificarDocente.FlatAppearance.BorderSize = 2;
+            this.btnModificarDocente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModificarDocente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificarDocente.ForeColor = System.Drawing.Color.White;
+            this.btnModificarDocente.Location = new System.Drawing.Point(548, 268);
+            this.btnModificarDocente.Name = "btnModificarDocente";
+            this.btnModificarDocente.Size = new System.Drawing.Size(105, 30);
+            this.btnModificarDocente.TabIndex = 20;
+            this.btnModificarDocente.Text = "Modificar";
+            this.btnModificarDocente.UseVisualStyleBackColor = true;
+            this.btnModificarDocente.Click += new System.EventHandler(this.btnModificarDocente_Click);
+            // 
+            // btnRegistarDocente
+            // 
+            this.btnRegistarDocente.FlatAppearance.BorderSize = 2;
+            this.btnRegistarDocente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegistarDocente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegistarDocente.ForeColor = System.Drawing.Color.White;
+            this.btnRegistarDocente.Location = new System.Drawing.Point(416, 268);
+            this.btnRegistarDocente.Name = "btnRegistarDocente";
+            this.btnRegistarDocente.Size = new System.Drawing.Size(105, 30);
+            this.btnRegistarDocente.TabIndex = 19;
+            this.btnRegistarDocente.Text = "Registrar";
+            this.btnRegistarDocente.UseVisualStyleBackColor = true;
+            this.btnRegistarDocente.Click += new System.EventHandler(this.btnRegistarDocente_Click);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.dtpFechaDeRegistro);
+            this.groupBox1.Controls.Add(this.label14);
+            this.groupBox1.Controls.Add(this.cbxGenero);
+            this.groupBox1.Controls.Add(this.groupBox3);
+            this.groupBox1.Controls.Add(this.txtFkDireccion);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.label13);
+            this.groupBox1.Controls.Add(this.txtIdDocente);
+            this.groupBox1.Controls.Add(this.dtpFecha);
+            this.groupBox1.Controls.Add(this.txtTelefono);
+            this.groupBox1.Controls.Add(this.label9);
+            this.groupBox1.Controls.Add(this.label8);
+            this.groupBox1.Controls.Add(this.txtEmail);
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.txtDui);
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.txtNombreDocente);
+            this.groupBox1.Controls.Add(this.txtApellidoDocente);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.ForeColor = System.Drawing.Color.White;
+            this.groupBox1.Location = new System.Drawing.Point(408, 42);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(792, 218);
+            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabStop = false;
+            // 
+            // dtpFechaDeRegistro
+            // 
+            this.dtpFechaDeRegistro.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtpFechaDeRegistro.Enabled = false;
+            this.dtpFechaDeRegistro.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpFechaDeRegistro.Location = new System.Drawing.Point(536, 130);
+            this.dtpFechaDeRegistro.Name = "dtpFechaDeRegistro";
+            this.dtpFechaDeRegistro.Size = new System.Drawing.Size(207, 20);
+            this.dtpFechaDeRegistro.TabIndex = 53;
+            // 
+            // label14
+            // 
+            this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.White;
+            this.label14.Location = new System.Drawing.Point(459, 131);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(69, 20);
+            this.label14.TabIndex = 52;
+            this.label14.Text = "Registro";
+            // 
+            // cbxGenero
+            // 
+            this.cbxGenero.FormattingEnabled = true;
+            this.cbxGenero.Location = new System.Drawing.Point(88, 144);
+            this.cbxGenero.Name = "cbxGenero";
+            this.cbxGenero.Size = new System.Drawing.Size(208, 21);
+            this.cbxGenero.TabIndex = 50;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox3.Controls.Add(this.rbSi);
+            this.groupBox3.Controls.Add(this.rbNo);
+            this.groupBox3.Location = new System.Drawing.Point(554, 157);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(131, 55);
+            this.groupBox3.TabIndex = 27;
+            this.groupBox3.TabStop = false;
+            // 
+            // rbSi
+            // 
+            this.rbSi.AutoSize = true;
+            this.rbSi.ForeColor = System.Drawing.Color.White;
+            this.rbSi.Location = new System.Drawing.Point(14, 19);
+            this.rbSi.Name = "rbSi";
+            this.rbSi.Size = new System.Drawing.Size(34, 17);
+            this.rbSi.TabIndex = 46;
+            this.rbSi.TabStop = true;
+            this.rbSi.Text = "Si";
+            this.rbSi.UseVisualStyleBackColor = true;
+            // 
+            // rbNo
+            // 
+            this.rbNo.AutoSize = true;
+            this.rbNo.ForeColor = System.Drawing.Color.White;
+            this.rbNo.Location = new System.Drawing.Point(90, 19);
+            this.rbNo.Name = "rbNo";
+            this.rbNo.Size = new System.Drawing.Size(39, 17);
+            this.rbNo.TabIndex = 47;
+            this.rbNo.TabStop = true;
+            this.rbNo.Text = "No";
+            this.rbNo.UseVisualStyleBackColor = true;
+            // 
+            // txtFkDireccion
+            // 
+            this.txtFkDireccion.Location = new System.Drawing.Point(28, 9);
+            this.txtFkDireccion.Name = "txtFkDireccion";
+            this.txtFkDireccion.Size = new System.Drawing.Size(34, 20);
+            this.txtFkDireccion.TabIndex = 49;
+            this.txtFkDireccion.Visible = false;
+            // 
+            // label5
+            // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(482, 176);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(52, 20);
+            this.label5.TabIndex = 48;
+            this.label5.Text = "Activo";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.White;
+            this.label13.Location = new System.Drawing.Point(19, 142);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(63, 20);
+            this.label13.TabIndex = 45;
+            this.label13.Text = "Genero";
+            // 
+            // txtIdDocente
+            // 
+            this.txtIdDocente.Location = new System.Drawing.Point(761, 19);
+            this.txtIdDocente.Name = "txtIdDocente";
+            this.txtIdDocente.Size = new System.Drawing.Size(31, 20);
+            this.txtIdDocente.TabIndex = 43;
+            this.txtIdDocente.Visible = false;
+            // 
+            // dtpFecha
+            // 
+            this.dtpFecha.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpFecha.Location = new System.Drawing.Point(536, 26);
+            this.dtpFecha.Name = "dtpFecha";
+            this.dtpFecha.Size = new System.Drawing.Size(207, 20);
+            this.dtpFecha.TabIndex = 42;
+            // 
+            // txtTelefono
+            // 
+            this.txtTelefono.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtTelefono.Location = new System.Drawing.Point(535, 56);
+            this.txtTelefono.Name = "txtTelefono";
+            this.txtTelefono.Size = new System.Drawing.Size(208, 20);
+            this.txtTelefono.TabIndex = 40;
+            // 
+            // label9
+            // 
+            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(463, 55);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(71, 20);
+            this.label9.TabIndex = 41;
+            this.label9.Text = "Telefono";
+            // 
+            // label8
+            // 
+            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(371, 27);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(157, 20);
+            this.label8.TabIndex = 39;
+            this.label8.Text = "Fecha de nacimiento";
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtEmail.Location = new System.Drawing.Point(535, 91);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(208, 20);
+            this.txtEmail.TabIndex = 37;
+            // 
+            // label7
+            // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(480, 91);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(48, 20);
+            this.label7.TabIndex = 38;
+            this.label7.Text = "Email";
+            // 
+            // txtDui
+            // 
+            this.txtDui.Location = new System.Drawing.Point(88, 105);
+            this.txtDui.Name = "txtDui";
+            this.txtDui.Size = new System.Drawing.Size(208, 20);
+            this.txtDui.TabIndex = 35;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(49, 107);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(33, 20);
+            this.label6.TabIndex = 36;
+            this.label6.Text = "Dui";
+            // 
+            // txtNombreDocente
+            // 
+            this.txtNombreDocente.Location = new System.Drawing.Point(88, 38);
+            this.txtNombreDocente.Name = "txtNombreDocente";
+            this.txtNombreDocente.Size = new System.Drawing.Size(208, 20);
+            this.txtNombreDocente.TabIndex = 29;
+            // 
+            // txtApellidoDocente
+            // 
+            this.txtApellidoDocente.Location = new System.Drawing.Point(88, 70);
+            this.txtApellidoDocente.Name = "txtApellidoDocente";
+            this.txtApellidoDocente.Size = new System.Drawing.Size(208, 20);
+            this.txtApellidoDocente.TabIndex = 30;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(24, 36);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(65, 20);
+            this.label4.TabIndex = 31;
+            this.label4.Text = "Nombre";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(19, 69);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(65, 20);
+            this.label3.TabIndex = 32;
+            this.label3.Text = "Apellido";
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(446, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(258, 25);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "REGISTRAR DOCENTE";
+            // 
+            // txtIdDireccion
+            // 
+            this.txtIdDireccion.Location = new System.Drawing.Point(315, 178);
+            this.txtIdDireccion.Name = "txtIdDireccion";
+            this.txtIdDireccion.Size = new System.Drawing.Size(34, 20);
+            this.txtIdDireccion.TabIndex = 54;
+            this.txtIdDireccion.Visible = false;
+            // 
             // Column9
             // 
             this.Column9.HeaderText = "Id";
@@ -314,295 +641,6 @@ namespace ProyectoFinal.VISTA
             this.Column8.Name = "Column8";
             this.Column8.ReadOnly = true;
             // 
-            // btnEliminarDocente
-            // 
-            this.btnEliminarDocente.FlatAppearance.BorderSize = 2;
-            this.btnEliminarDocente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminarDocente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminarDocente.ForeColor = System.Drawing.Color.White;
-            this.btnEliminarDocente.Location = new System.Drawing.Point(673, 268);
-            this.btnEliminarDocente.Name = "btnEliminarDocente";
-            this.btnEliminarDocente.Size = new System.Drawing.Size(105, 30);
-            this.btnEliminarDocente.TabIndex = 21;
-            this.btnEliminarDocente.Text = "Eliminar";
-            this.btnEliminarDocente.UseVisualStyleBackColor = true;
-            this.btnEliminarDocente.Click += new System.EventHandler(this.btnEliminarDocente_Click);
-            // 
-            // btnModificarDocente
-            // 
-            this.btnModificarDocente.FlatAppearance.BorderSize = 2;
-            this.btnModificarDocente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnModificarDocente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificarDocente.ForeColor = System.Drawing.Color.White;
-            this.btnModificarDocente.Location = new System.Drawing.Point(548, 268);
-            this.btnModificarDocente.Name = "btnModificarDocente";
-            this.btnModificarDocente.Size = new System.Drawing.Size(105, 30);
-            this.btnModificarDocente.TabIndex = 20;
-            this.btnModificarDocente.Text = "Modificar";
-            this.btnModificarDocente.UseVisualStyleBackColor = true;
-            this.btnModificarDocente.Click += new System.EventHandler(this.btnModificarDocente_Click);
-            // 
-            // btnRegistarDocente
-            // 
-            this.btnRegistarDocente.FlatAppearance.BorderSize = 2;
-            this.btnRegistarDocente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegistarDocente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistarDocente.ForeColor = System.Drawing.Color.White;
-            this.btnRegistarDocente.Location = new System.Drawing.Point(416, 268);
-            this.btnRegistarDocente.Name = "btnRegistarDocente";
-            this.btnRegistarDocente.Size = new System.Drawing.Size(105, 30);
-            this.btnRegistarDocente.TabIndex = 19;
-            this.btnRegistarDocente.Text = "Registrar";
-            this.btnRegistarDocente.UseVisualStyleBackColor = true;
-            this.btnRegistarDocente.Click += new System.EventHandler(this.btnRegistarDocente_Click);
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox1.Controls.Add(this.cbxGenero);
-            this.groupBox1.Controls.Add(this.groupBox3);
-            this.groupBox1.Controls.Add(this.txtIdDireccion);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.label13);
-            this.groupBox1.Controls.Add(this.txtIdDocente);
-            this.groupBox1.Controls.Add(this.dtpFecha);
-            this.groupBox1.Controls.Add(this.txtTelefono);
-            this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.txtEmail);
-            this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.txtDui);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.txtNombreDocente);
-            this.groupBox1.Controls.Add(this.txtApellidoDocente);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(408, 42);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(792, 218);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox3.Controls.Add(this.rbSi);
-            this.groupBox3.Controls.Add(this.rbNo);
-            this.groupBox3.Location = new System.Drawing.Point(535, 142);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(150, 55);
-            this.groupBox3.TabIndex = 27;
-            this.groupBox3.TabStop = false;
-            // 
-            // rbSi
-            // 
-            this.rbSi.AutoSize = true;
-            this.rbSi.ForeColor = System.Drawing.Color.White;
-            this.rbSi.Location = new System.Drawing.Point(14, 19);
-            this.rbSi.Name = "rbSi";
-            this.rbSi.Size = new System.Drawing.Size(34, 17);
-            this.rbSi.TabIndex = 46;
-            this.rbSi.TabStop = true;
-            this.rbSi.Text = "Si";
-            this.rbSi.UseVisualStyleBackColor = true;
-            // 
-            // rbNo
-            // 
-            this.rbNo.AutoSize = true;
-            this.rbNo.ForeColor = System.Drawing.Color.White;
-            this.rbNo.Location = new System.Drawing.Point(90, 19);
-            this.rbNo.Name = "rbNo";
-            this.rbNo.Size = new System.Drawing.Size(39, 17);
-            this.rbNo.TabIndex = 47;
-            this.rbNo.TabStop = true;
-            this.rbNo.Text = "No";
-            this.rbNo.UseVisualStyleBackColor = true;
-            // 
-            // txtIdDireccion
-            // 
-            this.txtIdDireccion.Location = new System.Drawing.Point(28, 9);
-            this.txtIdDireccion.Name = "txtIdDireccion";
-            this.txtIdDireccion.Size = new System.Drawing.Size(34, 20);
-            this.txtIdDireccion.TabIndex = 49;
-            this.txtIdDireccion.Visible = false;
-            // 
-            // label5
-            // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(466, 158);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(52, 20);
-            this.label5.TabIndex = 48;
-            this.label5.Text = "Activo";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(19, 142);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(63, 20);
-            this.label13.TabIndex = 45;
-            this.label13.Text = "Genero";
-            // 
-            // txtIdDocente
-            // 
-            this.txtIdDocente.Location = new System.Drawing.Point(708, 9);
-            this.txtIdDocente.Name = "txtIdDocente";
-            this.txtIdDocente.Size = new System.Drawing.Size(31, 20);
-            this.txtIdDocente.TabIndex = 43;
-            this.txtIdDocente.Visible = false;
-            // 
-            // dtpFecha
-            // 
-            this.dtpFecha.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFecha.Location = new System.Drawing.Point(535, 40);
-            this.dtpFecha.Name = "dtpFecha";
-            this.dtpFecha.Size = new System.Drawing.Size(208, 20);
-            this.dtpFecha.TabIndex = 42;
-            // 
-            // txtTelefono
-            // 
-            this.txtTelefono.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtTelefono.Location = new System.Drawing.Point(534, 70);
-            this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(208, 20);
-            this.txtTelefono.TabIndex = 40;
-            // 
-            // label9
-            // 
-            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(462, 69);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(71, 20);
-            this.label9.TabIndex = 41;
-            this.label9.Text = "Telefono";
-            // 
-            // label8
-            // 
-            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(370, 41);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(157, 20);
-            this.label8.TabIndex = 39;
-            this.label8.Text = "Fecha de nacimiento";
-            // 
-            // txtEmail
-            // 
-            this.txtEmail.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtEmail.Location = new System.Drawing.Point(534, 105);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(208, 20);
-            this.txtEmail.TabIndex = 37;
-            // 
-            // label7
-            // 
-            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(479, 105);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(48, 20);
-            this.label7.TabIndex = 38;
-            this.label7.Text = "Email";
-            // 
-            // txtDui
-            // 
-            this.txtDui.Location = new System.Drawing.Point(88, 105);
-            this.txtDui.Name = "txtDui";
-            this.txtDui.Size = new System.Drawing.Size(208, 20);
-            this.txtDui.TabIndex = 35;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(49, 107);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(33, 20);
-            this.label6.TabIndex = 36;
-            this.label6.Text = "Dui";
-            // 
-            // txtNombreDocente
-            // 
-            this.txtNombreDocente.Location = new System.Drawing.Point(88, 38);
-            this.txtNombreDocente.Name = "txtNombreDocente";
-            this.txtNombreDocente.Size = new System.Drawing.Size(208, 20);
-            this.txtNombreDocente.TabIndex = 29;
-            // 
-            // txtApellidoDocente
-            // 
-            this.txtApellidoDocente.Location = new System.Drawing.Point(88, 70);
-            this.txtApellidoDocente.Name = "txtApellidoDocente";
-            this.txtApellidoDocente.Size = new System.Drawing.Size(208, 20);
-            this.txtApellidoDocente.TabIndex = 30;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(24, 36);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(65, 20);
-            this.label4.TabIndex = 31;
-            this.label4.Text = "Nombre";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(19, 69);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(65, 20);
-            this.label3.TabIndex = 32;
-            this.label3.Text = "Apellido";
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(446, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(258, 25);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "REGISTRAR DOCENTE";
-            // 
-            // cbxGenero
-            // 
-            this.cbxGenero.FormattingEnabled = true;
-            this.cbxGenero.Location = new System.Drawing.Point(88, 144);
-            this.cbxGenero.Name = "cbxGenero";
-            this.cbxGenero.Size = new System.Drawing.Size(208, 21);
-            this.cbxGenero.TabIndex = 50;
-            // 
             // FrmDocente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -658,11 +696,16 @@ namespace ProyectoFinal.VISTA
         private System.Windows.Forms.TextBox txtMunicipio;
         private System.Windows.Forms.TextBox txtRecidencia;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox txtIdDireccion;
+        private System.Windows.Forms.TextBox txtFkDireccion;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.RadioButton rbNo;
         private System.Windows.Forms.RadioButton rbSi;
         private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.TextBox txtFiltro;
+        private System.Windows.Forms.ComboBox cbxGenero;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.DateTimePicker dtpFechaDeRegistro;
+        private System.Windows.Forms.TextBox txtIdDireccion;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
@@ -677,7 +720,5 @@ namespace ProyectoFinal.VISTA
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
-        private System.Windows.Forms.TextBox txtFiltro;
-        private System.Windows.Forms.ComboBox cbxGenero;
     }
 }

@@ -223,7 +223,7 @@ namespace ProyectoFinal.VISTA
             this.btnNotas.Name = "btnNotas";
             this.btnNotas.Size = new System.Drawing.Size(186, 38);
             this.btnNotas.TabIndex = 0;
-            this.btnNotas.Text = "Asignar notas";
+            this.btnNotas.Text = "Matriculas";
             this.btnNotas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnNotas.UseVisualStyleBackColor = true;
             this.btnNotas.Click += new System.EventHandler(this.btnNotas_Click);

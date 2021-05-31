@@ -46,7 +46,7 @@ namespace ProyectoFinal.VISTA
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(211, 393);
+            this.panel1.Size = new System.Drawing.Size(211, 474);
             this.panel1.TabIndex = 0;
             // 
             // label2
@@ -56,9 +56,9 @@ namespace ProyectoFinal.VISTA
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(12, 24);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(138, 24);
+            this.label2.Size = new System.Drawing.Size(112, 24);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Asignar notas";
+            this.label2.Text = "Matriculas";
             // 
             // pictureBox1
             // 
@@ -74,7 +74,7 @@ namespace ProyectoFinal.VISTA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(681, 393);
+            this.ClientSize = new System.Drawing.Size(871, 474);
             this.Controls.Add(this.panel1);
             this.Location = new System.Drawing.Point(204, 40);
             this.Name = "FrmNotas";

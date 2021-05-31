@@ -65,7 +65,7 @@ namespace ProyectoFinal.VISTA
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(269, 431);
+            this.panel1.Size = new System.Drawing.Size(269, 433);
             this.panel1.TabIndex = 2;
             // 
             // monthCalendar1
@@ -73,7 +73,7 @@ namespace ProyectoFinal.VISTA
             this.monthCalendar1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.monthCalendar1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(68)))), ((int)(((byte)(106)))));
             this.monthCalendar1.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.monthCalendar1.Location = new System.Drawing.Point(9, 259);
+            this.monthCalendar1.Location = new System.Drawing.Point(9, 260);
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 0;
             // 
@@ -98,7 +98,7 @@ namespace ProyectoFinal.VISTA
             this.panelMenuPrincial.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panelMenuPrincial.Location = new System.Drawing.Point(269, 0);
             this.panelMenuPrincial.Name = "panelMenuPrincial";
-            this.panelMenuPrincial.Size = new System.Drawing.Size(678, 431);
+            this.panelMenuPrincial.Size = new System.Drawing.Size(643, 433);
             this.panelMenuPrincial.TabIndex = 3;
             // 
             // btnClassrom
@@ -113,7 +113,7 @@ namespace ProyectoFinal.VISTA
             this.btnClassrom.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnClassrom.Image = ((System.Drawing.Image)(resources.GetObject("btnClassrom.Image")));
             this.btnClassrom.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnClassrom.Location = new System.Drawing.Point(260, 261);
+            this.btnClassrom.Location = new System.Drawing.Point(242, 262);
             this.btnClassrom.Name = "btnClassrom";
             this.btnClassrom.Size = new System.Drawing.Size(161, 126);
             this.btnClassrom.TabIndex = 3;
@@ -134,7 +134,7 @@ namespace ProyectoFinal.VISTA
             this.btnDocentes.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnDocentes.Image = ((System.Drawing.Image)(resources.GetObject("btnDocentes.Image")));
             this.btnDocentes.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnDocentes.Location = new System.Drawing.Point(63, 261);
+            this.btnDocentes.Location = new System.Drawing.Point(45, 262);
             this.btnDocentes.Name = "btnDocentes";
             this.btnDocentes.Size = new System.Drawing.Size(161, 126);
             this.btnDocentes.TabIndex = 2;
@@ -155,7 +155,7 @@ namespace ProyectoFinal.VISTA
             this.btnAulas.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnAulas.Image = ((System.Drawing.Image)(resources.GetObject("btnAulas.Image")));
             this.btnAulas.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnAulas.Location = new System.Drawing.Point(260, 74);
+            this.btnAulas.Location = new System.Drawing.Point(242, 75);
             this.btnAulas.Name = "btnAulas";
             this.btnAulas.Size = new System.Drawing.Size(161, 126);
             this.btnAulas.TabIndex = 1;
@@ -176,7 +176,7 @@ namespace ProyectoFinal.VISTA
             this.btmAlumos.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btmAlumos.Image = ((System.Drawing.Image)(resources.GetObject("btmAlumos.Image")));
             this.btmAlumos.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btmAlumos.Location = new System.Drawing.Point(63, 74);
+            this.btmAlumos.Location = new System.Drawing.Point(45, 75);
             this.btmAlumos.Name = "btmAlumos";
             this.btmAlumos.Size = new System.Drawing.Size(161, 126);
             this.btmAlumos.TabIndex = 0;
@@ -189,7 +189,7 @@ namespace ProyectoFinal.VISTA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(947, 431);
+            this.ClientSize = new System.Drawing.Size(912, 433);
             this.Controls.Add(this.panelMenuPrincial);
             this.Controls.Add(this.panel1);
             this.Name = "FrmMPrincipal";

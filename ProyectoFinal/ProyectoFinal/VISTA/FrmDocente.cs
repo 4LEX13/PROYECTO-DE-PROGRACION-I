@@ -37,7 +37,7 @@ namespace ProyectoFinal.VISTA
 
 
             lista++;
-            txtIdDireccion.Text = lista.ToString();
+            txtFkDireccion.Text = lista.ToString();
 
         }
 
@@ -51,7 +51,7 @@ namespace ProyectoFinal.VISTA
             {
                 var Lista = (from maestro in bd.Maestro
                                 from direccion in bd.Direccion
-                                where maestro.direccionFk == direccion.direccionId && (maestro.nombre + maestro.apellido).Contains(txtFiltro.Text)
+                                where maestro.direccionFk == direccion.direccionId && (maestro.nombre +" "+ maestro.apellido).Contains(txtFiltro.Text)
                              select new
                                 {
                                    maestro.maestroId, maestro.nombre,maestro.apellido,maestro.identificacion,maestro.genero,maestro.fechaNacimiento,direccion.direccionId,
@@ -79,11 +79,12 @@ namespace ProyectoFinal.VISTA
             txtNombreDocente.Clear();
             txtApellidoDocente.Clear();
             txtDui.Clear();
-            txtGenero.Clear();
+            //cbxGenero.DataSource = null;
+            //cbxGenero.Items.Clear();
             txtTelefono.Clear();
             txtEmail.Clear();
             dtpFecha.Value = DateTime.Now.Date;
-            txtIdDireccion.Clear();
+            txtFkDireccion.Clear();
             txtRecidencia.Clear();
             txtMunicipio.Clear();
             txtDepartamento.Clear();
@@ -107,9 +108,9 @@ namespace ProyectoFinal.VISTA
             maestroRegistrar.nombre = txtNombreDocente.Text;
             maestroRegistrar.apellido = txtApellidoDocente.Text;
             maestroRegistrar.identificacion = txtDui.Text;
-            maestroRegistrar.genero = txtGenero.Text;
+            maestroRegistrar.genero = cbxGenero.Text;
             maestroRegistrar.fechaNacimiento = dtpFecha.Value;
-            maestroRegistrar.direccionFk = Convert.ToInt32(txtIdDireccion.Text);
+            maestroRegistrar.direccionFk = Convert.ToInt32(txtFkDireccion.Text);
             maestroRegistrar.contacto = txtTelefono.Text;
             maestroRegistrar.correo = txtEmail.Text;
             maestroRegistrar.activo = rbSi.Checked == true ? 1 : 2;
@@ -126,31 +127,35 @@ namespace ProyectoFinal.VISTA
 
         private void btnModificarDocente_Click(object sender, EventArgs e)
         {
-            ClsDMaestro clsDUserList = new ClsDMaestro();
-            Maestro maestroUpdate = new Maestro();
-
-
 
             ClsDDireccion direccion = new ClsDDireccion();
             Direccion direccionRegistrar = new Direccion();
 
-            direccionRegistrar.direccionId = (Convert.ToInt32 (txtIdDireccion.Text));
-            direccionRegistrar.residencia = txtRecidencia.Text;
-            direccionRegistrar.municipio = txtMunicipio.Text;
-            direccionRegistrar.departamento = txtDepartamento.Text;
+
+           
+
+
+            ClsDMaestro clsDUserList = new ClsDMaestro();
+            Maestro maestroUpdate = new Maestro();
+
+            
 
 
             maestroUpdate.maestroId = (Convert.ToInt32 (txtIdDocente.Text));
             maestroUpdate.nombre = txtNombreDocente.Text;
             maestroUpdate.apellido = txtApellidoDocente.Text;
             maestroUpdate.identificacion = txtDui.Text;
-            maestroUpdate.genero = txtGenero.Text;
+            maestroUpdate.genero = cbxGenero.Text;
             maestroUpdate.fechaNacimiento = dtpFecha.Value;
-            maestroUpdate.direccionFk = Convert.ToInt32 (txtIdDireccion.Text);
+            maestroUpdate.direccionFk = Convert.ToInt32 (txtFkDireccion.Text);
+            direccionRegistrar.direccionId = (Convert.ToInt32(txtIdDireccion.Text));
+            direccionRegistrar.residencia = txtRecidencia.Text;
+            direccionRegistrar.municipio = txtMunicipio.Text;
+            direccionRegistrar.departamento = txtDepartamento.Text;
             maestroUpdate.correo = txtEmail.Text;
             maestroUpdate.contacto = txtTelefono.Text;
             maestroUpdate.activo = rbSi.Checked == true ? 1 : 2;
-            //maestroUpdate.fechaRegistro = DateTime.Now(fechaRegistro);
+            maestroUpdate.fechaRegistro = dtpFechaDeRegistro.Value;
 
             direccion.ModificarDireccion(direccionRegistrar);
             clsDUserList.ModificarDocente(maestroUpdate);
@@ -169,7 +174,7 @@ namespace ProyectoFinal.VISTA
             clear();
         }
 
-        public string fechaRegistro;
+        //public string fechaRegistro;
         private void dgvDocente_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             String idDocente = dgvDocente.CurrentRow.Cells[0].Value.ToString();
@@ -185,7 +190,7 @@ namespace ProyectoFinal.VISTA
             String telefono = dgvDocente.CurrentRow.Cells[10].Value.ToString();
             String email = dgvDocente.CurrentRow.Cells[11].Value.ToString();
             string activo = dgvDocente.CurrentRow.Cells[12].Value.ToString();
-            fechaRegistro = dgvDocente.CurrentRow.Cells[13].Value.ToString();
+            string fechaRegistro = dgvDocente.CurrentRow.Cells[13].Value.ToString();
            
 
 
@@ -194,15 +199,17 @@ namespace ProyectoFinal.VISTA
             txtNombreDocente.Text = Nombre;
             txtApellidoDocente.Text = apellido;
             txtDui.Text = dui;
-            txtGenero.Text = genero;
+            cbxGenero.Text = genero;
             dtpFecha.Text = nacimiento;
+
             txtIdDireccion.Text = idDireccion;
+            txtFkDireccion.Text = idDireccion;
             txtRecidencia.Text = recidencia;
             txtMunicipio.Text = municipio;
             txtDepartamento.Text = departamento;
             txtEmail.Text = email;
             txtTelefono.Text = telefono;
-
+            dtpFechaDeRegistro.Text = fechaRegistro;
 
 
             if (activo == "1")

@@ -39,12 +39,12 @@ namespace ProyectoFinal.VISTA
         void Carga()
         {
 
-            dgvAlumnos.Rows.Clear();
+            dgvAlumno.Rows.Clear();
             using (AdministracionEscolarEntities bd = new AdministracionEscolarEntities())
             {
                 var Lista = (from alumno in bd.Alumno
                              from direccion in bd.Direccion
-                             where alumno.direccionFk == direccion.direccionId 
+                             where alumno.direccionFk == direccion.direccionId && (alumno.nombre + " " + alumno.apellidoPaterno + " " + alumno.apellidoMaterno).Contains(txtFiltrarAlumnos.Text)
                              select new
                              {
                                  alumno.alumnoId,
@@ -68,7 +68,7 @@ namespace ProyectoFinal.VISTA
 
                 foreach (var listadoMaestro in Lista)
                 {
-                    dgvAlumnos.Rows.Add(listadoMaestro.alumnoId, listadoMaestro.nombre, listadoMaestro.apellidoPaterno, listadoMaestro.apellidoMaterno,
+                    dgvAlumno.Rows.Add(listadoMaestro.alumnoId, listadoMaestro.nombre, listadoMaestro.apellidoPaterno, listadoMaestro.apellidoMaterno,
                         listadoMaestro.genero, listadoMaestro.fechaNacimiento, listadoMaestro.direccionId, listadoMaestro.residencia,
                         listadoMaestro.municipio, listadoMaestro.departamento, listadoMaestro.contacto,
                         listadoMaestro.correo, listadoMaestro.activo, listadoMaestro.fechaRegistro);
@@ -80,17 +80,37 @@ namespace ProyectoFinal.VISTA
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            //ClsDAlumnos clsDUserList = new ClsDAlumnos();
-            //Alumno userList = new Alumno();
-            //userList.nombre = txtNombreAlumno.Text;
-            //userList.Apellido = txtApellidoAlumno.Text;
-            //userList.dirreccion = txtDireccion.Text;
-            //userList.representante = txtRepresentante.Text;
-            //userList.nacimiento = dtpFecha.Value;
-            //userList.contacto1 = txtContacto.Text;
-            //userList.correo = txtCorreo.Text;
+            ClsDDireccion direccion = new ClsDDireccion();
+            Direccion direccionRegistrar = new Direccion();
 
-            //clsDUserList.SaveDatosUser(userList);
+
+
+
+
+            ClsDMaestro clsDUserList = new ClsDMaestro();
+            Maestro maestroUpdate = new Maestro();
+
+
+
+
+            //maestroUpdate.maestroId = (Convert.ToInt32(txtIdDocente.Text));
+            //maestroUpdate.nombre = txtNombreDocente.Text;
+            //maestroUpdate.apellido = txtApellidoDocente.Text;
+            //maestroUpdate.identificacion = txtDui.Text;
+            //maestroUpdate.genero = cbxGenero.Text;
+            //maestroUpdate.fechaNacimiento = dtpFecha.Value;
+            //maestroUpdate.direccionFk = Convert.ToInt32(txtFkDireccion.Text);
+            //direccionRegistrar.direccionId = (Convert.ToInt32(txtIdDireccion.Text));
+            //direccionRegistrar.residencia = txtRecidencia.Text;
+            //direccionRegistrar.municipio = txtMunicipio.Text;
+            //direccionRegistrar.departamento = txtDepartamento.Text;
+            //maestroUpdate.correo = txtEmail.Text;
+            //maestroUpdate.contacto = txtTelefono.Text;
+            //maestroUpdate.activo = rbSi.Checked == true ? 1 : 2;
+            //maestroUpdate.fechaRegistro = dtpFechaDeRegistro.Value;
+
+            //direccion.ModificarDireccion(direccionRegistrar);
+            //clsDUserList.ModificarDocente(maestroUpdate);
 
             //Carga();
             //clear();
@@ -98,17 +118,32 @@ namespace ProyectoFinal.VISTA
 
         private void btnRegistarAlumnos_Click_1(object sender, EventArgs e)
         {
-            //ClsDAlumnos clsDUserList = new ClsDAlumnos();
-            //Alumno userList = new Alumno();
-            //userList.nombre = txtNombreAlumno.Text;
-            //userList.Apellidos = txtApellidoAlumno.Text;
-            //userList.dirreccion = txtDireccion.Text;
-            //userList.representante = txtRepresentante.Text;
-            //userList.nacimiento = dtpFecha.Value;
-            //userList.contacto1 = txtContacto.Text;
-            //userList.correo = txtCorreo.Text;
+            //ClsDDireccion direccion = new ClsDDireccion();
+            //Direccion direccionRegistrar = new Direccion();
 
-            //clsDUserList.SaveDatosUser(userList);
+
+
+            //ClsDMaestro clsDUserList = new ClsDMaestro();
+            //Maestro maestroRegistrar = new Maestro();
+
+            //direccionRegistrar.residencia = txtRecidencia.Text;
+            //direccionRegistrar.municipio = txtMunicipio.Text;
+            //direccionRegistrar.departamento = txtDepartamento.Text;
+
+            //maestroRegistrar.nombre = txtNombreDocente.Text;
+            //maestroRegistrar.apellido = txtApellidoDocente.Text;
+            //maestroRegistrar.identificacion = txtDui.Text;
+            //maestroRegistrar.genero = cbxGenero.Text;
+            //maestroRegistrar.fechaNacimiento = dtpFecha.Value;
+            //maestroRegistrar.direccionFk = Convert.ToInt32(txtFkDireccion.Text);
+            //maestroRegistrar.contacto = txtTelefono.Text;
+            //maestroRegistrar.correo = txtEmail.Text;
+            //maestroRegistrar.activo = rbSi.Checked == true ? 1 : 2;
+            //maestroRegistrar.fechaRegistro = DateTime.Now.Date;
+
+            //direccion.SaveDireccion(direccionRegistrar);
+            //clsDUserList.SaveDatosUser(maestroRegistrar);
+
 
             //Carga();
             //clear();
@@ -123,51 +158,57 @@ namespace ProyectoFinal.VISTA
             clear();
         }
 
-        private void dgvAlumnos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvAlumnos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            String idAlumnos = dgvAlumnos.CurrentRow.Cells[0].Value.ToString();
-            String nombre = dgvAlumnos.CurrentRow.Cells[1].Value.ToString();
-            String Apellido = dgvAlumnos.CurrentRow.Cells[2].Value.ToString();
-            String direccion = dgvAlumnos.CurrentRow.Cells[3].Value.ToString();
-            String representante = dgvAlumnos.CurrentRow.Cells[4].Value.ToString();
-            String nacimiento = dgvAlumnos.CurrentRow.Cells[5].Value.ToString();
-            String contacto = dgvAlumnos.CurrentRow.Cells[5].Value.ToString();
-            String correo = dgvAlumnos.CurrentRow.Cells[6].Value.ToString();
+            String idAlumno = dgvAlumno.CurrentRow.Cells[0].Value.ToString();
+            String Nombre = dgvAlumno.CurrentRow.Cells[1].Value.ToString();
+            String apellidoPaterno = dgvAlumno.CurrentRow.Cells[2].Value.ToString();
+            String ApellidoMaterno = dgvAlumno.CurrentRow.Cells[3].Value.ToString();
+            String genero = dgvAlumno.CurrentRow.Cells[4].Value.ToString();
+            String nacimiento = dgvAlumno.CurrentRow.Cells[5].Value.ToString();
+            string idDireccion = dgvAlumno.CurrentRow.Cells[6].Value.ToString();
+            string recidencia = dgvAlumno.CurrentRow.Cells[7].Value.ToString();
+            string municipio = dgvAlumno.CurrentRow.Cells[8].Value.ToString();
+            string departamento = dgvAlumno.CurrentRow.Cells[9].Value.ToString();
+            String telefono = dgvAlumno.CurrentRow.Cells[10].Value.ToString();
+            String email = dgvAlumno.CurrentRow.Cells[11].Value.ToString();
+            string activo = dgvAlumno.CurrentRow.Cells[12].Value.ToString();
+            string fechaRegistro = dgvAlumno.CurrentRow.Cells[13].Value.ToString();
+            string fkAlumno = dgvAlumno.CurrentRow.Cells[14].Value.ToString();
+            string NombreEncargado = dgvAlumno.CurrentRow.Cells[15].Value.ToString();
+            string ApellidoEncargado = dgvAlumno.CurrentRow.Cells[16].Value.ToString();
+            string DuiEncargado = dgvAlumno.CurrentRow.Cells[17].Value.ToString();
+            string TelefonoEncargado = dgvAlumno.CurrentRow.Cells[18].Value.ToString();
+            string CorreoEncargado = dgvAlumno.CurrentRow.Cells[19].Value.ToString();
 
 
-            txtIdAlumos.Text = idAlumnos;
-            txtNombreAlumno.Text = nombre;
-            txtApellidoPaterno.Text = Apellido;
-            txtApellidoMaterno.Text = direccion;
-            txtGenero.Text = representante;
-            dtpFecha.Value = default;
-            txtContacto.Text = contacto;
-            txtCorreo.Text = correo;
+
+            txtIdAlumos.Text = idAlumno;
+            txtNombreAlumno.Text = Nombre;
+            txtApellidoPaterno.Text = apellidoPaterno;
+            txtApellidoMaterno.Text = ApellidoMaterno;
+            txtGenero.Text = genero;
+            dtpFecha.Text = nacimiento;
+            txtiDDireccion.Text = idDireccion;
+            txtRecidencia.Text = recidencia;
+            txtMunicipio.Text = municipio;
+            txtDepartamento.Text = departamento;
+            txtContacto.Text = telefono;
+            txtCorreo.Text = email;
+            txtFkAlumno.Text = fkAlumno;
+            txtNombreAlumno.Text = NombreEncargado;
+            txtApellidoEncargado.Text = ApellidoEncargado;
+            txtDuiEncargado.Text = DuiEncargado;
+            txtContactoEncargado.Text = TelefonoEncargado;
+            txtCorreoEncargado.Text = CorreoEncargado;
+
 
 
         }
 
-        private void dgvAlumnos_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void txtFiltrarAlumnos_TextChanged(object sender, EventArgs e)
         {
-            String idAlumnos = dgvAlumnos.CurrentRow.Cells[0].Value.ToString();
-            String nombre = dgvAlumnos.CurrentRow.Cells[1].Value.ToString();
-            String Apellido = dgvAlumnos.CurrentRow.Cells[2].Value.ToString();
-            String direccion = dgvAlumnos.CurrentRow.Cells[3].Value.ToString();
-            String representante = dgvAlumnos.CurrentRow.Cells[4].Value.ToString();
-            String nacimiento = dgvAlumnos.CurrentRow.Cells[5].Value.ToString();
-            String contacto = dgvAlumnos.CurrentRow.Cells[5].Value.ToString();
-            String correo = dgvAlumnos.CurrentRow.Cells[6].Value.ToString();
-
-
-            txtIdAlumos.Text = idAlumnos;
-            txtNombreAlumno.Text = nombre;
-            txtApellidoPaterno.Text = Apellido;
-            txtApellidoMaterno.Text = direccion;
-            txtGenero.Text = representante;
-            txtContacto.Text = contacto;
-            txtCorreo.Text = correo;
-
-
+            Carga();
         }
     }
 }
