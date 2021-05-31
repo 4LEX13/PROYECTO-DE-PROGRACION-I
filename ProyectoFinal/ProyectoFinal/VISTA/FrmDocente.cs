@@ -221,5 +221,11 @@ namespace ProyectoFinal.VISTA
         {
             Carga();
         }
+
+        private void FrmDocente_Load(object sender, EventArgs e)
+        {
+            cbxGenero.Items.Add("Femenino");
+            cbxGenero.Items.Add("Masculino");
+        }
     }
 }

@@ -64,7 +64,6 @@ namespace ProyectoFinal.VISTA
             this.txtIdDireccion = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.txtGenero = new System.Windows.Forms.TextBox();
             this.txtIdDocente = new System.Windows.Forms.TextBox();
             this.dtpFecha = new System.Windows.Forms.DateTimePicker();
             this.txtTelefono = new System.Windows.Forms.TextBox();
@@ -79,6 +78,7 @@ namespace ProyectoFinal.VISTA
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.cbxGenero = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDocente)).BeginInit();
@@ -360,11 +360,11 @@ namespace ProyectoFinal.VISTA
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.cbxGenero);
             this.groupBox1.Controls.Add(this.groupBox3);
             this.groupBox1.Controls.Add(this.txtIdDireccion);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label13);
-            this.groupBox1.Controls.Add(this.txtGenero);
             this.groupBox1.Controls.Add(this.txtIdDocente);
             this.groupBox1.Controls.Add(this.dtpFecha);
             this.groupBox1.Controls.Add(this.txtTelefono);
@@ -452,13 +452,6 @@ namespace ProyectoFinal.VISTA
             this.label13.Size = new System.Drawing.Size(63, 20);
             this.label13.TabIndex = 45;
             this.label13.Text = "Genero";
-            // 
-            // txtGenero
-            // 
-            this.txtGenero.Location = new System.Drawing.Point(88, 142);
-            this.txtGenero.Name = "txtGenero";
-            this.txtGenero.Size = new System.Drawing.Size(208, 20);
-            this.txtGenero.TabIndex = 44;
             // 
             // txtIdDocente
             // 
@@ -602,6 +595,14 @@ namespace ProyectoFinal.VISTA
             this.label1.TabIndex = 0;
             this.label1.Text = "REGISTRAR DOCENTE";
             // 
+            // cbxGenero
+            // 
+            this.cbxGenero.FormattingEnabled = true;
+            this.cbxGenero.Location = new System.Drawing.Point(88, 144);
+            this.cbxGenero.Name = "cbxGenero";
+            this.cbxGenero.Size = new System.Drawing.Size(208, 21);
+            this.cbxGenero.TabIndex = 50;
+            // 
             // FrmDocente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -612,6 +613,7 @@ namespace ProyectoFinal.VISTA
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmDocente";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.FrmDocente_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -656,7 +658,6 @@ namespace ProyectoFinal.VISTA
         private System.Windows.Forms.TextBox txtMunicipio;
         private System.Windows.Forms.TextBox txtRecidencia;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox txtGenero;
         private System.Windows.Forms.TextBox txtIdDireccion;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.RadioButton rbNo;
@@ -677,5 +678,6 @@ namespace ProyectoFinal.VISTA
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.TextBox txtFiltro;
+        private System.Windows.Forms.ComboBox cbxGenero;
     }
 }
