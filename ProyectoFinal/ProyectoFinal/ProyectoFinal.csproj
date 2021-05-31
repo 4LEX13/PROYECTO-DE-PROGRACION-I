@@ -60,6 +60,7 @@
   <ItemGroup>
     <Compile Include="DAO\ClsDAlumnos.cs" />
     <Compile Include="DAO\ClsDDireccion.cs" />
+    <Compile Include="DAO\ClsDEncargado.cs" />
     <Compile Include="DAO\ClsDMaestro.cs" />
     <Compile Include="MODEL\Alumno.cs">
       <DependentUpon>Model.tt</DependentUpon>

@@ -45,6 +45,7 @@ namespace ProyectoFinal.VISTA
             this.label = new System.Windows.Forms.Label();
             this.txtFkAlumno = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtiDDireccion = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -54,6 +55,8 @@ namespace ProyectoFinal.VISTA
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.gbxDatosAlumno = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.rbSi = new System.Windows.Forms.RadioButton();
             this.rbNo = new System.Windows.Forms.RadioButton();
@@ -66,7 +69,6 @@ namespace ProyectoFinal.VISTA
             this.txtCorreo = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtIdAlumos = new System.Windows.Forms.TextBox();
-            this.txtGenero = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtApellidoMaterno = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -76,7 +78,6 @@ namespace ProyectoFinal.VISTA
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dgvAlumno = new System.Windows.Forms.DataGridView();
-            this.btnRegistarAlumnos = new System.Windows.Forms.Button();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -97,9 +98,8 @@ namespace ProyectoFinal.VISTA
             this.Column18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtiDDireccion = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.label1 = new System.Windows.Forms.Label();
+            this.btnRegistarAlumnos = new System.Windows.Forms.Button();
+            this.cbxGenero = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -259,7 +259,6 @@ namespace ProyectoFinal.VISTA
             this.txtFkAlumno.Name = "txtFkAlumno";
             this.txtFkAlumno.Size = new System.Drawing.Size(31, 22);
             this.txtFkAlumno.TabIndex = 30;
-            this.txtFkAlumno.Visible = false;
             // 
             // groupBox2
             // 
@@ -280,6 +279,13 @@ namespace ProyectoFinal.VISTA
             this.groupBox2.TabIndex = 27;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Direccion";
+            // 
+            // txtiDDireccion
+            // 
+            this.txtiDDireccion.Location = new System.Drawing.Point(301, 136);
+            this.txtiDDireccion.Name = "txtiDDireccion";
+            this.txtiDDireccion.Size = new System.Drawing.Size(31, 22);
+            this.txtiDDireccion.TabIndex = 18;
             // 
             // label12
             // 
@@ -369,6 +375,7 @@ namespace ProyectoFinal.VISTA
             // gbxDatosAlumno
             // 
             this.gbxDatosAlumno.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.gbxDatosAlumno.Controls.Add(this.cbxGenero);
             this.gbxDatosAlumno.Controls.Add(this.label1);
             this.gbxDatosAlumno.Controls.Add(this.dateTimePicker1);
             this.gbxDatosAlumno.Controls.Add(this.groupBox3);
@@ -381,7 +388,6 @@ namespace ProyectoFinal.VISTA
             this.gbxDatosAlumno.Controls.Add(this.txtCorreo);
             this.gbxDatosAlumno.Controls.Add(this.label7);
             this.gbxDatosAlumno.Controls.Add(this.txtIdAlumos);
-            this.gbxDatosAlumno.Controls.Add(this.txtGenero);
             this.gbxDatosAlumno.Controls.Add(this.label6);
             this.gbxDatosAlumno.Controls.Add(this.txtApellidoMaterno);
             this.gbxDatosAlumno.Controls.Add(this.label5);
@@ -397,6 +403,26 @@ namespace ProyectoFinal.VISTA
             this.gbxDatosAlumno.TabIndex = 16;
             this.gbxDatosAlumno.TabStop = false;
             this.gbxDatosAlumno.Text = "Datos";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(631, 57);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(64, 18);
+            this.label1.TabIndex = 52;
+            this.label1.Text = "Registro";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Enabled = false;
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker1.Location = new System.Drawing.Point(701, 53);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(105, 22);
+            this.dateTimePicker1.TabIndex = 51;
             // 
             // groupBox3
             // 
@@ -449,7 +475,6 @@ namespace ProyectoFinal.VISTA
             this.txtFkDireccion.Name = "txtFkDireccion";
             this.txtFkDireccion.Size = new System.Drawing.Size(31, 22);
             this.txtFkDireccion.TabIndex = 29;
-            this.txtFkDireccion.Visible = false;
             // 
             // dtpFecha
             // 
@@ -512,14 +537,6 @@ namespace ProyectoFinal.VISTA
             this.txtIdAlumos.Name = "txtIdAlumos";
             this.txtIdAlumos.Size = new System.Drawing.Size(31, 22);
             this.txtIdAlumos.TabIndex = 17;
-            this.txtIdAlumos.Visible = false;
-            // 
-            // txtGenero
-            // 
-            this.txtGenero.Location = new System.Drawing.Point(133, 118);
-            this.txtGenero.Name = "txtGenero";
-            this.txtGenero.Size = new System.Drawing.Size(208, 22);
-            this.txtGenero.TabIndex = 20;
             // 
             // label6
             // 
@@ -637,21 +654,6 @@ namespace ProyectoFinal.VISTA
             this.dgvAlumno.Size = new System.Drawing.Size(1178, 250);
             this.dgvAlumno.TabIndex = 6;
             this.dgvAlumno.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAlumnos_CellClick);
-            // 
-            // btnRegistarAlumnos
-            // 
-            this.btnRegistarAlumnos.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnRegistarAlumnos.FlatAppearance.BorderSize = 2;
-            this.btnRegistarAlumnos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegistarAlumnos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistarAlumnos.ForeColor = System.Drawing.Color.White;
-            this.btnRegistarAlumnos.Location = new System.Drawing.Point(769, 234);
-            this.btnRegistarAlumnos.Name = "btnRegistarAlumnos";
-            this.btnRegistarAlumnos.Size = new System.Drawing.Size(105, 40);
-            this.btnRegistarAlumnos.TabIndex = 16;
-            this.btnRegistarAlumnos.Text = "Registrar";
-            this.btnRegistarAlumnos.UseVisualStyleBackColor = true;
-            this.btnRegistarAlumnos.Click += new System.EventHandler(this.btnRegistarAlumnos_Click_1);
             // 
             // Column3
             // 
@@ -778,33 +780,28 @@ namespace ProyectoFinal.VISTA
             this.Column20.ReadOnly = true;
             this.Column20.Visible = false;
             // 
-            // txtiDDireccion
+            // btnRegistarAlumnos
             // 
-            this.txtiDDireccion.Location = new System.Drawing.Point(301, 136);
-            this.txtiDDireccion.Name = "txtiDDireccion";
-            this.txtiDDireccion.Size = new System.Drawing.Size(31, 22);
-            this.txtiDDireccion.TabIndex = 18;
-            this.txtiDDireccion.Visible = false;
+            this.btnRegistarAlumnos.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnRegistarAlumnos.FlatAppearance.BorderSize = 2;
+            this.btnRegistarAlumnos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegistarAlumnos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegistarAlumnos.ForeColor = System.Drawing.Color.White;
+            this.btnRegistarAlumnos.Location = new System.Drawing.Point(769, 234);
+            this.btnRegistarAlumnos.Name = "btnRegistarAlumnos";
+            this.btnRegistarAlumnos.Size = new System.Drawing.Size(105, 40);
+            this.btnRegistarAlumnos.TabIndex = 16;
+            this.btnRegistarAlumnos.Text = "Registrar";
+            this.btnRegistarAlumnos.UseVisualStyleBackColor = true;
+            this.btnRegistarAlumnos.Click += new System.EventHandler(this.btnRegistarAlumnos_Click_1);
             // 
-            // dateTimePicker1
+            // cbxGenero
             // 
-            this.dateTimePicker1.Enabled = false;
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(701, 53);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(105, 22);
-            this.dateTimePicker1.TabIndex = 51;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(631, 57);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(64, 18);
-            this.label1.TabIndex = 52;
-            this.label1.Text = "Registro";
+            this.cbxGenero.FormattingEnabled = true;
+            this.cbxGenero.Location = new System.Drawing.Point(133, 113);
+            this.cbxGenero.Name = "cbxGenero";
+            this.cbxGenero.Size = new System.Drawing.Size(121, 24);
+            this.cbxGenero.TabIndex = 53;
             // 
             // FrmAlumos
             // 
@@ -816,6 +813,7 @@ namespace ProyectoFinal.VISTA
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmAlumosMenuPrincipal";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.FrmAlumos_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -849,7 +847,6 @@ namespace ProyectoFinal.VISTA
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtCorreo;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtGenero;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtApellidoMaterno;
         private System.Windows.Forms.Label label5;
@@ -904,5 +901,6 @@ namespace ProyectoFinal.VISTA
         private System.Windows.Forms.TextBox txtiDDireccion;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.ComboBox cbxGenero;
     }
 }
