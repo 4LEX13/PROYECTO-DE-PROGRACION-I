@@ -89,8 +89,8 @@ namespace ProyectoFinal.VISTA
             using (AdministracionEscolarEntities bd = new AdministracionEscolarEntities())
             {
                 var Lista = (from alumno in bd.Alumno
-                             from direccion in bd.Direccion
-                             where alumno.direccionFk == direccion.direccionId && (alumno.nombre + " " + alumno.apellidoPaterno + " " + alumno.apellidoMaterno).Contains(txtFiltrarAlumnos.Text)
+                             from direccion in bd.Direccion 
+                             where alumno.direccionFk == direccion.direccionId  && (alumno.nombre + " " + alumno.apellidoPaterno + " " + alumno.apellidoMaterno).Contains(txtFiltrarAlumnos.Text)
                              select new
                              {
                                  alumno.alumnoId,
@@ -106,18 +106,21 @@ namespace ProyectoFinal.VISTA
                                  alumno.contacto,
                                  alumno.correo,
                                  alumno.activo,
-                                 alumno.fechaRegistro
+                                 alumno.fechaRegistro,
+                                
 
 
                              }).ToList();
 
 
-                foreach (var listadoMaestro in Lista)
+                foreach (var listadoAlumno in Lista)
                 {
-                    dgvAlumno.Rows.Add(listadoMaestro.alumnoId, listadoMaestro.nombre, listadoMaestro.apellidoPaterno, listadoMaestro.apellidoMaterno,
-                        listadoMaestro.genero, listadoMaestro.fechaNacimiento, listadoMaestro.direccionId, listadoMaestro.residencia,
-                        listadoMaestro.municipio, listadoMaestro.departamento, listadoMaestro.contacto,
-                        listadoMaestro.correo, listadoMaestro.activo, listadoMaestro.fechaRegistro);
+                    dgvAlumno.Rows.Add(listadoAlumno.alumnoId, listadoAlumno.nombre, listadoAlumno.apellidoPaterno, listadoAlumno.apellidoMaterno,
+                        listadoAlumno.genero, listadoAlumno.fechaNacimiento, listadoAlumno.direccionId, listadoAlumno.residencia,
+                        listadoAlumno.municipio, listadoAlumno.departamento, listadoAlumno.contacto,
+                        listadoAlumno.correo, listadoAlumno.activo, listadoAlumno.fechaRegistro);
+
+
                 }
             }
         }
@@ -204,7 +207,7 @@ namespace ProyectoFinal.VISTA
 
             direccion.SaveDireccion(direccionRegistrar);
             clsDAlumnos.SaveAlumno(alumnoRegistrar);
-
+            encargado.SaveEncargado(registarencargado);
 
             Carga();
             clear();
@@ -276,6 +279,7 @@ namespace ProyectoFinal.VISTA
         {
             cbxGenero.Items.Add("Femenino");
             cbxGenero.Items.Add("Masculino");
+            cbxGenero.Items.Add("Sin especificar");
         }
     }
 }

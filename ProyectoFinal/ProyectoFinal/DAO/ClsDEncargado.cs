@@ -95,7 +95,7 @@ namespace ProyectoFinal.DAO
 
 
                     encargado1.alumnoFk = encargado.alumnoFk;
-                    encargado1.nombre = encargado.nombre;
+                    encargado1.nombre= encargado.nombre;
                     encargado1.apellido = encargado.apellido;
                     encargado1.identificacion = encargado.identificacion;
                     encargado1.contacto = encargado.contacto;
