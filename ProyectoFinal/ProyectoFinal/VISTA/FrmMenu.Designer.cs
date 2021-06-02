@@ -102,7 +102,7 @@ namespace ProyectoFinal.VISTA
             this.pictureBox2.Location = new System.Drawing.Point(14, -40);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(1078, 760);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
             // 
@@ -313,7 +313,6 @@ namespace ProyectoFinal.VISTA
             this.Name = "FrmMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmMenu";
-            this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
             this.panelformularios.ResumeLayout(false);
             this.panelContenedor.ResumeLayout(false);
             this.panelFormula.ResumeLayout(false);

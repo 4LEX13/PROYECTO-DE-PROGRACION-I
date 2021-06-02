@@ -61,7 +61,10 @@
     <Compile Include="DAO\ClsDAlumnos.cs" />
     <Compile Include="DAO\ClsDDireccion.cs" />
     <Compile Include="DAO\ClsDEncargado.cs" />
+    <Compile Include="DAO\ClsDGrado.cs" />
     <Compile Include="DAO\ClsDMaestro.cs" />
+    <Compile Include="DAO\ClsDMatricula.cs" />
+    <Compile Include="DAO\ClsDSeccion.cs" />
     <Compile Include="MODEL\Alumno.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
@@ -71,7 +74,13 @@
     <Compile Include="MODEL\Encargado.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="MODEL\Grado.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
     <Compile Include="MODEL\Maestro.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MODEL\Matricula.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
     <Compile Include="MODEL\Model.Context.cs">
@@ -88,6 +97,9 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Model.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="MODEL\Seccion.cs">
+      <DependentUpon>Model.tt</DependentUpon>
     </Compile>
     <Compile Include="MODEL\Usuario.cs">
       <DependentUpon>Model.tt</DependentUpon>
@@ -111,6 +123,12 @@
     </Compile>
     <Compile Include="VISTA\FrmAulas.Designer.cs">
       <DependentUpon>FrmAulas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VISTA\FrmBuscarAlumno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VISTA\FrmBuscarAlumno.Designer.cs">
+      <DependentUpon>FrmBuscarAlumno.cs</DependentUpon>
     </Compile>
     <Compile Include="VISTA\FrmClassroom.cs">
       <SubType>Form</SubType>
@@ -141,6 +159,12 @@
     </Compile>
     <Compile Include="VISTA\FrmLogin.Designer.cs">
       <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VISTA\FrmMatricula.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VISTA\FrmMatricula.Designer.cs">
+      <DependentUpon>FrmMatricula.cs</DependentUpon>
     </Compile>
     <Compile Include="VISTA\FrmMenu.cs">
       <SubType>Form</SubType>
@@ -179,6 +203,9 @@
     <EmbeddedResource Include="VISTA\FrmAulas.resx">
       <DependentUpon>FrmAulas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="VISTA\FrmBuscarAlumno.resx">
+      <DependentUpon>FrmBuscarAlumno.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="VISTA\FrmClassroom.resx">
       <DependentUpon>FrmClassroom.cs</DependentUpon>
     </EmbeddedResource>
@@ -193,6 +220,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="VISTA\FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VISTA\FrmMatricula.resx">
+      <DependentUpon>FrmMatricula.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VISTA\FrmMenu.resx">
       <DependentUpon>FrmMenu.cs</DependentUpon>

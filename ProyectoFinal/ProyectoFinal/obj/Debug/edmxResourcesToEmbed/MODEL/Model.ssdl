@@ -15,6 +15,7 @@
     <Property Name="correo" Type="varchar" MaxLength="50" />
     <Property Name="activo" Type="int" />
     <Property Name="fechaRegistro" Type="date" />
+    <Property Name="encargadoFK" Type="int" />
   </EntityType>
   <EntityType Name="Direccion">
     <Key>
@@ -30,12 +31,18 @@
       <PropertyRef Name="encargadoId" />
     </Key>
     <Property Name="encargadoId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="alumnoFk" Type="int" />
-    <Property Name="nombre" Type="varchar" MaxLength="75" />
-    <Property Name="apellido" Type="varchar" MaxLength="75" />
-    <Property Name="identificacion" Type="varchar" MaxLength="25" />
-    <Property Name="contacto" Type="varchar" MaxLength="25" />
-    <Property Name="correo" Type="varchar" MaxLength="50" />
+    <Property Name="nombreEncargado" Type="varchar" MaxLength="75" />
+    <Property Name="apellidoEncargado" Type="varchar" MaxLength="75" />
+    <Property Name="identificacionEncargado" Type="varchar" MaxLength="25" />
+    <Property Name="contactoEncargado" Type="varchar" MaxLength="25" />
+    <Property Name="correoEncargado" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Grado">
+    <Key>
+      <PropertyRef Name="gradoId" />
+    </Key>
+    <Property Name="gradoId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombreGrado" Type="varchar" MaxLength="25" />
   </EntityType>
   <EntityType Name="Maestro">
     <Key>
@@ -52,6 +59,24 @@
     <Property Name="correo" Type="varchar" MaxLength="75" />
     <Property Name="activo" Type="int" />
     <Property Name="fechaRegistro" Type="date" />
+  </EntityType>
+  <EntityType Name="Matricula">
+    <Key>
+      <PropertyRef Name="matriculaId" />
+    </Key>
+    <Property Name="matriculaId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="alumnoFk" Type="int" />
+    <Property Name="gradoFk" Type="int" />
+    <Property Name="seccionFk" Type="int" />
+    <Property Name="nombreMatricula" Type="varchar" MaxLength="50" />
+    <Property Name="fechaRegistroMatricula" Type="date" />
+  </EntityType>
+  <EntityType Name="Seccion">
+    <Key>
+      <PropertyRef Name="seccionId" />
+    </Key>
+    <Property Name="seccionId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombreSeccion" Type="char" MaxLength="1" />
   </EntityType>
   <EntityType Name="Usuario">
     <Key>
@@ -74,15 +99,15 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Encargado__alumn__2F10007B">
-    <End Role="Alumno" Type="Self.Alumno" Multiplicity="0..1" />
-    <End Role="Encargado" Type="Self.Encargado" Multiplicity="*" />
+  <Association Name="FK__Alumno__encargad__37A5467C">
+    <End Role="Encargado" Type="Self.Encargado" Multiplicity="0..1" />
+    <End Role="Alumno" Type="Self.Alumno" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="Alumno">
-        <PropertyRef Name="alumnoId" />
+      <Principal Role="Encargado">
+        <PropertyRef Name="encargadoId" />
       </Principal>
-      <Dependent Role="Encargado">
-        <PropertyRef Name="alumnoFk" />
+      <Dependent Role="Alumno">
+        <PropertyRef Name="encargadoFK" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -98,23 +123,74 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK__Matricula__alumn__4F7CD00D">
+    <End Role="Alumno" Type="Self.Alumno" Multiplicity="0..1" />
+    <End Role="Matricula" Type="Self.Matricula" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Alumno">
+        <PropertyRef Name="alumnoId" />
+      </Principal>
+      <Dependent Role="Matricula">
+        <PropertyRef Name="alumnoFk" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Matricula__grado__5070F446">
+    <End Role="Grado" Type="Self.Grado" Multiplicity="0..1" />
+    <End Role="Matricula" Type="Self.Matricula" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Grado">
+        <PropertyRef Name="gradoId" />
+      </Principal>
+      <Dependent Role="Matricula">
+        <PropertyRef Name="gradoFk" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Matricula__secci__5165187F">
+    <End Role="Seccion" Type="Self.Seccion" Multiplicity="0..1" />
+    <End Role="Matricula" Type="Self.Matricula" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Seccion">
+        <PropertyRef Name="seccionId" />
+      </Principal>
+      <Dependent Role="Matricula">
+        <PropertyRef Name="seccionFk" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <EntityContainer Name="AdministracionEscolarModelStoreContainer">
     <EntitySet Name="Alumno" EntityType="Self.Alumno" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Direccion" EntityType="Self.Direccion" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Encargado" EntityType="Self.Encargado" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Grado" EntityType="Self.Grado" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Maestro" EntityType="Self.Maestro" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Matricula" EntityType="Self.Matricula" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Seccion" EntityType="Self.Seccion" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Usuario" EntityType="Self.Usuario" Schema="dbo" store:Type="Tables" />
     <AssociationSet Name="FK__Alumno__direccio__29572725" Association="Self.FK__Alumno__direccio__29572725">
       <End Role="Direccion" EntitySet="Direccion" />
       <End Role="Alumno" EntitySet="Alumno" />
     </AssociationSet>
-    <AssociationSet Name="FK__Encargado__alumn__2F10007B" Association="Self.FK__Encargado__alumn__2F10007B">
-      <End Role="Alumno" EntitySet="Alumno" />
+    <AssociationSet Name="FK__Alumno__encargad__37A5467C" Association="Self.FK__Alumno__encargad__37A5467C">
       <End Role="Encargado" EntitySet="Encargado" />
+      <End Role="Alumno" EntitySet="Alumno" />
     </AssociationSet>
     <AssociationSet Name="FK__Maestro__direcci__32E0915F" Association="Self.FK__Maestro__direcci__32E0915F">
       <End Role="Direccion" EntitySet="Direccion" />
       <End Role="Maestro" EntitySet="Maestro" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Matricula__alumn__4F7CD00D" Association="Self.FK__Matricula__alumn__4F7CD00D">
+      <End Role="Alumno" EntitySet="Alumno" />
+      <End Role="Matricula" EntitySet="Matricula" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Matricula__grado__5070F446" Association="Self.FK__Matricula__grado__5070F446">
+      <End Role="Grado" EntitySet="Grado" />
+      <End Role="Matricula" EntitySet="Matricula" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Matricula__secci__5165187F" Association="Self.FK__Matricula__secci__5165187F">
+      <End Role="Seccion" EntitySet="Seccion" />
+      <End Role="Matricula" EntitySet="Matricula" />
     </AssociationSet>
   </EntityContainer>
 </Schema>

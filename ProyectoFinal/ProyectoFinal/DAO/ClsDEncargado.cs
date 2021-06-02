@@ -34,12 +34,11 @@ namespace ProyectoFinal.DAO
 
                     Encargado encargadoSave = new Encargado();
 
-                    encargadoSave.alumnoFk = encargado.alumnoFk;
-                    encargadoSave.nombre = encargado.nombre;
-                    encargadoSave.apellido = encargado.apellido;
-                    encargadoSave.identificacion = encargado.identificacion;
-                    encargadoSave.contacto = encargado.contacto;
-                    encargadoSave.correo = encargado.correo;
+                    encargadoSave.nombreEncargado = encargado.nombreEncargado;
+                    encargadoSave.apellidoEncargado = encargado.apellidoEncargado;
+                    encargadoSave.identificacionEncargado = encargado.identificacionEncargado;
+                    encargadoSave.contactoEncargado = encargado.contactoEncargado;
+                    encargadoSave.correoEncargado = encargado.correoEncargado;
 
 
 
@@ -59,7 +58,7 @@ namespace ProyectoFinal.DAO
 
 
 
-        public void deleteDireccion(int ID)
+        public void eliminarEncargado(int ID)
         {
             try
             {
@@ -81,7 +80,7 @@ namespace ProyectoFinal.DAO
             }
         }
 
-        public void ModificarDireccion(Encargado encargado)
+        public void modificarEncargado(Encargado encargado)
         {
             try
             {
@@ -93,13 +92,11 @@ namespace ProyectoFinal.DAO
                     int update = Convert.ToInt32(encargado.encargadoId);
                     Encargado encargado1 = db.Encargado.Where(x => x.encargadoId == update).Select(x => x).FirstOrDefault();
 
-
-                    encargado1.alumnoFk = encargado.alumnoFk;
-                    encargado1.nombre= encargado.nombre;
-                    encargado1.apellido = encargado.apellido;
-                    encargado1.identificacion = encargado.identificacion;
-                    encargado1.contacto = encargado.contacto;
-                    encargado1.correo = encargado.correo;
+                    encargado1.nombreEncargado= encargado.nombreEncargado;
+                    encargado1.apellidoEncargado = encargado.apellidoEncargado;
+                    encargado1.identificacionEncargado = encargado.identificacionEncargado;
+                    encargado1.contactoEncargado = encargado.contactoEncargado;
+                    encargado1.correoEncargado = encargado.correoEncargado;
 
 
 

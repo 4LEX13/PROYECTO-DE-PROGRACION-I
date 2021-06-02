@@ -16,7 +16,9 @@
     <Property Name="activo" Type="Int32" />
     <Property Name="fechaRegistro" Type="DateTime" Precision="0" />
     <NavigationProperty Name="Direccion" Relationship="Self.FK__Alumno__direccio__29572725" FromRole="Alumno" ToRole="Direccion" />
-    <NavigationProperty Name="Encargado" Relationship="Self.FK__Encargado__alumn__2F10007B" FromRole="Alumno" ToRole="Encargado" />
+    <Property Name="encargadoFK" Type="Int32" />
+    <NavigationProperty Name="Encargado" Relationship="AdministracionEscolarModel.FK__Alumno__encargad__37A5467C" FromRole="Alumno" ToRole="Encargado" />
+    <NavigationProperty Name="Matricula" Relationship="AdministracionEscolarModel.FK__Matricula__alumn__4F7CD00D" FromRole="Alumno" ToRole="Matricula" />
   </EntityType>
   <EntityType Name="Direccion">
     <Key>
@@ -28,19 +30,6 @@
     <Property Name="departamento" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="Alumno" Relationship="Self.FK__Alumno__direccio__29572725" FromRole="Direccion" ToRole="Alumno" />
     <NavigationProperty Name="Maestro" Relationship="Self.FK__Maestro__direcci__32E0915F" FromRole="Direccion" ToRole="Maestro" />
-  </EntityType>
-  <EntityType Name="Encargado">
-    <Key>
-      <PropertyRef Name="encargadoId" />
-    </Key>
-    <Property Name="encargadoId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="alumnoFk" Type="Int32" />
-    <Property Name="nombre" Type="String" MaxLength="75" FixedLength="false" Unicode="false" />
-    <Property Name="apellido" Type="String" MaxLength="75" FixedLength="false" Unicode="false" />
-    <Property Name="identificacion" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
-    <Property Name="contacto" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
-    <Property Name="correo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <NavigationProperty Name="Alumno" Relationship="Self.FK__Encargado__alumn__2F10007B" FromRole="Encargado" ToRole="Alumno" />
   </EntityType>
   <EntityType Name="Maestro">
     <Key>
@@ -80,18 +69,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Encargado__alumn__2F10007B">
-    <End Role="Alumno" Type="Self.Alumno" Multiplicity="0..1" />
-    <End Role="Encargado" Type="Self.Encargado" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Alumno">
-        <PropertyRef Name="alumnoId" />
-      </Principal>
-      <Dependent Role="Encargado">
-        <PropertyRef Name="alumnoFk" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK__Maestro__direcci__32E0915F">
     <End Role="Direccion" Type="Self.Direccion" Multiplicity="0..1" />
     <End Role="Maestro" Type="Self.Maestro" Multiplicity="*" />
@@ -107,20 +84,125 @@
   <EntityContainer Name="AdministracionEscolarEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Alumno" EntityType="Self.Alumno" />
     <EntitySet Name="Direccion" EntityType="Self.Direccion" />
-    <EntitySet Name="Encargado" EntityType="Self.Encargado" />
     <EntitySet Name="Maestro" EntityType="Self.Maestro" />
     <EntitySet Name="Usuario" EntityType="Self.Usuario" />
     <AssociationSet Name="FK__Alumno__direccio__29572725" Association="Self.FK__Alumno__direccio__29572725">
       <End Role="Direccion" EntitySet="Direccion" />
       <End Role="Alumno" EntitySet="Alumno" />
     </AssociationSet>
-    <AssociationSet Name="FK__Encargado__alumn__2F10007B" Association="Self.FK__Encargado__alumn__2F10007B">
-      <End Role="Alumno" EntitySet="Alumno" />
-      <End Role="Encargado" EntitySet="Encargado" />
-    </AssociationSet>
     <AssociationSet Name="FK__Maestro__direcci__32E0915F" Association="Self.FK__Maestro__direcci__32E0915F">
       <End Role="Direccion" EntitySet="Direccion" />
       <End Role="Maestro" EntitySet="Maestro" />
     </AssociationSet>
+    <EntitySet Name="Encargado" EntityType="AdministracionEscolarModel.Encargado" />
+    <AssociationSet Name="FK__Alumno__encargad__37A5467C" Association="AdministracionEscolarModel.FK__Alumno__encargad__37A5467C">
+      <End Role="Encargado" EntitySet="Encargado" />
+      <End Role="Alumno" EntitySet="Alumno" />
+    </AssociationSet>
+    <EntitySet Name="Grado" EntityType="AdministracionEscolarModel.Grado" />
+    <EntitySet Name="Matricula" EntityType="AdministracionEscolarModel.Matricula" />
+    <EntitySet Name="Seccion" EntityType="AdministracionEscolarModel.Seccion" />
+    <AssociationSet Name="FK__Matricula__alumn__4F7CD00D" Association="AdministracionEscolarModel.FK__Matricula__alumn__4F7CD00D">
+      <End Role="Alumno" EntitySet="Alumno" />
+      <End Role="Matricula" EntitySet="Matricula" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Matricula__grado__5070F446" Association="AdministracionEscolarModel.FK__Matricula__grado__5070F446">
+      <End Role="Grado" EntitySet="Grado" />
+      <End Role="Matricula" EntitySet="Matricula" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Matricula__secci__5165187F" Association="AdministracionEscolarModel.FK__Matricula__secci__5165187F">
+      <End Role="Seccion" EntitySet="Seccion" />
+      <End Role="Matricula" EntitySet="Matricula" />
+    </AssociationSet>
   </EntityContainer>
+  <EntityType Name="Encargado">
+    <Key>
+      <PropertyRef Name="encargadoId" />
+    </Key>
+    <Property Name="encargadoId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombreEncargado" Type="String" MaxLength="75" FixedLength="false" Unicode="false" />
+    <Property Name="apellidoEncargado" Type="String" MaxLength="75" FixedLength="false" Unicode="false" />
+    <Property Name="identificacionEncargado" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="contactoEncargado" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="correoEncargado" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Alumno" Relationship="AdministracionEscolarModel.FK__Alumno__encargad__37A5467C" FromRole="Encargado" ToRole="Alumno" />
+  </EntityType>
+  <Association Name="FK__Alumno__encargad__37A5467C">
+    <End Type="AdministracionEscolarModel.Encargado" Role="Encargado" Multiplicity="0..1" />
+    <End Type="AdministracionEscolarModel.Alumno" Role="Alumno" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Encargado">
+        <PropertyRef Name="encargadoId" />
+      </Principal>
+      <Dependent Role="Alumno">
+        <PropertyRef Name="encargadoFK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Grado">
+    <Key>
+      <PropertyRef Name="gradoId" />
+    </Key>
+    <Property Name="gradoId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombreGrado" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Matricula" Relationship="AdministracionEscolarModel.FK__Matricula__grado__5070F446" FromRole="Grado" ToRole="Matricula" />
+  </EntityType>
+  <EntityType Name="Matricula">
+    <Key>
+      <PropertyRef Name="matriculaId" />
+    </Key>
+    <Property Name="matriculaId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="alumnoFk" Type="Int32" />
+    <Property Name="gradoFk" Type="Int32" />
+    <Property Name="seccionFk" Type="Int32" />
+    <Property Name="nombreMatricula" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="fechaRegistroMatricula" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="Alumno" Relationship="AdministracionEscolarModel.FK__Matricula__alumn__4F7CD00D" FromRole="Matricula" ToRole="Alumno" />
+    <NavigationProperty Name="Grado" Relationship="AdministracionEscolarModel.FK__Matricula__grado__5070F446" FromRole="Matricula" ToRole="Grado" />
+    <NavigationProperty Name="Seccion" Relationship="AdministracionEscolarModel.FK__Matricula__secci__5165187F" FromRole="Matricula" ToRole="Seccion" />
+  </EntityType>
+  <EntityType Name="Seccion">
+    <Key>
+      <PropertyRef Name="seccionId" />
+    </Key>
+    <Property Name="seccionId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombreSeccion" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <NavigationProperty Name="Matricula" Relationship="AdministracionEscolarModel.FK__Matricula__secci__5165187F" FromRole="Seccion" ToRole="Matricula" />
+  </EntityType>
+  <Association Name="FK__Matricula__alumn__4F7CD00D">
+    <End Type="AdministracionEscolarModel.Alumno" Role="Alumno" Multiplicity="0..1" />
+    <End Type="AdministracionEscolarModel.Matricula" Role="Matricula" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Alumno">
+        <PropertyRef Name="alumnoId" />
+      </Principal>
+      <Dependent Role="Matricula">
+        <PropertyRef Name="alumnoFk" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Matricula__grado__5070F446">
+    <End Type="AdministracionEscolarModel.Grado" Role="Grado" Multiplicity="0..1" />
+    <End Type="AdministracionEscolarModel.Matricula" Role="Matricula" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Grado">
+        <PropertyRef Name="gradoId" />
+      </Principal>
+      <Dependent Role="Matricula">
+        <PropertyRef Name="gradoFk" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Matricula__secci__5165187F">
+    <End Type="AdministracionEscolarModel.Seccion" Role="Seccion" Multiplicity="0..1" />
+    <End Type="AdministracionEscolarModel.Matricula" Role="Matricula" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Seccion">
+        <PropertyRef Name="seccionId" />
+      </Principal>
+      <Dependent Role="Matricula">
+        <PropertyRef Name="seccionFk" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
 </Schema>

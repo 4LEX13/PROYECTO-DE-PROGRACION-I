@@ -76,3 +76,5 @@ C:\Users\crobe\Documents\GitHub\PROYECTO-DE-PROGRAMACION-I\ProyectoFinal\Proyect
 C:\Users\crobe\Documents\GitHub\PROYECTO-DE-PROGRAMACION-I\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.VISTA.FrmAlumos.resources
 C:\Users\carlj\Documents\GitHub\PROYECTO-DE-PROGRAMACION-I\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.VISTA.FrmAlumos.resources
 C:\Users\kevin\Documents\GitHub\PROYECTO-DE-PROGRAMACION-I\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.VISTA.FrmAlumos.resources
+C:\Users\crobe\Documents\GitHub\PROYECTO-DE-PROGRAMACION-I\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.VISTA.FrmMatricula.resources
+C:\Users\crobe\Documents\GitHub\PROYECTO-DE-PROGRAMACION-I\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.VISTA.FrmBuscarAlumno.resources

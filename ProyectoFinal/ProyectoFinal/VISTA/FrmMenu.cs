@@ -17,6 +17,7 @@ namespace ProyectoFinal.VISTA
         {
             InitializeComponent();
         }
+        public static FrmMatricula matriculaVer = new FrmMatricula();
 
         private void BtnCerrar_Click(object sender, EventArgs e)
         {
@@ -64,7 +65,9 @@ namespace ProyectoFinal.VISTA
 
         private void btnNotas_Click(object sender, EventArgs e)
         {
-            AbrirFormulario<FrmNotas>();
+            //AbrirFormulario<FrmNotas>();
+            matriculaVer.Show(); /*excepcion click 3 veces*/
+
 
         }
 

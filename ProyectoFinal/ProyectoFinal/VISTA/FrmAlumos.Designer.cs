@@ -43,7 +43,7 @@ namespace ProyectoFinal.VISTA
             this.label13 = new System.Windows.Forms.Label();
             this.txtNombreEncargado = new System.Windows.Forms.TextBox();
             this.label = new System.Windows.Forms.Label();
-            this.txtFkAlumno = new System.Windows.Forms.TextBox();
+            this.txtFkEncargado = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtiDDireccion = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
@@ -55,6 +55,7 @@ namespace ProyectoFinal.VISTA
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.gbxDatosAlumno = new System.Windows.Forms.GroupBox();
+            this.cbxGenero = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -99,7 +100,6 @@ namespace ProyectoFinal.VISTA
             this.Column19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnRegistarAlumnos = new System.Windows.Forms.Button();
-            this.cbxGenero = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -163,7 +163,6 @@ namespace ProyectoFinal.VISTA
             this.groupBox1.Controls.Add(this.label13);
             this.groupBox1.Controls.Add(this.txtNombreEncargado);
             this.groupBox1.Controls.Add(this.label);
-            this.groupBox1.Controls.Add(this.txtFkAlumno);
             this.groupBox1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.White;
             this.groupBox1.Location = new System.Drawing.Point(3, 193);
@@ -253,12 +252,12 @@ namespace ProyectoFinal.VISTA
             this.label.TabIndex = 31;
             this.label.Text = "Nombres";
             // 
-            // txtFkAlumno
+            // txtFkEncargado
             // 
-            this.txtFkAlumno.Location = new System.Drawing.Point(6, 84);
-            this.txtFkAlumno.Name = "txtFkAlumno";
-            this.txtFkAlumno.Size = new System.Drawing.Size(31, 22);
-            this.txtFkAlumno.TabIndex = 30;
+            this.txtFkEncargado.Location = new System.Drawing.Point(599, 127);
+            this.txtFkEncargado.Name = "txtFkEncargado";
+            this.txtFkEncargado.Size = new System.Drawing.Size(118, 22);
+            this.txtFkEncargado.TabIndex = 30;
             // 
             // groupBox2
             // 
@@ -385,6 +384,7 @@ namespace ProyectoFinal.VISTA
             this.gbxDatosAlumno.Controls.Add(this.txtContacto);
             this.gbxDatosAlumno.Controls.Add(this.label9);
             this.gbxDatosAlumno.Controls.Add(this.label8);
+            this.gbxDatosAlumno.Controls.Add(this.txtFkEncargado);
             this.gbxDatosAlumno.Controls.Add(this.txtCorreo);
             this.gbxDatosAlumno.Controls.Add(this.label7);
             this.gbxDatosAlumno.Controls.Add(this.txtIdAlumos);
@@ -403,6 +403,14 @@ namespace ProyectoFinal.VISTA
             this.gbxDatosAlumno.TabIndex = 16;
             this.gbxDatosAlumno.TabStop = false;
             this.gbxDatosAlumno.Text = "Datos";
+            // 
+            // cbxGenero
+            // 
+            this.cbxGenero.FormattingEnabled = true;
+            this.cbxGenero.Location = new System.Drawing.Point(133, 113);
+            this.cbxGenero.Name = "cbxGenero";
+            this.cbxGenero.Size = new System.Drawing.Size(121, 24);
+            this.cbxGenero.TabIndex = 53;
             // 
             // label1
             // 
@@ -793,15 +801,7 @@ namespace ProyectoFinal.VISTA
             this.btnRegistarAlumnos.TabIndex = 16;
             this.btnRegistarAlumnos.Text = "Registrar";
             this.btnRegistarAlumnos.UseVisualStyleBackColor = true;
-            this.btnRegistarAlumnos.Click += new System.EventHandler(this.btnRegistarAlumnos_Click_1);
-            // 
-            // cbxGenero
-            // 
-            this.cbxGenero.FormattingEnabled = true;
-            this.cbxGenero.Location = new System.Drawing.Point(133, 113);
-            this.cbxGenero.Name = "cbxGenero";
-            this.cbxGenero.Size = new System.Drawing.Size(121, 24);
-            this.cbxGenero.TabIndex = 53;
+            this.btnRegistarAlumnos.Click += new System.EventHandler(this.btnRegistarAlumnos_Click);
             // 
             // FrmAlumos
             // 
@@ -859,7 +859,7 @@ namespace ProyectoFinal.VISTA
         private System.Windows.Forms.TextBox txtDepartamento;
         private System.Windows.Forms.TextBox txtMunicipio;
         private System.Windows.Forms.TextBox txtRecidencia;
-        private System.Windows.Forms.TextBox txtFkAlumno;
+        private System.Windows.Forms.TextBox txtFkEncargado;
         private System.Windows.Forms.TextBox txtFkDireccion;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox txtCorreoEncargado;

@@ -17,7 +17,7 @@ namespace ProyectoFinal.MODEL
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Alumno()
         {
-            this.Encargado = new HashSet<Encargado>();
+            this.Matricula = new HashSet<Matricula>();
         }
     
         public int alumnoId { get; set; }
@@ -31,9 +31,11 @@ namespace ProyectoFinal.MODEL
         public string correo { get; set; }
         public Nullable<int> activo { get; set; }
         public Nullable<System.DateTime> fechaRegistro { get; set; }
+        public Nullable<int> encargadoFK { get; set; }
     
         public virtual Direccion Direccion { get; set; }
+        public virtual Encargado Encargado { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Encargado> Encargado { get; set; }
+        public virtual ICollection<Matricula> Matricula { get; set; }
     }
 }

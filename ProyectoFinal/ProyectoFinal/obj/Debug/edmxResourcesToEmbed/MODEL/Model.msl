@@ -4,6 +4,7 @@
     <EntitySetMapping Name="Alumno">
       <EntityTypeMapping TypeName="AdministracionEscolarModel.Alumno">
         <MappingFragment StoreEntitySet="Alumno">
+          <ScalarProperty Name="encargadoFK" ColumnName="encargadoFK" />
           <ScalarProperty Name="alumnoId" ColumnName="alumnoId" />
           <ScalarProperty Name="nombre" ColumnName="nombre" />
           <ScalarProperty Name="apellidoPaterno" ColumnName="apellidoPaterno" />
@@ -25,19 +26,6 @@
           <ScalarProperty Name="residencia" ColumnName="residencia" />
           <ScalarProperty Name="municipio" ColumnName="municipio" />
           <ScalarProperty Name="departamento" ColumnName="departamento" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Encargado">
-      <EntityTypeMapping TypeName="AdministracionEscolarModel.Encargado">
-        <MappingFragment StoreEntitySet="Encargado">
-          <ScalarProperty Name="encargadoId" ColumnName="encargadoId" />
-          <ScalarProperty Name="alumnoFk" ColumnName="alumnoFk" />
-          <ScalarProperty Name="nombre" ColumnName="nombre" />
-          <ScalarProperty Name="apellido" ColumnName="apellido" />
-          <ScalarProperty Name="identificacion" ColumnName="identificacion" />
-          <ScalarProperty Name="contacto" ColumnName="contacto" />
-          <ScalarProperty Name="correo" ColumnName="correo" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -65,6 +53,46 @@
           <ScalarProperty Name="correo_Usuario" ColumnName="correo_Usuario" />
           <ScalarProperty Name="contrasena" ColumnName="contrasena" />
           <ScalarProperty Name="tipo_Rol" ColumnName="tipo_Rol" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Encargado">
+      <EntityTypeMapping TypeName="AdministracionEscolarModel.Encargado">
+        <MappingFragment StoreEntitySet="Encargado">
+          <ScalarProperty Name="correoEncargado" ColumnName="correoEncargado" />
+          <ScalarProperty Name="contactoEncargado" ColumnName="contactoEncargado" />
+          <ScalarProperty Name="identificacionEncargado" ColumnName="identificacionEncargado" />
+          <ScalarProperty Name="apellidoEncargado" ColumnName="apellidoEncargado" />
+          <ScalarProperty Name="nombreEncargado" ColumnName="nombreEncargado" />
+          <ScalarProperty Name="encargadoId" ColumnName="encargadoId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Grado">
+      <EntityTypeMapping TypeName="AdministracionEscolarModel.Grado">
+        <MappingFragment StoreEntitySet="Grado">
+          <ScalarProperty Name="nombreGrado" ColumnName="nombreGrado" />
+          <ScalarProperty Name="gradoId" ColumnName="gradoId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Matricula">
+      <EntityTypeMapping TypeName="AdministracionEscolarModel.Matricula">
+        <MappingFragment StoreEntitySet="Matricula">
+          <ScalarProperty Name="fechaRegistroMatricula" ColumnName="fechaRegistroMatricula" />
+          <ScalarProperty Name="nombreMatricula" ColumnName="nombreMatricula" />
+          <ScalarProperty Name="seccionFk" ColumnName="seccionFk" />
+          <ScalarProperty Name="gradoFk" ColumnName="gradoFk" />
+          <ScalarProperty Name="alumnoFk" ColumnName="alumnoFk" />
+          <ScalarProperty Name="matriculaId" ColumnName="matriculaId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Seccion">
+      <EntityTypeMapping TypeName="AdministracionEscolarModel.Seccion">
+        <MappingFragment StoreEntitySet="Seccion">
+          <ScalarProperty Name="nombreSeccion" ColumnName="nombreSeccion" />
+          <ScalarProperty Name="seccionId" ColumnName="seccionId" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

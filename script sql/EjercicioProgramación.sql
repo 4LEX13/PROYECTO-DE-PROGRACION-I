@@ -19,6 +19,14 @@ municipio varchar(50),
 departamento varchar(50)
 
 );
+create table Encargado (
+encargadoId int primary key identity not null,
+nombreEncargado varchar(75),
+apellidoEncargado varchar(75),
+identificacionEncargado varchar(25),
+contactoEncargado varchar(25),
+correoEncargado varchar(50) default('ninguno')
+);
 
 create table Alumno(
 alumnoId int primary key identity not null,
@@ -34,15 +42,8 @@ activo int,
 fechaRegistro date default getdate()
 );
 
-create table Encargado (
-encargadoId int primary key identity not null,
-alumnoFk int references Alumno(alumnoId),
-nombre varchar(75),
-apellido varchar(75),
-identificacion varchar(25),
-contacto varchar(25),
-correo varchar(50) default('ninguno')
-);
+alter table Alumnos add encargadoFK int references Encargado(encargadoId)
+
 
 create table Maestro(
 maestroId int primary key identity not null,
@@ -58,3 +59,24 @@ activo int,
 fechaRegistro date default getdate()
 );
 
+create table Grado(
+gradoId int primary key identity not null,
+nombreGrado varchar(25),
+)
+
+create table Seccion(
+seccionId int primary key identity not null,
+nombreSeccion char
+
+);
+
+create table Matricula(
+matriculaId int primary key identity not null,
+alumnoFk int references Alumno(alumnoId),
+gradoFk int references Grado(gradoId),
+seccionFk int references Seccion(seccionId),
+nombreMatricula  varchar (50),
+fechaRegistroMatricula date default getdate()
+);
+
+select * from Matricula

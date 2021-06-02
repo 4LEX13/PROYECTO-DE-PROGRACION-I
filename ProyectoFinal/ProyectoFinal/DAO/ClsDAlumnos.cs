@@ -45,6 +45,7 @@ namespace ProyectoFinal.DAO
                     alumno1.correo = alumno.correo;
                     alumno1.activo = alumno.activo;
                     alumno1.fechaRegistro = alumno.fechaRegistro;
+                    alumno1.encargadoFK = alumno.encargadoFK;
 
                     db.Alumno.Add(alumno1);
                     db.SaveChanges();

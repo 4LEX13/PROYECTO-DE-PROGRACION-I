@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="AdministracionEscolarModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="AdministracionEscolarModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Alumno">
           <Key>
             <PropertyRef Name="alumnoId" />
@@ -20,6 +20,7 @@
           <Property Name="correo" Type="varchar" MaxLength="50" />
           <Property Name="activo" Type="int" />
           <Property Name="fechaRegistro" Type="date" />
+          <Property Name="encargadoFK" Type="int" />
         </EntityType>
         <EntityType Name="Direccion">
           <Key>
@@ -35,12 +36,18 @@
             <PropertyRef Name="encargadoId" />
           </Key>
           <Property Name="encargadoId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="alumnoFk" Type="int" />
-          <Property Name="nombre" Type="varchar" MaxLength="75" />
-          <Property Name="apellido" Type="varchar" MaxLength="75" />
-          <Property Name="identificacion" Type="varchar" MaxLength="25" />
-          <Property Name="contacto" Type="varchar" MaxLength="25" />
-          <Property Name="correo" Type="varchar" MaxLength="50" />
+          <Property Name="nombreEncargado" Type="varchar" MaxLength="75" />
+          <Property Name="apellidoEncargado" Type="varchar" MaxLength="75" />
+          <Property Name="identificacionEncargado" Type="varchar" MaxLength="25" />
+          <Property Name="contactoEncargado" Type="varchar" MaxLength="25" />
+          <Property Name="correoEncargado" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Grado">
+          <Key>
+            <PropertyRef Name="gradoId" />
+          </Key>
+          <Property Name="gradoId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nombreGrado" Type="varchar" MaxLength="25" />
         </EntityType>
         <EntityType Name="Maestro">
           <Key>
@@ -57,6 +64,24 @@
           <Property Name="correo" Type="varchar" MaxLength="75" />
           <Property Name="activo" Type="int" />
           <Property Name="fechaRegistro" Type="date" />
+        </EntityType>
+        <EntityType Name="Matricula">
+          <Key>
+            <PropertyRef Name="matriculaId" />
+          </Key>
+          <Property Name="matriculaId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="alumnoFk" Type="int" />
+          <Property Name="gradoFk" Type="int" />
+          <Property Name="seccionFk" Type="int" />
+          <Property Name="nombreMatricula" Type="varchar" MaxLength="50" />
+          <Property Name="fechaRegistroMatricula" Type="date" />
+        </EntityType>
+        <EntityType Name="Seccion">
+          <Key>
+            <PropertyRef Name="seccionId" />
+          </Key>
+          <Property Name="seccionId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nombreSeccion" Type="char" MaxLength="1" />
         </EntityType>
         <EntityType Name="Usuario">
           <Key>
@@ -79,15 +104,15 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Encargado__alumn__2F10007B">
-          <End Role="Alumno" Type="Self.Alumno" Multiplicity="0..1" />
-          <End Role="Encargado" Type="Self.Encargado" Multiplicity="*" />
+        <Association Name="FK__Alumno__encargad__37A5467C">
+          <End Role="Encargado" Type="Self.Encargado" Multiplicity="0..1" />
+          <End Role="Alumno" Type="Self.Alumno" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="Alumno">
-              <PropertyRef Name="alumnoId" />
+            <Principal Role="Encargado">
+              <PropertyRef Name="encargadoId" />
             </Principal>
-            <Dependent Role="Encargado">
-              <PropertyRef Name="alumnoFk" />
+            <Dependent Role="Alumno">
+              <PropertyRef Name="encargadoFK" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -103,27 +128,77 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK__Matricula__alumn__4F7CD00D">
+          <End Role="Alumno" Type="Self.Alumno" Multiplicity="0..1" />
+          <End Role="Matricula" Type="Self.Matricula" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Alumno">
+              <PropertyRef Name="alumnoId" />
+            </Principal>
+            <Dependent Role="Matricula">
+              <PropertyRef Name="alumnoFk" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Matricula__grado__5070F446">
+          <End Role="Grado" Type="Self.Grado" Multiplicity="0..1" />
+          <End Role="Matricula" Type="Self.Matricula" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Grado">
+              <PropertyRef Name="gradoId" />
+            </Principal>
+            <Dependent Role="Matricula">
+              <PropertyRef Name="gradoFk" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Matricula__secci__5165187F">
+          <End Role="Seccion" Type="Self.Seccion" Multiplicity="0..1" />
+          <End Role="Matricula" Type="Self.Matricula" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Seccion">
+              <PropertyRef Name="seccionId" />
+            </Principal>
+            <Dependent Role="Matricula">
+              <PropertyRef Name="seccionFk" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <EntityContainer Name="AdministracionEscolarModelStoreContainer">
           <EntitySet Name="Alumno" EntityType="Self.Alumno" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Direccion" EntityType="Self.Direccion" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Encargado" EntityType="Self.Encargado" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Grado" EntityType="Self.Grado" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Maestro" EntityType="Self.Maestro" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Matricula" EntityType="Self.Matricula" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Seccion" EntityType="Self.Seccion" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Usuario" EntityType="Self.Usuario" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK__Alumno__direccio__29572725" Association="Self.FK__Alumno__direccio__29572725">
             <End Role="Direccion" EntitySet="Direccion" />
             <End Role="Alumno" EntitySet="Alumno" />
           </AssociationSet>
-          <AssociationSet Name="FK__Encargado__alumn__2F10007B" Association="Self.FK__Encargado__alumn__2F10007B">
-            <End Role="Alumno" EntitySet="Alumno" />
+          <AssociationSet Name="FK__Alumno__encargad__37A5467C" Association="Self.FK__Alumno__encargad__37A5467C">
             <End Role="Encargado" EntitySet="Encargado" />
+            <End Role="Alumno" EntitySet="Alumno" />
           </AssociationSet>
           <AssociationSet Name="FK__Maestro__direcci__32E0915F" Association="Self.FK__Maestro__direcci__32E0915F">
             <End Role="Direccion" EntitySet="Direccion" />
             <End Role="Maestro" EntitySet="Maestro" />
           </AssociationSet>
+          <AssociationSet Name="FK__Matricula__alumn__4F7CD00D" Association="Self.FK__Matricula__alumn__4F7CD00D">
+            <End Role="Alumno" EntitySet="Alumno" />
+            <End Role="Matricula" EntitySet="Matricula" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Matricula__grado__5070F446" Association="Self.FK__Matricula__grado__5070F446">
+            <End Role="Grado" EntitySet="Grado" />
+            <End Role="Matricula" EntitySet="Matricula" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Matricula__secci__5165187F" Association="Self.FK__Matricula__secci__5165187F">
+            <End Role="Seccion" EntitySet="Seccion" />
+            <End Role="Matricula" EntitySet="Matricula" />
+          </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="AdministracionEscolarModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -143,7 +218,9 @@
           <Property Name="activo" Type="Int32" />
           <Property Name="fechaRegistro" Type="DateTime" Precision="0" />
           <NavigationProperty Name="Direccion" Relationship="Self.FK__Alumno__direccio__29572725" FromRole="Alumno" ToRole="Direccion" />
-          <NavigationProperty Name="Encargado" Relationship="Self.FK__Encargado__alumn__2F10007B" FromRole="Alumno" ToRole="Encargado" />
+          <Property Name="encargadoFK" Type="Int32" />
+          <NavigationProperty Name="Encargado" Relationship="AdministracionEscolarModel.FK__Alumno__encargad__37A5467C" FromRole="Alumno" ToRole="Encargado" />
+          <NavigationProperty Name="Matricula" Relationship="AdministracionEscolarModel.FK__Matricula__alumn__4F7CD00D" FromRole="Alumno" ToRole="Matricula" />
         </EntityType>
         <EntityType Name="Direccion">
           <Key>
@@ -155,19 +232,6 @@
           <Property Name="departamento" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Alumno" Relationship="Self.FK__Alumno__direccio__29572725" FromRole="Direccion" ToRole="Alumno" />
           <NavigationProperty Name="Maestro" Relationship="Self.FK__Maestro__direcci__32E0915F" FromRole="Direccion" ToRole="Maestro" />
-        </EntityType>
-        <EntityType Name="Encargado">
-          <Key>
-            <PropertyRef Name="encargadoId" />
-          </Key>
-          <Property Name="encargadoId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="alumnoFk" Type="Int32" />
-          <Property Name="nombre" Type="String" MaxLength="75" FixedLength="false" Unicode="false" />
-          <Property Name="apellido" Type="String" MaxLength="75" FixedLength="false" Unicode="false" />
-          <Property Name="identificacion" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
-          <Property Name="contacto" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
-          <Property Name="correo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="Alumno" Relationship="Self.FK__Encargado__alumn__2F10007B" FromRole="Encargado" ToRole="Alumno" />
         </EntityType>
         <EntityType Name="Maestro">
           <Key>
@@ -207,18 +271,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Encargado__alumn__2F10007B">
-          <End Role="Alumno" Type="Self.Alumno" Multiplicity="0..1" />
-          <End Role="Encargado" Type="Self.Encargado" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Alumno">
-              <PropertyRef Name="alumnoId" />
-            </Principal>
-            <Dependent Role="Encargado">
-              <PropertyRef Name="alumnoFk" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK__Maestro__direcci__32E0915F">
           <End Role="Direccion" Type="Self.Direccion" Multiplicity="0..1" />
           <End Role="Maestro" Type="Self.Maestro" Multiplicity="*" />
@@ -234,22 +286,127 @@
         <EntityContainer Name="AdministracionEscolarEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Alumno" EntityType="Self.Alumno" />
           <EntitySet Name="Direccion" EntityType="Self.Direccion" />
-          <EntitySet Name="Encargado" EntityType="Self.Encargado" />
           <EntitySet Name="Maestro" EntityType="Self.Maestro" />
           <EntitySet Name="Usuario" EntityType="Self.Usuario" />
           <AssociationSet Name="FK__Alumno__direccio__29572725" Association="Self.FK__Alumno__direccio__29572725">
             <End Role="Direccion" EntitySet="Direccion" />
             <End Role="Alumno" EntitySet="Alumno" />
           </AssociationSet>
-          <AssociationSet Name="FK__Encargado__alumn__2F10007B" Association="Self.FK__Encargado__alumn__2F10007B">
-            <End Role="Alumno" EntitySet="Alumno" />
-            <End Role="Encargado" EntitySet="Encargado" />
-          </AssociationSet>
           <AssociationSet Name="FK__Maestro__direcci__32E0915F" Association="Self.FK__Maestro__direcci__32E0915F">
             <End Role="Direccion" EntitySet="Direccion" />
             <End Role="Maestro" EntitySet="Maestro" />
           </AssociationSet>
+          <EntitySet Name="Encargado" EntityType="AdministracionEscolarModel.Encargado" />
+          <AssociationSet Name="FK__Alumno__encargad__37A5467C" Association="AdministracionEscolarModel.FK__Alumno__encargad__37A5467C">
+            <End Role="Encargado" EntitySet="Encargado" />
+            <End Role="Alumno" EntitySet="Alumno" />
+          </AssociationSet>
+          <EntitySet Name="Grado" EntityType="AdministracionEscolarModel.Grado" />
+          <EntitySet Name="Matricula" EntityType="AdministracionEscolarModel.Matricula" />
+          <EntitySet Name="Seccion" EntityType="AdministracionEscolarModel.Seccion" />
+          <AssociationSet Name="FK__Matricula__alumn__4F7CD00D" Association="AdministracionEscolarModel.FK__Matricula__alumn__4F7CD00D">
+            <End Role="Alumno" EntitySet="Alumno" />
+            <End Role="Matricula" EntitySet="Matricula" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Matricula__grado__5070F446" Association="AdministracionEscolarModel.FK__Matricula__grado__5070F446">
+            <End Role="Grado" EntitySet="Grado" />
+            <End Role="Matricula" EntitySet="Matricula" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Matricula__secci__5165187F" Association="AdministracionEscolarModel.FK__Matricula__secci__5165187F">
+            <End Role="Seccion" EntitySet="Seccion" />
+            <End Role="Matricula" EntitySet="Matricula" />
+          </AssociationSet>
         </EntityContainer>
+        <EntityType Name="Encargado">
+          <Key>
+            <PropertyRef Name="encargadoId" />
+          </Key>
+          <Property Name="encargadoId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nombreEncargado" Type="String" MaxLength="75" FixedLength="false" Unicode="false" />
+          <Property Name="apellidoEncargado" Type="String" MaxLength="75" FixedLength="false" Unicode="false" />
+          <Property Name="identificacionEncargado" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="contactoEncargado" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="correoEncargado" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Alumno" Relationship="AdministracionEscolarModel.FK__Alumno__encargad__37A5467C" FromRole="Encargado" ToRole="Alumno" />
+        </EntityType>
+        <Association Name="FK__Alumno__encargad__37A5467C">
+          <End Type="AdministracionEscolarModel.Encargado" Role="Encargado" Multiplicity="0..1" />
+          <End Type="AdministracionEscolarModel.Alumno" Role="Alumno" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Encargado">
+              <PropertyRef Name="encargadoId" />
+            </Principal>
+            <Dependent Role="Alumno">
+              <PropertyRef Name="encargadoFK" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Grado">
+          <Key>
+            <PropertyRef Name="gradoId" />
+          </Key>
+          <Property Name="gradoId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nombreGrado" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Matricula" Relationship="AdministracionEscolarModel.FK__Matricula__grado__5070F446" FromRole="Grado" ToRole="Matricula" />
+        </EntityType>
+        <EntityType Name="Matricula">
+          <Key>
+            <PropertyRef Name="matriculaId" />
+          </Key>
+          <Property Name="matriculaId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="alumnoFk" Type="Int32" />
+          <Property Name="gradoFk" Type="Int32" />
+          <Property Name="seccionFk" Type="Int32" />
+          <Property Name="nombreMatricula" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="fechaRegistroMatricula" Type="DateTime" Precision="0" />
+          <NavigationProperty Name="Alumno" Relationship="AdministracionEscolarModel.FK__Matricula__alumn__4F7CD00D" FromRole="Matricula" ToRole="Alumno" />
+          <NavigationProperty Name="Grado" Relationship="AdministracionEscolarModel.FK__Matricula__grado__5070F446" FromRole="Matricula" ToRole="Grado" />
+          <NavigationProperty Name="Seccion" Relationship="AdministracionEscolarModel.FK__Matricula__secci__5165187F" FromRole="Matricula" ToRole="Seccion" />
+        </EntityType>
+        <EntityType Name="Seccion">
+          <Key>
+            <PropertyRef Name="seccionId" />
+          </Key>
+          <Property Name="seccionId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nombreSeccion" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <NavigationProperty Name="Matricula" Relationship="AdministracionEscolarModel.FK__Matricula__secci__5165187F" FromRole="Seccion" ToRole="Matricula" />
+        </EntityType>
+        <Association Name="FK__Matricula__alumn__4F7CD00D">
+          <End Type="AdministracionEscolarModel.Alumno" Role="Alumno" Multiplicity="0..1" />
+          <End Type="AdministracionEscolarModel.Matricula" Role="Matricula" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Alumno">
+              <PropertyRef Name="alumnoId" />
+            </Principal>
+            <Dependent Role="Matricula">
+              <PropertyRef Name="alumnoFk" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Matricula__grado__5070F446">
+          <End Type="AdministracionEscolarModel.Grado" Role="Grado" Multiplicity="0..1" />
+          <End Type="AdministracionEscolarModel.Matricula" Role="Matricula" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Grado">
+              <PropertyRef Name="gradoId" />
+            </Principal>
+            <Dependent Role="Matricula">
+              <PropertyRef Name="gradoFk" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Matricula__secci__5165187F">
+          <End Type="AdministracionEscolarModel.Seccion" Role="Seccion" Multiplicity="0..1" />
+          <End Type="AdministracionEscolarModel.Matricula" Role="Matricula" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Seccion">
+              <PropertyRef Name="seccionId" />
+            </Principal>
+            <Dependent Role="Matricula">
+              <PropertyRef Name="seccionFk" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -259,6 +416,7 @@
           <EntitySetMapping Name="Alumno">
             <EntityTypeMapping TypeName="AdministracionEscolarModel.Alumno">
               <MappingFragment StoreEntitySet="Alumno">
+                <ScalarProperty Name="encargadoFK" ColumnName="encargadoFK" />
                 <ScalarProperty Name="alumnoId" ColumnName="alumnoId" />
                 <ScalarProperty Name="nombre" ColumnName="nombre" />
                 <ScalarProperty Name="apellidoPaterno" ColumnName="apellidoPaterno" />
@@ -280,19 +438,6 @@
                 <ScalarProperty Name="residencia" ColumnName="residencia" />
                 <ScalarProperty Name="municipio" ColumnName="municipio" />
                 <ScalarProperty Name="departamento" ColumnName="departamento" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Encargado">
-            <EntityTypeMapping TypeName="AdministracionEscolarModel.Encargado">
-              <MappingFragment StoreEntitySet="Encargado">
-                <ScalarProperty Name="encargadoId" ColumnName="encargadoId" />
-                <ScalarProperty Name="alumnoFk" ColumnName="alumnoFk" />
-                <ScalarProperty Name="nombre" ColumnName="nombre" />
-                <ScalarProperty Name="apellido" ColumnName="apellido" />
-                <ScalarProperty Name="identificacion" ColumnName="identificacion" />
-                <ScalarProperty Name="contacto" ColumnName="contacto" />
-                <ScalarProperty Name="correo" ColumnName="correo" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -320,6 +465,46 @@
                 <ScalarProperty Name="correo_Usuario" ColumnName="correo_Usuario" />
                 <ScalarProperty Name="contrasena" ColumnName="contrasena" />
                 <ScalarProperty Name="tipo_Rol" ColumnName="tipo_Rol" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Encargado">
+            <EntityTypeMapping TypeName="AdministracionEscolarModel.Encargado">
+              <MappingFragment StoreEntitySet="Encargado">
+                <ScalarProperty Name="correoEncargado" ColumnName="correoEncargado" />
+                <ScalarProperty Name="contactoEncargado" ColumnName="contactoEncargado" />
+                <ScalarProperty Name="identificacionEncargado" ColumnName="identificacionEncargado" />
+                <ScalarProperty Name="apellidoEncargado" ColumnName="apellidoEncargado" />
+                <ScalarProperty Name="nombreEncargado" ColumnName="nombreEncargado" />
+                <ScalarProperty Name="encargadoId" ColumnName="encargadoId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Grado">
+            <EntityTypeMapping TypeName="AdministracionEscolarModel.Grado">
+              <MappingFragment StoreEntitySet="Grado">
+                <ScalarProperty Name="nombreGrado" ColumnName="nombreGrado" />
+                <ScalarProperty Name="gradoId" ColumnName="gradoId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Matricula">
+            <EntityTypeMapping TypeName="AdministracionEscolarModel.Matricula">
+              <MappingFragment StoreEntitySet="Matricula">
+                <ScalarProperty Name="fechaRegistroMatricula" ColumnName="fechaRegistroMatricula" />
+                <ScalarProperty Name="nombreMatricula" ColumnName="nombreMatricula" />
+                <ScalarProperty Name="seccionFk" ColumnName="seccionFk" />
+                <ScalarProperty Name="gradoFk" ColumnName="gradoFk" />
+                <ScalarProperty Name="alumnoFk" ColumnName="alumnoFk" />
+                <ScalarProperty Name="matriculaId" ColumnName="matriculaId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Seccion">
+            <EntityTypeMapping TypeName="AdministracionEscolarModel.Seccion">
+              <MappingFragment StoreEntitySet="Seccion">
+                <ScalarProperty Name="nombreSeccion" ColumnName="nombreSeccion" />
+                <ScalarProperty Name="seccionId" ColumnName="seccionId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

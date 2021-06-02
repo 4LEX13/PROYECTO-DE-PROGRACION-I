@@ -17,7 +17,7 @@ namespace ProyectoFinal
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmDocente());
+            Application.Run(new FrmMenu());
         }
     }
 }

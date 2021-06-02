@@ -12,22 +12,18 @@ namespace ProyectoFinal.MODEL
     using System;
     using System.Collections.Generic;
     
-    public partial class Encargado
+    public partial class Grado
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Encargado()
+        public Grado()
         {
-            this.Alumno = new HashSet<Alumno>();
+            this.Matricula = new HashSet<Matricula>();
         }
     
-        public int encargadoId { get; set; }
-        public string nombreEncargado { get; set; }
-        public string apellidoEncargado { get; set; }
-        public string identificacionEncargado { get; set; }
-        public string contactoEncargado { get; set; }
-        public string correoEncargado { get; set; }
+        public int gradoId { get; set; }
+        public string nombreGrado { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Alumno> Alumno { get; set; }
+        public virtual ICollection<Matricula> Matricula { get; set; }
     }
 }
