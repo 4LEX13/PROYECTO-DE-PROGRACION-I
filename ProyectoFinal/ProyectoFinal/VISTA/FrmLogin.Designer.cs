@@ -38,8 +38,8 @@ namespace ProyectoFinal.VISTA
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.lblCrearCuenta = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -147,15 +147,6 @@ namespace ProyectoFinal.VISTA
             this.pictureBox1.TabIndex = 12;
             this.pictureBox1.TabStop = false;
             // 
-            // comboBox1
-            // 
-            this.comboBox1.BackColor = System.Drawing.Color.DarkGray;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(70, 349);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(236, 21);
-            this.comboBox1.TabIndex = 18;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -168,14 +159,26 @@ namespace ProyectoFinal.VISTA
             this.label2.Text = "CERRAR";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
+            // lblCrearCuenta
+            // 
+            this.lblCrearCuenta.AutoSize = true;
+            this.lblCrearCuenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCrearCuenta.ForeColor = System.Drawing.Color.DarkGray;
+            this.lblCrearCuenta.Location = new System.Drawing.Point(135, 348);
+            this.lblCrearCuenta.Name = "lblCrearCuenta";
+            this.lblCrearCuenta.Size = new System.Drawing.Size(104, 20);
+            this.lblCrearCuenta.TabIndex = 20;
+            this.lblCrearCuenta.Text = "Crear Cuenta";
+            this.lblCrearCuenta.Click += new System.EventHandler(this.lblCrearCuenta_Click);
+            // 
             // FrmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(68)))), ((int)(((byte)(106)))));
             this.ClientSize = new System.Drawing.Size(382, 523);
+            this.Controls.Add(this.lblCrearCuenta);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.panel1);
@@ -209,7 +212,7 @@ namespace ProyectoFinal.VISTA
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblCrearCuenta;
     }
 }

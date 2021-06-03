@@ -66,7 +66,11 @@ namespace ProyectoFinal.VISTA
         private void btnNotas_Click(object sender, EventArgs e)
         {
             //AbrirFormulario<FrmNotas>();
-            matriculaVer.Show(); /*excepcion click 3 veces*/
+            
+            
+            //matriculaVer.Show(); /*excepcion click 3 veces*/
+
+            AbrirFormulario<FrmMatricula>();
 
 
         }

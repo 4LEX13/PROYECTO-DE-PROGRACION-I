@@ -87,12 +87,12 @@ namespace ProyectoFinal.VISTA
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1241, 608);
+            this.panel1.Size = new System.Drawing.Size(1087, 608);
             this.panel1.TabIndex = 0;
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(1121, 194);
+            this.btnEliminar.Location = new System.Drawing.Point(1006, 202);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(75, 23);
             this.btnEliminar.TabIndex = 36;
@@ -101,7 +101,7 @@ namespace ProyectoFinal.VISTA
             // 
             // btnActualizar
             // 
-            this.btnActualizar.Location = new System.Drawing.Point(1121, 125);
+            this.btnActualizar.Location = new System.Drawing.Point(1006, 133);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(75, 23);
             this.btnActualizar.TabIndex = 35;
@@ -110,7 +110,7 @@ namespace ProyectoFinal.VISTA
             // 
             // btnRegistrar
             // 
-            this.btnRegistrar.Location = new System.Drawing.Point(1121, 72);
+            this.btnRegistrar.Location = new System.Drawing.Point(1006, 80);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(75, 23);
             this.btnRegistrar.TabIndex = 34;
@@ -289,7 +289,7 @@ namespace ProyectoFinal.VISTA
             this.dtgMatricula.Location = new System.Drawing.Point(12, 353);
             this.dtgMatricula.Name = "dtgMatricula";
             this.dtgMatricula.ReadOnly = true;
-            this.dtgMatricula.Size = new System.Drawing.Size(1217, 252);
+            this.dtgMatricula.Size = new System.Drawing.Size(1057, 252);
             this.dtgMatricula.TabIndex = 31;
             // 
             // Column1
@@ -412,7 +412,7 @@ namespace ProyectoFinal.VISTA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1241, 608);
+            this.ClientSize = new System.Drawing.Size(1087, 608);
             this.Controls.Add(this.panel1);
             this.Name = "FrmMatricula";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

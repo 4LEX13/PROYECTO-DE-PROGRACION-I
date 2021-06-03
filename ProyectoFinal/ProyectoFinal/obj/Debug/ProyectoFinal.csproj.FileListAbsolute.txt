@@ -7,7 +7,6 @@ C:\Users\crobe\Documents\GitHub\PROYECTO-DE-PROGRAMACION-I\ProyectoFinal\Proyect
 C:\Users\crobe\Documents\GitHub\PROYECTO-DE-PROGRAMACION-I\ProyectoFinal\ProyectoFinal\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\crobe\Documents\GitHub\PROYECTO-DE-PROGRAMACION-I\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.csprojAssemblyReference.cache
 C:\Users\crobe\Documents\GitHub\PROYECTO-DE-PROGRAMACION-I\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.Properties.Resources.resources
-C:\Users\crobe\Documents\GitHub\PROYECTO-DE-PROGRAMACION-I\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.Form1.resources
 C:\Users\crobe\Documents\GitHub\PROYECTO-DE-PROGRAMACION-I\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.VISTA.FrmLogin.resources
 C:\Users\crobe\Documents\GitHub\PROYECTO-DE-PROGRAMACION-I\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.csproj.GenerateResource.cache
 C:\Users\crobe\Documents\GitHub\PROYECTO-DE-PROGRAMACION-I\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.csproj.CoreCompileInputs.cache
@@ -78,3 +77,4 @@ C:\Users\carlj\Documents\GitHub\PROYECTO-DE-PROGRAMACION-I\ProyectoFinal\Proyect
 C:\Users\kevin\Documents\GitHub\PROYECTO-DE-PROGRAMACION-I\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.VISTA.FrmAlumos.resources
 C:\Users\crobe\Documents\GitHub\PROYECTO-DE-PROGRAMACION-I\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.VISTA.FrmMatricula.resources
 C:\Users\crobe\Documents\GitHub\PROYECTO-DE-PROGRAMACION-I\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.VISTA.FrmBuscarAlumno.resources
+C:\Users\crobe\Documents\GitHub\PROYECTO-DE-PROGRAMACION-I\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.VISTA.FrmCrearCuenta.resources

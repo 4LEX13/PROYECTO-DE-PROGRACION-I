@@ -142,5 +142,12 @@ namespace ProyectoFinal.VISTA
 
             this.Show();
         }
+
+        private void lblCrearCuenta_Click(object sender, EventArgs e)
+        {
+            FrmCrearCuenta crearCuenta = new FrmCrearCuenta();
+
+            crearCuenta.Show();
+        }
     }
 }
