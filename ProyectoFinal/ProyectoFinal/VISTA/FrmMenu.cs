@@ -66,18 +66,18 @@ namespace ProyectoFinal.VISTA
         private void btnNotas_Click(object sender, EventArgs e)
         {
             //AbrirFormulario<FrmNotas>();
-            
-            
-            //matriculaVer.Show(); /*excepcion click 3 veces*/
 
-            AbrirFormulario<FrmMatricula>();
+
+            matriculaVer.Show(); /*excepcion click 3 veces*/
+
+            //AbrirFormulario<FrmMatricula>();
 
 
         }
 
         private void btnHorarios_Click(object sender, EventArgs e)
         {
-            AbrirFormulario<FrmHorarios>();
+            AbrirFormulario<FrmCrearCuenta>();
 
         }
 

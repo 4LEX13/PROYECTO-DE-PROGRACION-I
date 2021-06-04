@@ -16,5 +16,15 @@ namespace ProyectoFinal.VISTA
         {
             InitializeComponent();
         }
+
+        private void lblCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnCrearCuenta_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -48,7 +48,7 @@ namespace ProyectoFinal.VISTA
 
                 if (lg.Count() > 0)
                 {
-                    MessageBox.Show("Bienvenido" + user);
+                    MessageBox.Show("Bienvenido  " + user);
                     FrmMenu menu = new FrmMenu();
                     menu.Show();
                     menu.FormClosed += CerrarSesion;

@@ -39,7 +39,6 @@ namespace ProyectoFinal.VISTA
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.lblCrearCuenta = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -159,25 +158,12 @@ namespace ProyectoFinal.VISTA
             this.label2.Text = "CERRAR";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // lblCrearCuenta
-            // 
-            this.lblCrearCuenta.AutoSize = true;
-            this.lblCrearCuenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCrearCuenta.ForeColor = System.Drawing.Color.DarkGray;
-            this.lblCrearCuenta.Location = new System.Drawing.Point(135, 348);
-            this.lblCrearCuenta.Name = "lblCrearCuenta";
-            this.lblCrearCuenta.Size = new System.Drawing.Size(104, 20);
-            this.lblCrearCuenta.TabIndex = 20;
-            this.lblCrearCuenta.Text = "Crear Cuenta";
-            this.lblCrearCuenta.Click += new System.EventHandler(this.lblCrearCuenta_Click);
-            // 
             // FrmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(68)))), ((int)(((byte)(106)))));
             this.ClientSize = new System.Drawing.Size(382, 523);
-            this.Controls.Add(this.lblCrearCuenta);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.pictureBox3);
@@ -213,6 +199,5 @@ namespace ProyectoFinal.VISTA
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label lblCrearCuenta;
     }
 }

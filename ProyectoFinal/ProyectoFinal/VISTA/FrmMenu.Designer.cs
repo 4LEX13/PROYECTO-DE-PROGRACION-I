@@ -203,7 +203,7 @@ namespace ProyectoFinal.VISTA
             this.btnHorarios.Name = "btnHorarios";
             this.btnHorarios.Size = new System.Drawing.Size(192, 44);
             this.btnHorarios.TabIndex = 1;
-            this.btnHorarios.Text = "Horarios";
+            this.btnHorarios.Text = "Crear Cuenta";
             this.btnHorarios.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnHorarios.UseVisualStyleBackColor = true;
             this.btnHorarios.Click += new System.EventHandler(this.btnHorarios_Click);

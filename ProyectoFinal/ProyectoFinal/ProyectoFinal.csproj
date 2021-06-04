@@ -136,23 +136,17 @@
     <Compile Include="VISTA\FrmConfiguracion.Designer.cs">
       <DependentUpon>FrmConfiguracion.cs</DependentUpon>
     </Compile>
-    <Compile Include="VISTA\FrmCrearCuenta.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="VISTA\FrmCrearCuenta.Designer.cs">
-      <DependentUpon>FrmCrearCuenta.cs</DependentUpon>
-    </Compile>
     <Compile Include="VISTA\FrmDocente.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="VISTA\FrmDocente.Designer.cs">
       <DependentUpon>FrmDocente.cs</DependentUpon>
     </Compile>
-    <Compile Include="VISTA\FrmHorarios.cs">
+    <Compile Include="VISTA\FrmCrearCuenta.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="VISTA\FrmHorarios.Designer.cs">
-      <DependentUpon>FrmHorarios.cs</DependentUpon>
+    <Compile Include="VISTA\FrmCrearCuenta.Designer.cs">
+      <DependentUpon>FrmCrearCuenta.cs</DependentUpon>
     </Compile>
     <Compile Include="VISTA\FrmLogin.cs">
       <SubType>Form</SubType>
@@ -209,14 +203,11 @@
     <EmbeddedResource Include="VISTA\FrmConfiguracion.resx">
       <DependentUpon>FrmConfiguracion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="VISTA\FrmCrearCuenta.resx">
-      <DependentUpon>FrmCrearCuenta.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="VISTA\FrmDocente.resx">
       <DependentUpon>FrmDocente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="VISTA\FrmHorarios.resx">
-      <DependentUpon>FrmHorarios.cs</DependentUpon>
+    <EmbeddedResource Include="VISTA\FrmCrearCuenta.resx">
+      <DependentUpon>FrmCrearCuenta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VISTA\FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>

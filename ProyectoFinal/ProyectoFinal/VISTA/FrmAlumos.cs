@@ -179,6 +179,7 @@ namespace ProyectoFinal.VISTA
 
             Carga();
             clear();
+            ultimoDireccion();
         }
 
         private void dgvAlumnos_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -219,7 +220,7 @@ namespace ProyectoFinal.VISTA
             txtContacto.Text = telefono;
             txtCorreo.Text = email;
             txtFkEncargado.Text = fkAlumno;
-            txtNombreAlumno.Text = NombreEncargado;
+            txtNombreEncargado.Text = NombreEncargado;
             txtApellidoEncargado.Text = ApellidoEncargado;
             txtDuiEncargado.Text = DuiEncargado;
             txtContactoEncargado.Text = TelefonoEncargado;
@@ -278,11 +279,14 @@ namespace ProyectoFinal.VISTA
 
 
             direccion.SaveDireccion(direccionRegistrar);
-            clsDAlumnos.SaveAlumno(alumnoRegistrar);
             encargado.SaveEncargado(registarencargado);
+            clsDAlumnos.SaveAlumno(alumnoRegistrar);
+            
 
             Carga();
             clear();
+            ultimoDireccion();
+
         }
     }
 }
