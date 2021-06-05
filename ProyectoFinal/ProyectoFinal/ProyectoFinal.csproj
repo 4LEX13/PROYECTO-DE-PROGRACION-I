@@ -59,6 +59,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAO\ClsDAlumnos.cs" />
+    <Compile Include="DAO\ClsDCrearCuenta.cs" />
     <Compile Include="DAO\ClsDDireccion.cs" />
     <Compile Include="DAO\ClsDEncargado.cs" />
     <Compile Include="DAO\ClsDGrado.cs" />
