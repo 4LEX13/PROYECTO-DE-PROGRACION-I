@@ -79,8 +79,6 @@ namespace ProyectoFinal.VISTA
             txtNombreDocente.Clear();
             txtApellidoDocente.Clear();
             txtDui.Clear();
-            //cbxGenero.DataSource = null;
-            //cbxGenero.Items.Clear();
             txtTelefono.Clear();
             txtEmail.Clear();
             dtpFecha.Value = DateTime.Now.Date;
@@ -93,31 +91,39 @@ namespace ProyectoFinal.VISTA
 
         private void btnRegistarDocente_Click(object sender, EventArgs e)
         {
-            ClsDDireccion direccion = new ClsDDireccion();
-            Direccion direccionRegistrar = new Direccion();
-           
-           
+            try
+            {
+                ClsDDireccion direccion = new ClsDDireccion();
+                Direccion direccionRegistrar = new Direccion();
 
-            ClsDMaestro clsDUserList = new ClsDMaestro();
-            Maestro maestroRegistrar = new Maestro();
 
-            direccionRegistrar.residencia = txtRecidencia.Text;
-            direccionRegistrar.municipio = txtMunicipio.Text;
-            direccionRegistrar.departamento = txtDepartamento.Text;
 
-            maestroRegistrar.nombre = txtNombreDocente.Text;
-            maestroRegistrar.apellido = txtApellidoDocente.Text;
-            maestroRegistrar.identificacion = txtDui.Text;
-            maestroRegistrar.genero = cbxGenero.Text;
-            maestroRegistrar.fechaNacimiento = dtpFecha.Value;
-            maestroRegistrar.direccionFk = Convert.ToInt32(txtFkDireccion.Text);
-            maestroRegistrar.contacto = txtTelefono.Text;
-            maestroRegistrar.correo = txtEmail.Text;
-            maestroRegistrar.activo = rbSi.Checked == true ? 1 : 2;
-            maestroRegistrar.fechaRegistro = DateTime.Now.Date;
+                ClsDMaestro clsDUserList = new ClsDMaestro();
+                Maestro maestroRegistrar = new Maestro();
 
-            direccion.SaveDireccion(direccionRegistrar);
-            clsDUserList.SaveDatosUser(maestroRegistrar);
+                direccionRegistrar.residencia = txtRecidencia.Text;
+                direccionRegistrar.municipio = txtMunicipio.Text;
+                direccionRegistrar.departamento = txtDepartamento.Text;
+
+                maestroRegistrar.nombre = txtNombreDocente.Text;
+                maestroRegistrar.apellido = txtApellidoDocente.Text;
+                maestroRegistrar.identificacion = txtDui.Text;
+                maestroRegistrar.genero = cbxGenero.Text;
+                maestroRegistrar.fechaNacimiento = dtpFecha.Value;
+                maestroRegistrar.direccionFk = Convert.ToInt32(txtFkDireccion.Text);
+                maestroRegistrar.contacto = txtTelefono.Text;
+                maestroRegistrar.correo = txtEmail.Text;
+                maestroRegistrar.activo = rbSi.Checked == true ? 1 : 2;
+                maestroRegistrar.fechaRegistro = DateTime.Now.Date;
+
+                direccion.SaveDireccion(direccionRegistrar);
+                clsDUserList.SaveDatosUser(maestroRegistrar);
+
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Error");
+            }
 
 
             Carga();
@@ -132,7 +138,10 @@ namespace ProyectoFinal.VISTA
             Direccion direccionRegistrar = new Direccion();
 
 
-           
+            direccionRegistrar.direccionId = (Convert.ToInt32(txtIdDireccion.Text));
+            direccionRegistrar.residencia = txtRecidencia.Text;
+            direccionRegistrar.municipio = txtMunicipio.Text;
+            direccionRegistrar.departamento = txtDepartamento.Text;
 
 
             ClsDMaestro clsDUserList = new ClsDMaestro();
@@ -148,10 +157,7 @@ namespace ProyectoFinal.VISTA
             maestroUpdate.genero = cbxGenero.Text;
             maestroUpdate.fechaNacimiento = dtpFecha.Value;
             maestroUpdate.direccionFk = Convert.ToInt32 (txtFkDireccion.Text);
-            direccionRegistrar.direccionId = (Convert.ToInt32(txtIdDireccion.Text));
-            direccionRegistrar.residencia = txtRecidencia.Text;
-            direccionRegistrar.municipio = txtMunicipio.Text;
-            direccionRegistrar.departamento = txtDepartamento.Text;
+            
             maestroUpdate.correo = txtEmail.Text;
             maestroUpdate.contacto = txtTelefono.Text;
             maestroUpdate.activo = rbSi.Checked == true ? 1 : 2;
@@ -215,12 +221,14 @@ namespace ProyectoFinal.VISTA
             if (activo == "1")
             {
                 rbSi.Checked = true;
+                rbNo.Checked = false;
+
             }
             else
             {
 
-                rbNo.Checked = false;
-
+                rbNo.Checked = true;
+                rbSi.Checked = false;
             }
         }
 
