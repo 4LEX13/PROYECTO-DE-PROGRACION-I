@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using ProyectoFinal.MODEL;
 namespace ProyectoFinal.DAO
 {
@@ -37,8 +38,8 @@ namespace ProyectoFinal.DAO
                     direccion.residencia = user.residencia;
                     direccion.municipio = user.municipio;
                     direccion.departamento = user.departamento;
-                  
-                    
+
+
 
                     db.Direccion.Add(direccion);
                     db.SaveChanges();
@@ -50,7 +51,7 @@ namespace ProyectoFinal.DAO
             }
             catch (Exception ex)
             {
-
+                MessageBox.Show("Error " + ex);
             }
         }
 
@@ -74,6 +75,7 @@ namespace ProyectoFinal.DAO
             }
             catch (Exception ex)
             {
+                MessageBox.Show("Error " + ex);
 
             }
         }
@@ -88,12 +90,12 @@ namespace ProyectoFinal.DAO
                 {
 
                     int update = Convert.ToInt32(direccion.direccionId);
-                    Direccion userList = db.Direccion.Where(x => x.direccionId == update).Select(x => x).FirstOrDefault();
+                    Direccion guardarDireccion = db.Direccion.Where(x => x.direccionId == update).Select(x => x).FirstOrDefault();
 
 
-                    direccion.residencia = direccion.residencia;
-                    direccion.municipio = direccion.municipio;
-                    direccion.departamento = direccion.departamento;
+                    guardarDireccion.residencia = direccion.residencia;
+                    guardarDireccion.municipio = direccion.municipio;
+                    guardarDireccion.departamento = direccion.departamento;
 
 
 
@@ -103,7 +105,7 @@ namespace ProyectoFinal.DAO
             }
             catch (Exception ex)
             {
-
+                MessageBox.Show("Error " + ex);
             }
         }
 

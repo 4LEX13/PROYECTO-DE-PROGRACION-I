@@ -35,12 +35,12 @@ namespace ProyectoFinal.VISTA
             this.panelFormula = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.btnVerMatriculas = new System.Windows.Forms.Button();
             this.btnCerrarSesion = new System.Windows.Forms.Button();
+            this.btnVerDocentes = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnPrincipal = new System.Windows.Forms.Button();
-            this.btnSetting = new System.Windows.Forms.Button();
-            this.btnHorarios = new System.Windows.Forms.Button();
-            this.btnNotas = new System.Windows.Forms.Button();
+            this.btnVerAlumnos = new System.Windows.Forms.Button();
             this.panelTitulo = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.BtnRestaurar = new System.Windows.Forms.PictureBox();
@@ -109,17 +109,37 @@ namespace ProyectoFinal.VISTA
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(68)))), ((int)(((byte)(106)))));
+            this.panelMenu.Controls.Add(this.btnVerMatriculas);
             this.panelMenu.Controls.Add(this.btnCerrarSesion);
+            this.panelMenu.Controls.Add(this.btnVerDocentes);
             this.panelMenu.Controls.Add(this.pictureBox1);
             this.panelMenu.Controls.Add(this.btnPrincipal);
-            this.panelMenu.Controls.Add(this.btnSetting);
-            this.panelMenu.Controls.Add(this.btnHorarios);
-            this.panelMenu.Controls.Add(this.btnNotas);
+            this.panelMenu.Controls.Add(this.btnVerAlumnos);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 40);
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(204, 651);
             this.panelMenu.TabIndex = 1;
+            // 
+            // btnVerMatriculas
+            // 
+            this.btnVerMatriculas.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnVerMatriculas.FlatAppearance.BorderSize = 0;
+            this.btnVerMatriculas.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.btnVerMatriculas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
+            this.btnVerMatriculas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVerMatriculas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVerMatriculas.ForeColor = System.Drawing.Color.White;
+            this.btnVerMatriculas.Image = ((System.Drawing.Image)(resources.GetObject("btnVerMatriculas.Image")));
+            this.btnVerMatriculas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnVerMatriculas.Location = new System.Drawing.Point(6, 360);
+            this.btnVerMatriculas.Name = "btnVerMatriculas";
+            this.btnVerMatriculas.Size = new System.Drawing.Size(186, 38);
+            this.btnVerMatriculas.TabIndex = 6;
+            this.btnVerMatriculas.Text = "Ver Matriculas";
+            this.btnVerMatriculas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnVerMatriculas.UseVisualStyleBackColor = true;
+            this.btnVerMatriculas.Click += new System.EventHandler(this.btnVerMatriculas_Click);
             // 
             // btnCerrarSesion
             // 
@@ -137,6 +157,26 @@ namespace ProyectoFinal.VISTA
             this.btnCerrarSesion.Text = "Cerrar sesión";
             this.btnCerrarSesion.UseVisualStyleBackColor = true;
             this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
+            // 
+            // btnVerDocentes
+            // 
+            this.btnVerDocentes.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnVerDocentes.FlatAppearance.BorderSize = 0;
+            this.btnVerDocentes.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.btnVerDocentes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
+            this.btnVerDocentes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVerDocentes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVerDocentes.ForeColor = System.Drawing.Color.White;
+            this.btnVerDocentes.Image = ((System.Drawing.Image)(resources.GetObject("btnVerDocentes.Image")));
+            this.btnVerDocentes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnVerDocentes.Location = new System.Drawing.Point(6, 316);
+            this.btnVerDocentes.Name = "btnVerDocentes";
+            this.btnVerDocentes.Size = new System.Drawing.Size(186, 38);
+            this.btnVerDocentes.TabIndex = 7;
+            this.btnVerDocentes.Text = "Ver Docentes";
+            this.btnVerDocentes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnVerDocentes.UseVisualStyleBackColor = true;
+            this.btnVerDocentes.Click += new System.EventHandler(this.btnVerDocentes_Click);
             // 
             // pictureBox1
             // 
@@ -163,70 +203,30 @@ namespace ProyectoFinal.VISTA
             this.btnPrincipal.Name = "btnPrincipal";
             this.btnPrincipal.Size = new System.Drawing.Size(195, 43);
             this.btnPrincipal.TabIndex = 3;
-            this.btnPrincipal.Text = "Principal";
+            this.btnPrincipal.Text = "Registros";
             this.btnPrincipal.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnPrincipal.UseVisualStyleBackColor = false;
             this.btnPrincipal.Click += new System.EventHandler(this.btnPrincipal_Click);
             // 
-            // btnSetting
+            // btnVerAlumnos
             // 
-            this.btnSetting.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnSetting.FlatAppearance.BorderSize = 0;
-            this.btnSetting.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.btnSetting.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
-            this.btnSetting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSetting.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSetting.ForeColor = System.Drawing.Color.White;
-            this.btnSetting.Image = ((System.Drawing.Image)(resources.GetObject("btnSetting.Image")));
-            this.btnSetting.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSetting.Location = new System.Drawing.Point(6, 542);
-            this.btnSetting.Name = "btnSetting";
-            this.btnSetting.Size = new System.Drawing.Size(192, 44);
-            this.btnSetting.TabIndex = 1;
-            this.btnSetting.Text = "Configuración";
-            this.btnSetting.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnSetting.UseVisualStyleBackColor = true;
-            this.btnSetting.Click += new System.EventHandler(this.btnSetting_Click);
-            // 
-            // btnHorarios
-            // 
-            this.btnHorarios.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnHorarios.FlatAppearance.BorderSize = 0;
-            this.btnHorarios.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.btnHorarios.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
-            this.btnHorarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHorarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHorarios.ForeColor = System.Drawing.Color.White;
-            this.btnHorarios.Image = ((System.Drawing.Image)(resources.GetObject("btnHorarios.Image")));
-            this.btnHorarios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHorarios.Location = new System.Drawing.Point(8, 316);
-            this.btnHorarios.Name = "btnHorarios";
-            this.btnHorarios.Size = new System.Drawing.Size(192, 44);
-            this.btnHorarios.TabIndex = 1;
-            this.btnHorarios.Text = "Crear Cuenta";
-            this.btnHorarios.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnHorarios.UseVisualStyleBackColor = true;
-            this.btnHorarios.Click += new System.EventHandler(this.btnHorarios_Click);
-            // 
-            // btnNotas
-            // 
-            this.btnNotas.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnNotas.FlatAppearance.BorderSize = 0;
-            this.btnNotas.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.btnNotas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
-            this.btnNotas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNotas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNotas.ForeColor = System.Drawing.Color.White;
-            this.btnNotas.Image = ((System.Drawing.Image)(resources.GetObject("btnNotas.Image")));
-            this.btnNotas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNotas.Location = new System.Drawing.Point(6, 272);
-            this.btnNotas.Name = "btnNotas";
-            this.btnNotas.Size = new System.Drawing.Size(186, 38);
-            this.btnNotas.TabIndex = 0;
-            this.btnNotas.Text = "Matriculas";
-            this.btnNotas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnNotas.UseVisualStyleBackColor = true;
-            this.btnNotas.Click += new System.EventHandler(this.btnNotas_Click);
+            this.btnVerAlumnos.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnVerAlumnos.FlatAppearance.BorderSize = 0;
+            this.btnVerAlumnos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.btnVerAlumnos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
+            this.btnVerAlumnos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVerAlumnos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVerAlumnos.ForeColor = System.Drawing.Color.White;
+            this.btnVerAlumnos.Image = ((System.Drawing.Image)(resources.GetObject("btnVerAlumnos.Image")));
+            this.btnVerAlumnos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnVerAlumnos.Location = new System.Drawing.Point(6, 272);
+            this.btnVerAlumnos.Name = "btnVerAlumnos";
+            this.btnVerAlumnos.Size = new System.Drawing.Size(186, 38);
+            this.btnVerAlumnos.TabIndex = 0;
+            this.btnVerAlumnos.Text = "Ver Alumnos";
+            this.btnVerAlumnos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnVerAlumnos.UseVisualStyleBackColor = true;
+            this.btnVerAlumnos.Click += new System.EventHandler(this.btnNotas_Click);
             // 
             // panelTitulo
             // 
@@ -341,12 +341,12 @@ namespace ProyectoFinal.VISTA
         private System.Windows.Forms.PictureBox BtnMaximizar;
         private System.Windows.Forms.PictureBox BtnRestaurar;
         private System.Windows.Forms.Button btnPrincipal;
-        private System.Windows.Forms.Button btnSetting;
-        private System.Windows.Forms.Button btnHorarios;
-        private System.Windows.Forms.Button btnNotas;
+        private System.Windows.Forms.Button btnVerAlumnos;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnCerrarSesion;
+        private System.Windows.Forms.Button btnVerMatriculas;
+        private System.Windows.Forms.Button btnVerDocentes;
     }
 }

@@ -23,12 +23,6 @@ namespace ProyectoFinal.VISTA
             alumno.Show();
         }
 
-        private void btnAulas_Click(object sender, EventArgs e)
-        {
-            FrmAulas aulas = new FrmAulas();
-            aulas.Show();
-        }
-
         private void btnDocentes_Click(object sender, EventArgs e)
         {
             FrmDocente docente = new FrmDocente();
@@ -36,32 +30,28 @@ namespace ProyectoFinal.VISTA
 
         }
 
-        private void btnClassrom_Click(object sender, EventArgs e)
+
+        private void btnCuenta_Click(object sender, EventArgs e)
         {
-            FrmClassroom classroom = new FrmClassroom();
-            classroom.Show();
+            FrmCrearCuenta cuenta = new FrmCrearCuenta();
+            cuenta.Show();
         }
 
-    //private void AbrirFormulario<MiForm>() where MiForm : Form, new()
-    //{
-    //    Form formula;
-    //    formula = panelMenuPrincial.Controls.OfType<MiForm>().FirstOrDefault();
+        public static FrmMatricula matriculaVer = new FrmMatricula();
 
-    //    if (formula == null)
-    //    {
-    //        formula = new MiForm();
-    //        formula.TopLevel = false;
-    //        formula.FormBorderStyle = FormBorderStyle.None;
-    //        formula.Dock = DockStyle.Fill;
-    //        panelMenuPrincial.Controls.Add(formula);
-    //        panelMenuPrincial.Tag = formula;
-    //        formula.Show();
-    //        formula.BringToFront();
-    //    }
-
-    //    else
-    //    {
-    //        formula.BringToFront();
-}
+        private void btnMatriculas_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                FrmMatricula matricula = new FrmMatricula();
+                matriculaVer.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error de tipo " + ex);
+            }
+            
+        }
+    }
 }
 

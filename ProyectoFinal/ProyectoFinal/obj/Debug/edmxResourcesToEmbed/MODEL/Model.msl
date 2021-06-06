@@ -52,7 +52,6 @@
           <ScalarProperty Name="usuarioId" ColumnName="usuarioId" />
           <ScalarProperty Name="correo_Usuario" ColumnName="correo_Usuario" />
           <ScalarProperty Name="contrasena" ColumnName="contrasena" />
-          <ScalarProperty Name="tipo_Rol" ColumnName="tipo_Rol" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

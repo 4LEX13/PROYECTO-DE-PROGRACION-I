@@ -22,12 +22,9 @@ namespace ProyectoFinal.VISTA
 
         }
         void clear()
-        {
-
+        { 
             txtCorreoCuenta.Clear();
-            txtPassCuenta.Clear();
-           
-
+            txtPassCuenta.Clear();        
         }
 
 
@@ -45,26 +42,27 @@ namespace ProyectoFinal.VISTA
             }
         }
 
-
         private void btnCrearCuenta_Click(object sender, EventArgs e)
         {
+            try
+            {
+                ClsDCrearCuenta cuenta = new ClsDCrearCuenta();
+                Usuario crearUsuario = new Usuario();
 
-            ClsDCrearCuenta cuenta = new ClsDCrearCuenta();
-            Usuario crearUsuario = new Usuario();
 
+                crearUsuario.correo_Usuario = txtCorreoCuenta.Text;
+                crearUsuario.contrasena = txtPassCuenta.Text;
 
-            crearUsuario.correo_Usuario = txtCorreoCuenta.Text;
-            crearUsuario.contrasena = txtPassCuenta.Text;
+                cuenta.GuardarCuenta(crearUsuario);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error " + ex);
+            }
 
-            cuenta.GuardarCuenta (crearUsuario);
 
             Carga();
             clear();
         }
-
-
-
-
-
     }
 }

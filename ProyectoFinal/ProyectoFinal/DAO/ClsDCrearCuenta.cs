@@ -39,24 +39,16 @@ namespace ProyectoFinal.DAO
                     usuario.contrasena = usuarios.contrasena;
 
 
-
-
                     db.Usuario.Add(usuario);
                     db.SaveChanges();
-
-
 
                 }
 
             }
             catch (Exception ex)
             {
-
+                System.Windows.Forms.MessageBox.Show("error de tipo"+ ex);
             }
-
-
-
-
 
         }
     }

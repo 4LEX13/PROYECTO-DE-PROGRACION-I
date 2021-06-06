@@ -92,19 +92,19 @@ namespace ProyectoFinal.DAO
                 {
 
                     int update = Convert.ToInt32(alumno.alumnoId); 
-                    Alumno alumno1 = db.Alumno.Where(x => x.alumnoId == update).Select(x => x).FirstOrDefault();
+                    Alumno alumnoUpdate = db.Alumno.Where(x => x.alumnoId == update).Select(x => x).FirstOrDefault();
 
 
-                    alumno1.nombre = alumno.nombre;
-                    alumno1.apellidoPaterno = alumno.apellidoPaterno;
-                    alumno1.apellidoMaterno = alumno.apellidoMaterno;
-                    alumno1.genero = alumno.genero;
-                    alumno1.fechaNacimiento = alumno.fechaNacimiento;
-                    alumno1.direccionFk = alumno.direccionFk;
-                    alumno1.contacto = alumno.contacto;
-                    alumno1.correo = alumno.correo;
-                    alumno1.activo = alumno.activo;
-                    alumno1.fechaRegistro = alumno.fechaRegistro;
+                    alumnoUpdate.nombre = alumno.nombre;
+                    alumnoUpdate.apellidoPaterno = alumno.apellidoPaterno;
+                    alumnoUpdate.apellidoMaterno = alumno.apellidoMaterno;
+                    alumnoUpdate.genero = alumno.genero;
+                    alumnoUpdate.fechaNacimiento = alumno.fechaNacimiento;
+                    alumnoUpdate.direccionFk = alumno.direccionFk;
+                    alumnoUpdate.contacto = alumno.contacto;
+                    alumnoUpdate.correo = alumno.correo;
+                    alumnoUpdate.activo = alumno.activo;
+                    alumnoUpdate.fechaRegistro = alumno.fechaRegistro;
                     db.SaveChanges();
                 }
 

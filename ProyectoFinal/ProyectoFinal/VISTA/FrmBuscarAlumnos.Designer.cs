@@ -1,7 +1,7 @@
 ﻿
 namespace ProyectoFinal.VISTA
 {
-    partial class FrmBuscarAlumno
+    partial class FrmBuscarAlumnos
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,10 @@ namespace ProyectoFinal.VISTA
         /// </summary>
         private void InitializeComponent()
         {
-            this.dtgAlumnoBuscar = new System.Windows.Forms.DataGridView();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.txtFiltrarAlumnos = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.dgvAlumno = new System.Windows.Forms.DataGridView();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,20 +53,57 @@ namespace ProyectoFinal.VISTA
             this.Column18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgAlumnoBuscar)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAlumno)).BeginInit();
             this.SuspendLayout();
             // 
-            // dtgAlumnoBuscar
+            // panel1
             // 
-            this.dtgAlumnoBuscar.AllowUserToAddRows = false;
-            this.dtgAlumnoBuscar.AllowUserToDeleteRows = false;
-            this.dtgAlumnoBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(68)))), ((int)(((byte)(106)))));
+            this.panel1.Controls.Add(this.txtFiltrarAlumnos);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.dgvAlumno);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(912, 433);
+            this.panel1.TabIndex = 0;
+            // 
+            // txtFiltrarAlumnos
+            // 
+            this.txtFiltrarAlumnos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dtgAlumnoBuscar.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dtgAlumnoBuscar.BackgroundColor = System.Drawing.SystemColors.ActiveBorder;
-            this.dtgAlumnoBuscar.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dtgAlumnoBuscar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgAlumnoBuscar.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.txtFiltrarAlumnos.Location = new System.Drawing.Point(321, 65);
+            this.txtFiltrarAlumnos.Name = "txtFiltrarAlumnos";
+            this.txtFiltrarAlumnos.Size = new System.Drawing.Size(381, 20);
+            this.txtFiltrarAlumnos.TabIndex = 36;
+            this.txtFiltrarAlumnos.TextChanged += new System.EventHandler(this.txtFiltrarAlumnos_TextChanged);
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(124, 65);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(191, 20);
+            this.label2.TabIndex = 35;
+            this.label2.Text = "Filtar por Nombre/Apellido";
+            // 
+            // dgvAlumno
+            // 
+            this.dgvAlumno.AllowUserToAddRows = false;
+            this.dgvAlumno.AllowUserToDeleteRows = false;
+            this.dgvAlumno.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvAlumno.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            this.dgvAlumno.BackgroundColor = System.Drawing.SystemColors.ActiveBorder;
+            this.dgvAlumno.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvAlumno.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAlumno.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column3,
             this.Column1,
             this.Column2,
@@ -84,12 +124,11 @@ namespace ProyectoFinal.VISTA
             this.Column18,
             this.Column19,
             this.Column20});
-            this.dtgAlumnoBuscar.Location = new System.Drawing.Point(33, 188);
-            this.dtgAlumnoBuscar.Name = "dtgAlumnoBuscar";
-            this.dtgAlumnoBuscar.ReadOnly = true;
-            this.dtgAlumnoBuscar.Size = new System.Drawing.Size(1195, 250);
-            this.dtgAlumnoBuscar.TabIndex = 7;
-            this.dtgAlumnoBuscar.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAlumno_CellDoubleClick);
+            this.dgvAlumno.Location = new System.Drawing.Point(3, 171);
+            this.dgvAlumno.Name = "dgvAlumno";
+            this.dgvAlumno.ReadOnly = true;
+            this.dgvAlumno.Size = new System.Drawing.Size(906, 250);
+            this.dgvAlumno.TabIndex = 34;
             // 
             // Column3
             // 
@@ -103,6 +142,7 @@ namespace ProyectoFinal.VISTA
             this.Column1.HeaderText = "Nombre";
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
+            this.Column1.Width = 69;
             // 
             // Column2
             // 
@@ -115,18 +155,21 @@ namespace ProyectoFinal.VISTA
             this.Column9.HeaderText = "Apellido Materno";
             this.Column9.Name = "Column9";
             this.Column9.ReadOnly = true;
+            this.Column9.Width = 102;
             // 
             // Column10
             // 
             this.Column10.HeaderText = "Genero";
             this.Column10.Name = "Column10";
             this.Column10.ReadOnly = true;
+            this.Column10.Width = 67;
             // 
             // Column4
             // 
             this.Column4.HeaderText = "Fecha Nacimiento";
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
+            this.Column4.Width = 108;
             // 
             // Column11
             // 
@@ -140,42 +183,49 @@ namespace ProyectoFinal.VISTA
             this.Column7.HeaderText = "Residencia";
             this.Column7.Name = "Column7";
             this.Column7.ReadOnly = true;
+            this.Column7.Width = 85;
             // 
             // Column12
             // 
             this.Column12.HeaderText = "Municipio";
             this.Column12.Name = "Column12";
             this.Column12.ReadOnly = true;
+            this.Column12.Width = 77;
             // 
             // Column13
             // 
             this.Column13.HeaderText = "Departamento";
             this.Column13.Name = "Column13";
             this.Column13.ReadOnly = true;
+            this.Column13.Width = 99;
             // 
             // Column5
             // 
             this.Column5.HeaderText = "Teléfono";
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
+            this.Column5.Width = 74;
             // 
             // Column8
             // 
             this.Column8.HeaderText = "Correo";
             this.Column8.Name = "Column8";
             this.Column8.ReadOnly = true;
+            this.Column8.Width = 63;
             // 
             // Column14
             // 
             this.Column14.HeaderText = "Activo";
             this.Column14.Name = "Column14";
             this.Column14.ReadOnly = true;
+            this.Column14.Visible = false;
             // 
             // Column6
             // 
             this.Column6.HeaderText = "Fecha de registro";
             this.Column6.Name = "Column6";
             this.Column6.ReadOnly = true;
+            this.Column6.Width = 74;
             // 
             // Column15
             // 
@@ -189,12 +239,14 @@ namespace ProyectoFinal.VISTA
             this.Column16.HeaderText = "Nombre Encargado";
             this.Column16.Name = "Column16";
             this.Column16.ReadOnly = true;
+            this.Column16.Width = 114;
             // 
             // Column17
             // 
             this.Column17.HeaderText = "Apellido Encargado";
             this.Column17.Name = "Column17";
             this.Column17.ReadOnly = true;
+            this.Column17.Width = 114;
             // 
             // Column18
             // 
@@ -208,6 +260,7 @@ namespace ProyectoFinal.VISTA
             this.Column19.HeaderText = "Teléfono Encargado";
             this.Column19.Name = "Column19";
             this.Column19.ReadOnly = true;
+            this.Column19.Width = 118;
             // 
             // Column20
             // 
@@ -216,22 +269,28 @@ namespace ProyectoFinal.VISTA
             this.Column20.ReadOnly = true;
             this.Column20.Visible = false;
             // 
-            // FrmBuscarAlumno
+            // FrmBuscarAlumnos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1293, 450);
-            this.Controls.Add(this.dtgAlumnoBuscar);
-            this.Name = "FrmBuscarAlumno";
-            this.Text = "FrmBuscarAlumno";
-            ((System.ComponentModel.ISupportInitialize)(this.dtgAlumnoBuscar)).EndInit();
+            this.ClientSize = new System.Drawing.Size(912, 433);
+            this.Controls.Add(this.panel1);
+            this.Name = "FrmBuscarAlumnos";
+            this.Text = "FrmBAlumnos";
+            this.Load += new System.EventHandler(this.FrmBuscarAlumnos_Load);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAlumno)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dtgAlumnoBuscar;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TextBox txtFiltrarAlumnos;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DataGridView dgvAlumno;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;

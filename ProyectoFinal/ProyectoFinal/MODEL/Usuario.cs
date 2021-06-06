@@ -17,6 +17,5 @@ namespace ProyectoFinal.MODEL
         public int usuarioId { get; set; }
         public string correo_Usuario { get; set; }
         public string contrasena { get; set; }
-        public string tipo_Rol { get; set; }
     }
 }

@@ -257,7 +257,6 @@
           <Property Name="usuarioId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="correo_Usuario" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="contrasena" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="tipo_Rol" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
         <Association Name="FK__Alumno__direccio__29572725">
           <End Role="Direccion" Type="Self.Direccion" Multiplicity="0..1" />
@@ -464,7 +463,6 @@
                 <ScalarProperty Name="usuarioId" ColumnName="usuarioId" />
                 <ScalarProperty Name="correo_Usuario" ColumnName="correo_Usuario" />
                 <ScalarProperty Name="contrasena" ColumnName="contrasena" />
-                <ScalarProperty Name="tipo_Rol" ColumnName="tipo_Rol" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

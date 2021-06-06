@@ -17,7 +17,7 @@ namespace ProyectoFinal.VISTA
         {
             InitializeComponent();
         }
-        public static FrmMatricula matriculaVer = new FrmMatricula();
+        //public static FrmMatricula matriculaVer = new FrmMatricula();
 
         private void BtnCerrar_Click(object sender, EventArgs e)
         {
@@ -65,27 +65,9 @@ namespace ProyectoFinal.VISTA
 
         private void btnNotas_Click(object sender, EventArgs e)
         {
-            //AbrirFormulario<FrmNotas>();
-
-
-            matriculaVer.Show(); /*excepcion click 3 veces*/
-
-            //AbrirFormulario<FrmMatricula>();
-
-
+            AbrirFormulario<FrmBuscarAlumnos>();
         }
 
-        private void btnHorarios_Click(object sender, EventArgs e)
-        {
-            AbrirFormulario<FrmCrearCuenta>();
-
-        }
-
-        private void btnSetting_Click(object sender, EventArgs e)
-        {
-            AbrirFormulario<FrmConfiguracion>();
-
-        }
 
         private void btnPrincipal_Click(object sender, EventArgs e)
         {
@@ -104,11 +86,21 @@ namespace ProyectoFinal.VISTA
 
         }
 
+        private void btnVerDocentes_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<FrmBuscarDocente>();
+        }
+
+        private void btnVerMatriculas_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<FrmBuscarMatricula>();
+        }
+
         private void AbrirFormulario<MiForm>() where MiForm : Form, new()
         {
             Form formula;
             formula = panelFormula.Controls.OfType<MiForm>().FirstOrDefault();
-                                                                                     
+
             if (formula == null)
             {
                 formula = new MiForm();
@@ -121,7 +113,7 @@ namespace ProyectoFinal.VISTA
                 formula.BringToFront();
                 formula.FormClosed += new FormClosedEventHandler(CloseForms);
             }
-          
+
             else
             {
                 formula.BringToFront();
@@ -134,17 +126,17 @@ namespace ProyectoFinal.VISTA
                 btnPrincipal.BackColor = Color.FromArgb(176, 196, 222);
 
             if (Application.OpenForms["FrmNotas"] == null)
-                btnNotas.BackColor = Color.FromArgb(176, 196, 222);
-            if (Application.OpenForms["FrmHorarios"] == null)
-                btnHorarios.BackColor = Color.FromArgb(176, 196, 222);
-            if (Application.OpenForms["FrmConfiguracion"] == null)
-                btnSetting.BackColor = Color.FromArgb(176, 196, 222);
+                btnVerAlumnos.BackColor = Color.FromArgb(176, 196, 222);
+            //if (Application.OpenForms["FrmHorarios"] == null)
+            //    btnHorarios.BackColor = Color.FromArgb(176, 196, 222);
+            //if (Application.OpenForms["FrmConfiguracion"] == null)
+            //    btnSetting.BackColor = Color.FromArgb(176, 196, 222);
 
         }
 
-      
 
 
-        }
+
+    }
 
 }

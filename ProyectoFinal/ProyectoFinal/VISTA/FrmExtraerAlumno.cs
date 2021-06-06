@@ -11,9 +11,9 @@ using ProyectoFinal.MODEL;
 
 namespace ProyectoFinal.VISTA
 {
-    public partial class FrmBuscarAlumno : Form
+    public partial class FrmExtraerAlumno : Form
     {
-        public FrmBuscarAlumno()
+        public FrmExtraerAlumno()
         {
             InitializeComponent();
             Carga();
@@ -27,7 +27,7 @@ namespace ProyectoFinal.VISTA
                 var Lista = (from alumno in bd.Alumno
                              from direccion in bd.Direccion
                              from encargado in bd.Encargado
-                             where (alumno.direccionFk == direccion.direccionId && alumno.encargadoFK == encargado.encargadoId) /*&& (alumno.nombre + " " + alumno.apellidoPaterno + " " + alumno.apellidoMaterno).Contains(txtFiltrarAlumnos.Text)*/
+                             where (alumno.direccionFk == direccion.direccionId && alumno.encargadoFK == encargado.encargadoId) && (alumno.nombre + " " + alumno.apellidoPaterno + " " + alumno.apellidoMaterno).Contains(txtFiltro.Text)
                              select new
                              {
                                  alumno.alumnoId,
@@ -75,26 +75,20 @@ namespace ProyectoFinal.VISTA
             String apellidoMaterno = dtgAlumnoBuscar.CurrentRow.Cells[3].Value.ToString();
 
 
-            //FrmMatricula matricula = new FrmMatricula();
-            //matricula.txtFkAlumno.Text = id;
-            //matricula.nombreAlumno = nombre;
-            //matricula.apellidoPapa = apellidoPaterno;
-            //matricula.apellidomama = apellidoMaterno;
-            //matricula.Show();
+            FrmMPrincipal.matriculaVer.txtFkAlumno.Text = id;
+            FrmMPrincipal.matriculaVer.txtAlumno.Text = nombre + " " + apellidoPaterno + " " + apellidoMaterno;
 
-            FrmMenu.matriculaVer.txtFkAlumno.Text = id;
-            //FrmMenu.matriculaVer.nombreAlumno = nombre;
-            //FrmMenu.matriculaVer.apellidoPapa = apellidoPaterno;
-            //FrmMenu.matriculaVer.apellidomama = apellidoMaterno;
-            FrmMenu.matriculaVer.txtAlumno.Text = nombre + " " + apellidoPaterno + " " + apellidoMaterno;
-
-            //FrmMenu.venta.txtCantidad.Focus();
             this.Close();
         }
 
         private void dgvAlumno_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             envio();
+        }
+
+        private void txtFiltro_TextChanged(object sender, EventArgs e)
+        {
+            Carga();
         }
     }
 }

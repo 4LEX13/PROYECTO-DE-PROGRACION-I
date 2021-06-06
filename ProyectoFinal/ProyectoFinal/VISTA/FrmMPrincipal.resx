@@ -359,6 +359,26 @@
         muq1q99R/a6V31n97rf130v1nqr3BgCekCT/H6TqDKbDG928AAAAAElFTkSuQmCC
 </value>
   </data>
+  <data name="btnCuenta.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAN
+        1wAADdcBQiibeAAAA1dJREFUWEe91iFsFUEQBuCKuiY1lU1qqqpqK3GkSQ0SWVtFUlWFqK2qQyJxSBwW
+        hUMhUBgUDoGA/7veHHv37r2+vjZM8uf29mZn/p2Zndut56/OFhDZC94Fv4NPweHk+26w/wjsDrZaw8Pk
+        1taLgPM/Pa6ab9vBm+DrI/A22OnsleEWkVUE7P5z8DG43ADWfQn2OntluEVkJ7gNsJWK/eZbEbhp16yL
+        yOtgnoDJwO5fBgfBeXAYnPZzXf6CEYGItJwEndFViMwTiDBst0Iu/JzLFcc/AvPCdxwMBCLWXQeK9ajs
+        LUNkKYFnwa/gZ/9kUAo8vX8PkJBHRXjar7sJEDspW6sQWUpA6GuX3wJR4LhIVXSugqOAoYtA6IcauQ/9
+        upUEPgR2blyQgiKAoBSU7nbZWAeRjQi0EQDR8X5c69dFZGMC8s6x3SvQtcPeIrIxAUeRjmOpDi5r7UMQ
+        2ZhAV+URTUoUGNGsHopauxYBxSfsLQFNx9FzPDcFIuN/QUSDUeFCVATknfOBQENCJDbFcHIGAr1hH7Vg
+        fQABTBcIPCUWJ5KbQCQ4nY3AU2Jx4q6363SqXqdbSiAiFQjf24wi7HZ5H82PXu7+B9XpOEdEOrTjEYEI
+        xyKkov20DtrvjR6SbLGpwMd2GkX551zuodt1oOPNEWC0dOG6/d7oscFW6SExRKJVrP98KXIqInY3R8Bp
+        KV24bb83evWXLT0+5u+EEbty9i3g2AVEmDnrGkejKz3ONF1pWKiRXq/uGfTYvhh9b5S0WEZdQBAROnNy
+        bYwQGMtr3ZToetIDbZpD/4sqUmvosc2HtV0USBWeCweGnjV+H1BuU2PXmpZnq48E56Vnx+ZcYHxXzKUL
+        aoHvkfEpEOCsLSJO7WiuXujXHCA0LdYWbHS9ntH2BBTsUgRaw909IGh/WGxU6ozNsYmU/0bpFarR0R2U
+        GS4FO1J8DMihvNkNGJvzTatmrG7P5o05FX5HG1nrhL3s88Wncbc7xSVXxmBsIRKiMIcqSP8O+nKKjGfB
+        O2fIQGvfeuOuUqfAnIFivAwczIV4Crvvrm+Rsa86jy0iwixEML2cgDlG5VC6QC+Y6slzrT+f9TU7+a/y
+        LbbLqWFz7SmgK5ytDlhfkRw1oMHX7OR/I3C29RfOe/ezi6U/FAAAAABJRU5ErkJggg==
+</value>
+  </data>
   <data name="btnDocentes.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
@@ -377,7 +397,7 @@
         vvH9uF1SpfjfdlCGtyGBANZ8E9DBzdICCWtIftPyG/DXOPfZfr73B/brJNqV1reNAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="btnAulas.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnMatricula.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAN
         1wAADdcBQiibeAAAA1dJREFUWEe91iFsFUEQBuCKuiY1lU1qqqpqK3GkSQ0SWVtFUlWFqK2qQyJxSBwW

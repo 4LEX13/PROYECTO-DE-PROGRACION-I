@@ -119,17 +119,29 @@
     <Compile Include="VISTA\FrmAulas.Designer.cs">
       <DependentUpon>FrmAulas.cs</DependentUpon>
     </Compile>
-    <Compile Include="VISTA\FrmBuscarAlumno.cs">
+    <Compile Include="VISTA\FrmBuscarAlumnos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="VISTA\FrmBuscarAlumno.Designer.cs">
-      <DependentUpon>FrmBuscarAlumno.cs</DependentUpon>
+    <Compile Include="VISTA\FrmBuscarAlumnos.Designer.cs">
+      <DependentUpon>FrmBuscarAlumnos.cs</DependentUpon>
     </Compile>
-    <Compile Include="VISTA\FrmClassroom.cs">
+    <Compile Include="VISTA\FrmExtraerAlumno.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="VISTA\FrmClassroom.Designer.cs">
-      <DependentUpon>FrmClassroom.cs</DependentUpon>
+    <Compile Include="VISTA\FrmExtraerAlumno.Designer.cs">
+      <DependentUpon>FrmExtraerAlumno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VISTA\FrmBuscarDocente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VISTA\FrmBuscarDocente.Designer.cs">
+      <DependentUpon>FrmBuscarDocente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VISTA\FrmBuscarMatricula.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VISTA\FrmBuscarMatricula.Designer.cs">
+      <DependentUpon>FrmBuscarMatricula.cs</DependentUpon>
     </Compile>
     <Compile Include="VISTA\FrmConfiguracion.cs">
       <SubType>Form</SubType>
@@ -173,12 +185,6 @@
     <Compile Include="VISTA\FrmMPrincipal.Designer.cs">
       <DependentUpon>FrmMPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="VISTA\FrmNotas.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="VISTA\FrmNotas.Designer.cs">
-      <DependentUpon>FrmNotas.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -195,11 +201,17 @@
     <EmbeddedResource Include="VISTA\FrmAulas.resx">
       <DependentUpon>FrmAulas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="VISTA\FrmBuscarAlumno.resx">
-      <DependentUpon>FrmBuscarAlumno.cs</DependentUpon>
+    <EmbeddedResource Include="VISTA\FrmBuscarAlumnos.resx">
+      <DependentUpon>FrmBuscarAlumnos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="VISTA\FrmClassroom.resx">
-      <DependentUpon>FrmClassroom.cs</DependentUpon>
+    <EmbeddedResource Include="VISTA\FrmExtraerAlumno.resx">
+      <DependentUpon>FrmExtraerAlumno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VISTA\FrmBuscarDocente.resx">
+      <DependentUpon>FrmBuscarDocente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VISTA\FrmBuscarMatricula.resx">
+      <DependentUpon>FrmBuscarMatricula.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VISTA\FrmConfiguracion.resx">
       <DependentUpon>FrmConfiguracion.cs</DependentUpon>
@@ -221,9 +233,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="VISTA\FrmMPrincipal.resx">
       <DependentUpon>FrmMPrincipal.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="VISTA\FrmNotas.resx">
-      <DependentUpon>FrmNotas.cs</DependentUpon>
     </EmbeddedResource>
     <EntityDeploy Include="MODEL\Model.edmx">
       <Generator>EntityModelCodeGenerator</Generator>

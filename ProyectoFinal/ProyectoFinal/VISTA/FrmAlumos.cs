@@ -19,7 +19,7 @@ namespace ProyectoFinal.VISTA
             Carga();
             clear();
             ultimoDireccion();
-            //ultimoAlumno();
+            ultimoEncargado();
         }
 
 
@@ -42,27 +42,27 @@ namespace ProyectoFinal.VISTA
 
         }
 
-        //void ultimoAlumno()
-        //{
+        void ultimoEncargado()
+        {
 
-        //    var consultarultimoalumno = new ClsDAlumnos();
-        //    int lista = 0;
+            var consultarultimoalumno = new ClsDEncargado();
+            int lista = 0;
 
-        //    foreach (var list in consultarultimoalumno.cargarAlumno())
-        //    {
-        //        lista = list.alumnoId;
-        //    }
+            foreach (var list in consultarultimoalumno.cargarEncargado())
+            {
+                lista = list.encargadoId;
+            }
 
 
 
-        //    lista++;
-        //    txtFkAlumno.Text = lista.ToString();
+            lista++;
+            txtFkEncargado.Text = lista.ToString();
 
-        //}
+        }
         void clear()
         {
 
-            txtIdAlumos.Clear();
+            txtIdAlumno.Clear();
             txtNombreAlumno.Clear();
             txtApellidoPaterno.Clear();
             txtApellidoMaterno.Clear();
@@ -81,6 +81,8 @@ namespace ProyectoFinal.VISTA
             txtFkEncargado.Clear();
             txtFkDireccion.Clear();
             txtiDDireccion.Clear();
+            rbSi.Checked = false;
+            rbNo.Checked = false;
         }
 
         void Carga()
@@ -136,50 +138,82 @@ namespace ProyectoFinal.VISTA
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            ClsDDireccion direccion = new ClsDDireccion();
-            Direccion direccionRegistrar = new Direccion();
+            try
+            {
+                ClsDDireccion direccion = new ClsDDireccion();
+                Direccion direccionModificar = new Direccion();
+
+                ClsDEncargado encargado = new ClsDEncargado();
+                Encargado encargadoModificar = new Encargado();
+
+                ClsDAlumnos alumnos = new ClsDAlumnos();
+                Alumno alumnoModificar = new Alumno();
 
 
 
+                direccionModificar.direccionId = (Convert.ToInt32(txtiDDireccion.Text));
+                direccionModificar.residencia = txtRecidencia.Text;
+                direccionModificar.municipio = txtMunicipio.Text;
+                direccionModificar.departamento = txtDepartamento.Text;
 
+                encargadoModificar.encargadoId = Convert.ToInt32(txtFkEncargado.Text);
+                encargadoModificar.nombreEncargado = txtNombreEncargado.Text;
+                encargadoModificar.apellidoEncargado = txtApellidoEncargado.Text;
+                encargadoModificar.identificacionEncargado = txtDuiEncargado.Text;
+                encargadoModificar.contactoEncargado = txtContactoEncargado.Text;
+                encargadoModificar.correoEncargado = txtCorreoEncargado.Text;
 
-            ClsDMaestro clsDUserList = new ClsDMaestro();
-            Maestro maestroUpdate = new Maestro();
+                alumnoModificar.alumnoId = Convert.ToInt32(txtAlumnoId.Text);
+                alumnoModificar.nombre = txtNombreAlumno.Text;
+                alumnoModificar.apellidoPaterno = txtApellidoPaterno.Text;
+                alumnoModificar.apellidoMaterno = txtApellidoMaterno.Text;
+                alumnoModificar.genero = cbxGenero.Text;
+                alumnoModificar.fechaNacimiento = dtpFecha.Value;
+                alumnoModificar.direccionFk = Convert.ToInt32(txtFkDireccion.Text);
+                alumnoModificar.contacto = txtContacto.Text;
+                alumnoModificar.correo = txtCorreo.Text;
+                alumnoModificar.activo = rbSi.Checked == true ? 1 : 2;
+                alumnoModificar.fechaRegistro = dtpFechaRegistro.Value;
+                alumnoModificar.encargadoFK = Convert.ToInt32(txtFkEncargado.Text);
 
+                direccion.ModificarDireccion(direccionModificar);
+                encargado.modificarEncargado(encargadoModificar);
+                alumnos.ModificarAlunmos(alumnoModificar);
 
-
-
-            //maestroUpdate.maestroId = (Convert.ToInt32(txtIdDocente.Text));
-            //maestroUpdate.nombre = txtNombreDocente.Text;
-            //maestroUpdate.apellido = txtApellidoDocente.Text;
-            //maestroUpdate.identificacion = txtDui.Text;
-            //maestroUpdate.genero = cbxGenero.Text;
-            //maestroUpdate.fechaNacimiento = dtpFecha.Value;
-            //maestroUpdate.direccionFk = Convert.ToInt32(txtFkDireccion.Text);
-            //direccionRegistrar.direccionId = (Convert.ToInt32(txtIdDireccion.Text));
-            //direccionRegistrar.residencia = txtRecidencia.Text;
-            //direccionRegistrar.municipio = txtMunicipio.Text;
-            //direccionRegistrar.departamento = txtDepartamento.Text;
-            //maestroUpdate.correo = txtEmail.Text;
-            //maestroUpdate.contacto = txtTelefono.Text;
-            //maestroUpdate.activo = rbSi.Checked == true ? 1 : 2;
-            //maestroUpdate.fechaRegistro = dtpFechaDeRegistro.Value;
-
-            //direccion.ModificarDireccion(direccionRegistrar);
-            //clsDUserList.ModificarDocente(maestroUpdate);
-
-            //Carga();
-            //clear();
-        }
-
-        private void btnEliminar_Click(object sender, EventArgs e)
-        {
-            ClsDAlumnos user = new ClsDAlumnos();
-            user.deleteAlumno(Convert.ToInt32(txtIdAlumos.Text));
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("error " + ex);
+            }
+            
 
             Carga();
             clear();
             ultimoDireccion();
+            ultimoEncargado();
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {           
+            try
+            {
+                ClsDAlumnos alumnos = new ClsDAlumnos();
+                ClsDDireccion direccion = new ClsDDireccion();
+                ClsDEncargado encargado = new ClsDEncargado();
+
+                alumnos.deleteAlumno(Convert.ToInt32(txtIdAlumno.Text));
+                direccion.deleteDireccion(Convert.ToInt32(txtiDDireccion.Text));
+                encargado.eliminarEncargado(Convert.ToInt32(txtFkEncargado.Text));
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Error" + ex);
+            }
+
+            Carga();
+            clear();
+            ultimoDireccion();
+            ultimoEncargado();
         }
 
         private void dgvAlumnos_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -206,8 +240,8 @@ namespace ProyectoFinal.VISTA
             string CorreoEncargado = dgvAlumno.CurrentRow.Cells[19].Value.ToString();
 
 
-
-            txtIdAlumos.Text = idAlumno;
+            txtAlumnoId.Text = idAlumno;
+            txtIdAlumno.Text = idAlumno;
             txtNombreAlumno.Text = Nombre;
             txtApellidoPaterno.Text = apellidoPaterno;
             txtApellidoMaterno.Text = ApellidoMaterno;
@@ -228,6 +262,19 @@ namespace ProyectoFinal.VISTA
 
 
 
+            if (activo == "1")
+            {
+                rbSi.Checked = true;
+                rbNo.Checked = false;
+            }
+            else
+            {
+                rbSi.Checked = false;
+                rbNo.Checked = true;
+            }
+
+
+
         }
 
         private void txtFiltrarAlumnos_TextChanged(object sender, EventArgs e)
@@ -238,7 +285,6 @@ namespace ProyectoFinal.VISTA
         private void FrmAlumos_Load(object sender, EventArgs e)
         {
             cbxGenero.Text = "Sin especificar";
-            //cbxGenero.Items.Add("Sin especificar");
             cbxGenero.Items.Add("Femenino");
             cbxGenero.Items.Add("Masculino");
 
@@ -246,47 +292,59 @@ namespace ProyectoFinal.VISTA
 
         private void btnRegistarAlumnos_Click(object sender, EventArgs e)
         {
-            ClsDDireccion direccion = new ClsDDireccion();
-            Direccion direccionRegistrar = new Direccion();
+            try {
+                ClsDDireccion direccion = new ClsDDireccion();
+                Direccion direccionRegistrar = new Direccion();
 
-            ClsDEncargado encargado = new ClsDEncargado();
-            Encargado registarencargado = new Encargado();
+                ClsDEncargado encargado = new ClsDEncargado();
+                Encargado registarencargado = new Encargado();
 
-            ClsDAlumnos clsDAlumnos = new ClsDAlumnos();
-            Alumno alumnoRegistrar = new Alumno();
+                ClsDAlumnos clsDAlumnos = new ClsDAlumnos();
+                Alumno alumnoRegistrar = new Alumno();
 
-            direccionRegistrar.residencia = txtRecidencia.Text;
-            direccionRegistrar.municipio = txtMunicipio.Text;
-            direccionRegistrar.departamento = txtDepartamento.Text;
+                direccionRegistrar.residencia = txtRecidencia.Text;
+                direccionRegistrar.municipio = txtMunicipio.Text;
+                direccionRegistrar.departamento = txtDepartamento.Text;
 
-            registarencargado.nombreEncargado = txtNombreEncargado.Text;
-            registarencargado.apellidoEncargado = txtApellidoEncargado.Text;
-            registarencargado.identificacionEncargado = txtDuiEncargado.Text;
-            registarencargado.contactoEncargado = txtContactoEncargado.Text;
-            registarencargado.correoEncargado = txtCorreoEncargado.Text;
+                registarencargado.nombreEncargado = txtNombreEncargado.Text;
+                registarencargado.apellidoEncargado = txtApellidoEncargado.Text;
+                registarencargado.identificacionEncargado = txtDuiEncargado.Text;
+                registarencargado.contactoEncargado = txtContactoEncargado.Text;
+                registarencargado.correoEncargado = txtCorreoEncargado.Text;
 
-            alumnoRegistrar.nombre = txtNombreAlumno.Text;
-            alumnoRegistrar.apellidoPaterno = txtApellidoPaterno.Text;
-            alumnoRegistrar.apellidoMaterno = txtApellidoMaterno.Text;
-            alumnoRegistrar.genero = cbxGenero.Text;
-            alumnoRegistrar.fechaNacimiento = dtpFecha.Value;
-            alumnoRegistrar.direccionFk = Convert.ToInt32(txtFkDireccion.Text);
-            alumnoRegistrar.contacto = txtContacto.Text;
-            alumnoRegistrar.correo = txtCorreo.Text;
-            alumnoRegistrar.activo = rbSi.Checked == true ? 1 : 2;
-            alumnoRegistrar.fechaRegistro = DateTime.Now.Date;
-            alumnoRegistrar.encargadoFK = Convert.ToInt32(txtFkEncargado.Text);
+                alumnoRegistrar.nombre = txtNombreAlumno.Text;
+                alumnoRegistrar.apellidoPaterno = txtApellidoPaterno.Text;
+                alumnoRegistrar.apellidoMaterno = txtApellidoMaterno.Text;
+                alumnoRegistrar.genero = cbxGenero.Text;
+                alumnoRegistrar.fechaNacimiento = dtpFecha.Value;
+                alumnoRegistrar.direccionFk = Convert.ToInt32(txtFkDireccion.Text);
+                alumnoRegistrar.contacto = txtContacto.Text;
+                alumnoRegistrar.correo = txtCorreo.Text;
+                alumnoRegistrar.activo = rbSi.Checked == true ? 1 : 2;
+                alumnoRegistrar.fechaRegistro = DateTime.Now.Date;
+                alumnoRegistrar.encargadoFK = Convert.ToInt32(txtFkEncargado.Text);
 
 
-            direccion.SaveDireccion(direccionRegistrar);
-            encargado.SaveEncargado(registarencargado);
-            clsDAlumnos.SaveAlumno(alumnoRegistrar);
+                direccion.SaveDireccion(direccionRegistrar);
+                encargado.SaveEncargado(registarencargado);
+                clsDAlumnos.SaveAlumno(alumnoRegistrar);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error" + ex);
+            }     
             
-
             Carga();
             clear();
             ultimoDireccion();
+            ultimoEncargado();
+        }
 
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            clear();
+            ultimoDireccion();
+            ultimoEncargado();
         }
     }
 }

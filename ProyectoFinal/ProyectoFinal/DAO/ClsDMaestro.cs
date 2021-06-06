@@ -9,19 +9,19 @@ namespace ProyectoFinal.DAO
 {
     class ClsDMaestro
     {
-        public List<Maestro> cargarMaestros()
+        //public List<Maestro> cargarMaestros()
 
-        {
-            List<Maestro> Lista = new List<Maestro>();
+        //{
+        //    List<Maestro> Lista = new List<Maestro>();
 
-            using (AdministracionEscolarEntities db = new AdministracionEscolarEntities())
-            {
-                Lista = db.Maestro.ToList();
+        //    using (AdministracionEscolarEntities db = new AdministracionEscolarEntities())
+        //    {
+        //        Lista = db.Maestro.ToList();
 
-            }
+        //    }
 
-            return Lista;
-        }
+        //    return Lista;
+        //}
 
         public void SaveDatosUser(Maestro maestro)
         {
@@ -110,7 +110,7 @@ namespace ProyectoFinal.DAO
             }
             catch (Exception ex)
             {
-
+                System.Windows.Forms.MessageBox.Show("Error" + ex);
             }
         }
 
