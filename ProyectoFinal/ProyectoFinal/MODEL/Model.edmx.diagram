@@ -8,7 +8,6 @@
         <EntityTypeShape EntityType="AdministracionEscolarModel.Alumno" Width="1.5" PointX="3" PointY="1.25" IsExpanded="true" />
         <EntityTypeShape EntityType="AdministracionEscolarModel.Direccion" Width="1.5" PointX="0.75" PointY="3.875" IsExpanded="true" />
         <EntityTypeShape EntityType="AdministracionEscolarModel.Maestro" Width="1.5" PointX="3" PointY="5.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="AdministracionEscolarModel.Usuario" Width="1.5" PointX="5.75" PointY="5.75" IsExpanded="true" />
         <AssociationConnector Association="AdministracionEscolarModel.FK__Alumno__direccio__29572725" ManuallyRouted="false" />
         <AssociationConnector Association="AdministracionEscolarModel.FK__Maestro__direcci__32E0915F" ManuallyRouted="false" />
         <EntityTypeShape EntityType="AdministracionEscolarModel.Encargado" Width="1.5" PointX="5.375" PointY="0.75" />
@@ -19,6 +18,8 @@
         <AssociationConnector Association="AdministracionEscolarModel.FK__Matricula__alumn__4F7CD00D" />
         <AssociationConnector Association="AdministracionEscolarModel.FK__Matricula__grado__5070F446" />
         <AssociationConnector Association="AdministracionEscolarModel.FK__Matricula__secci__5165187F" />
+        <EntityTypeShape EntityType="AdministracionEscolarModel.sysdiagrams" Width="1.5" PointX="0.875" PointY="6.375" />
+        <EntityTypeShape EntityType="AdministracionEscolarModel.Usuario" Width="1.5" PointX="7.75" PointY="6.625" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

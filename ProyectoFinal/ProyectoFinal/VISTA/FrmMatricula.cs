@@ -20,26 +20,26 @@ namespace ProyectoFinal.VISTA
         {
             InitializeComponent();
             Carga();
+            clear();
         }
 
-        //void clear()
-        //{
+        void clear()
+        {
 
-        //    txtIdDocente.Clear();
-        //    txtNombreDocente.Clear();
-        //    txtApellidoDocente.Clear();
-        //    txtDui.Clear();
-        //    //cbxGenero.DataSource = null;
-        //    //cbxGenero.Items.Clear();
-        //    txtTelefono.Clear();
-        //    txtEmail.Clear();
-        //    dtpFecha.Value = DateTime.Now.Date;
-        //    txtFkDireccion.Clear();
-        //    txtRecidencia.Clear();
-        //    txtMunicipio.Clear();
-        //    txtDepartamento.Clear();
+            txtIdMatricula.Clear();
+            txtFkAlumno.Clear();
+            txtAlumno.Clear();
+            txtAlumno.Clear();
+            txtAlumno.Clear();
+            txtFkGrado.Clear();
+            txtNombreMatricula.Clear();
+            txtFkSeccion.Clear();
+            dtpRegistroFecha.Value = DateTime.Now.Date;
+            // cbxGrado.
+            //cbxSeccion.
 
-        //}
+        }
+
         void Carga()
         {
 
@@ -135,6 +135,79 @@ namespace ProyectoFinal.VISTA
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             this.Hide();
+        }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ClsDMatricula matricula = new ClsDMatricula();
+                Matricula modificarMatricula = new Matricula();
+
+                modificarMatricula.matriculaId = (Convert.ToInt32(txtIdMatricula.Text));
+                modificarMatricula.alumnoFk = (Convert.ToInt32(txtFkAlumno.Text));
+                modificarMatricula.gradoFk = Convert.ToInt32(cbxGrado.SelectedValue.ToString());
+                modificarMatricula.seccionFk = Convert.ToInt32(cbxSeccion.SelectedValue.ToString());
+                modificarMatricula.nombreMatricula = txtNombreMatricula.Text;
+
+
+
+                matricula.modificarMatricula(modificarMatricula);
+
+
+                Carga();
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error" + ex);
+            }
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ClsDMatricula matricula = new ClsDMatricula();
+                matricula.eliminarMatricula(Convert.ToInt32(txtIdMatricula.Text));
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Error" + ex);
+            }
+            
+            Carga();
+            clear();
+        }
+
+        private void dtgMatricula_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            String idMatricula = dtgMatricula.CurrentRow.Cells[0].Value.ToString();
+            String fkAlumno = dtgMatricula.CurrentRow.Cells[1].Value.ToString();
+            String nombreAlumno = dtgMatricula.CurrentRow.Cells[2].Value.ToString();
+            String apellidPaterno = dtgMatricula.CurrentRow.Cells[3].Value.ToString();
+            String ApellidoMaterno = dtgMatricula.CurrentRow.Cells[4].Value.ToString();
+            String fkGrado = dtgMatricula.CurrentRow.Cells[5].Value.ToString();
+            String grado = dtgMatricula.CurrentRow.Cells[6].Value.ToString();
+            String fKSeccion = dtgMatricula.CurrentRow.Cells[7].Value.ToString();
+            String seccion = dtgMatricula.CurrentRow.Cells[8].Value.ToString();
+            String nombreMatricula = dtgMatricula.CurrentRow.Cells[9].Value.ToString();
+            String fechaDeRegistro = dtgMatricula.CurrentRow.Cells[10].Value.ToString();
+
+
+
+
+            txtIdMatricula.Text = idMatricula;
+            txtFkAlumno.Text = fkAlumno;
+            txtAlumno.Text = txtAlumno.Text = nombreAlumno + " " + apellidPaterno + " " + ApellidoMaterno;
+            txtFkGrado.Text = fkGrado;
+            cbxGrado.Text = grado;
+            txtFkSeccion.Text = fKSeccion;
+            cbxSeccion.Text = seccion;
+            txtNombreMatricula.Text = nombreMatricula;
+            dtpRegistroFecha.Text = fechaDeRegistro;
+
         }
     }
 }

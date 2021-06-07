@@ -78,6 +78,16 @@
     <Property Name="seccionId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="nombreSeccion" Type="char" MaxLength="1" />
   </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
   <EntityType Name="Usuario">
     <Key>
       <PropertyRef Name="usuarioId" />
@@ -85,7 +95,6 @@
     <Property Name="usuarioId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="correo_Usuario" Type="varchar" MaxLength="50" />
     <Property Name="contrasena" Type="varchar" MaxLength="50" />
-    <Property Name="tipo_Rol" Type="varchar" MaxLength="50" />
   </EntityType>
   <Association Name="FK__Alumno__direccio__29572725">
     <End Role="Direccion" Type="Self.Direccion" Multiplicity="0..1" />
@@ -167,6 +176,7 @@
     <EntitySet Name="Maestro" EntityType="Self.Maestro" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Matricula" EntityType="Self.Matricula" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Seccion" EntityType="Self.Seccion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Usuario" EntityType="Self.Usuario" Schema="dbo" store:Type="Tables" />
     <AssociationSet Name="FK__Alumno__direccio__29572725" Association="Self.FK__Alumno__direccio__29572725">
       <End Role="Direccion" EntitySet="Direccion" />

@@ -88,6 +88,9 @@ namespace ProyectoFinal.VISTA
             // 
             this.dtgMatricula.AllowUserToAddRows = false;
             this.dtgMatricula.AllowUserToDeleteRows = false;
+            this.dtgMatricula.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dtgMatricula.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgMatricula.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgMatricula.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {

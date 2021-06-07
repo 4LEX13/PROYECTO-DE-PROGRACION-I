@@ -97,7 +97,8 @@ namespace ProyectoFinal.VISTA
             // 
             this.dgvAlumno.AllowUserToAddRows = false;
             this.dgvAlumno.AllowUserToDeleteRows = false;
-            this.dgvAlumno.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.dgvAlumno.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvAlumno.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.dgvAlumno.BackgroundColor = System.Drawing.SystemColors.ActiveBorder;
@@ -225,7 +226,7 @@ namespace ProyectoFinal.VISTA
             this.Column6.HeaderText = "Fecha de registro";
             this.Column6.Name = "Column6";
             this.Column6.ReadOnly = true;
-            this.Column6.Width = 74;
+            this.Column6.Width = 105;
             // 
             // Column15
             // 

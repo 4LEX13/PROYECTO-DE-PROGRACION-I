@@ -9,19 +9,19 @@ namespace ProyectoFinal.DAO
 {
     class ClsDMatricula
     {
-        public List<Matricula> cargarMatricula()
+        //public List<Matricula> cargarMatricula()
 
-        {
-            List<Matricula> Lista = new List<Matricula>();
+        //{
+        //    List<Matricula> Lista = new List<Matricula>();
 
-            using (AdministracionEscolarEntities db = new AdministracionEscolarEntities())
-            {
-                Lista = db.Matricula.ToList();
+        //    using (AdministracionEscolarEntities db = new AdministracionEscolarEntities())
+        //    {
+        //        Lista = db.Matricula.ToList();
 
-            }
+        //    }
 
-            return Lista;
-        }
+        //    return Lista;
+        //}
 
         public void guardarMatricula(Matricula matricula)
         {
@@ -48,7 +48,7 @@ namespace ProyectoFinal.DAO
             }
             catch (Exception ex)
             {
-
+                System.Windows.Forms.MessageBox.Show("Error" + ex);
             }
         }
 
@@ -70,7 +70,7 @@ namespace ProyectoFinal.DAO
             }
             catch (Exception ex)
             {
-
+                System.Windows.Forms.MessageBox.Show("Error" + ex);
             }
         }
 
@@ -100,7 +100,7 @@ namespace ProyectoFinal.DAO
             }
             catch (Exception ex)
             {
-
+                System.Windows.Forms.MessageBox.Show("Error" + ex);
             }
         }
     }

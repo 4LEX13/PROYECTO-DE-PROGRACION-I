@@ -48,14 +48,6 @@
     <Property Name="fechaRegistro" Type="DateTime" Precision="0" />
     <NavigationProperty Name="Direccion" Relationship="Self.FK__Maestro__direcci__32E0915F" FromRole="Maestro" ToRole="Direccion" />
   </EntityType>
-  <EntityType Name="Usuario">
-    <Key>
-      <PropertyRef Name="usuarioId" />
-    </Key>
-    <Property Name="usuarioId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="correo_Usuario" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="contrasena" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-  </EntityType>
   <Association Name="FK__Alumno__direccio__29572725">
     <End Role="Direccion" Type="Self.Direccion" Multiplicity="0..1" />
     <End Role="Alumno" Type="Self.Alumno" Multiplicity="*" />
@@ -84,7 +76,6 @@
     <EntitySet Name="Alumno" EntityType="Self.Alumno" />
     <EntitySet Name="Direccion" EntityType="Self.Direccion" />
     <EntitySet Name="Maestro" EntityType="Self.Maestro" />
-    <EntitySet Name="Usuario" EntityType="Self.Usuario" />
     <AssociationSet Name="FK__Alumno__direccio__29572725" Association="Self.FK__Alumno__direccio__29572725">
       <End Role="Direccion" EntitySet="Direccion" />
       <End Role="Alumno" EntitySet="Alumno" />
@@ -113,6 +104,8 @@
       <End Role="Seccion" EntitySet="Seccion" />
       <End Role="Matricula" EntitySet="Matricula" />
     </AssociationSet>
+    <EntitySet Name="sysdiagrams" EntityType="AdministracionEscolarModel.sysdiagrams" />
+    <EntitySet Name="Usuario" EntityType="AdministracionEscolarModel.Usuario" />
   </EntityContainer>
   <EntityType Name="Encargado">
     <Key>
@@ -204,4 +197,22 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Usuario">
+    <Key>
+      <PropertyRef Name="usuarioId" />
+    </Key>
+    <Property Name="usuarioId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="correo_Usuario" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="contrasena" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
 </Schema>

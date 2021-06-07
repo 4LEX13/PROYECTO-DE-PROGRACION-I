@@ -28,10 +28,11 @@ namespace ProyectoFinal.MODEL
         public virtual DbSet<Alumno> Alumno { get; set; }
         public virtual DbSet<Direccion> Direccion { get; set; }
         public virtual DbSet<Maestro> Maestro { get; set; }
-        public virtual DbSet<Usuario> Usuario { get; set; }
         public virtual DbSet<Encargado> Encargado { get; set; }
         public virtual DbSet<Grado> Grado { get; set; }
         public virtual DbSet<Matricula> Matricula { get; set; }
         public virtual DbSet<Seccion> Seccion { get; set; }
+        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
+        public virtual DbSet<Usuario> Usuario { get; set; }
     }
 }

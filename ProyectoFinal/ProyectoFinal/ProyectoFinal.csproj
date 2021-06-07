@@ -102,6 +102,9 @@
     <Compile Include="MODEL\Seccion.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="MODEL\sysdiagrams.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
     <Compile Include="MODEL\Usuario.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
@@ -112,12 +115,6 @@
     </Compile>
     <Compile Include="VISTA\FrmAlumos.Designer.cs">
       <DependentUpon>FrmAlumos.cs</DependentUpon>
-    </Compile>
-    <Compile Include="VISTA\FrmAulas.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="VISTA\FrmAulas.Designer.cs">
-      <DependentUpon>FrmAulas.cs</DependentUpon>
     </Compile>
     <Compile Include="VISTA\FrmBuscarAlumnos.cs">
       <SubType>Form</SubType>
@@ -197,9 +194,6 @@
     </Compile>
     <EmbeddedResource Include="VISTA\FrmAlumos.resx">
       <DependentUpon>FrmAlumos.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="VISTA\FrmAulas.resx">
-      <DependentUpon>FrmAulas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VISTA\FrmBuscarAlumnos.resx">
       <DependentUpon>FrmBuscarAlumnos.cs</DependentUpon>

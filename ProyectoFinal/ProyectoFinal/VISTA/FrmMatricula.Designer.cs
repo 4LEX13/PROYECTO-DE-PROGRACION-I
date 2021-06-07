@@ -102,27 +102,44 @@ namespace ProyectoFinal.VISTA
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(1006, 202);
+            this.btnEliminar.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnEliminar.FlatAppearance.BorderSize = 2;
+            this.btnEliminar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminar.ForeColor = System.Drawing.Color.White;
+            this.btnEliminar.Location = new System.Drawing.Point(989, 202);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(75, 23);
+            this.btnEliminar.Size = new System.Drawing.Size(92, 37);
             this.btnEliminar.TabIndex = 36;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnActualizar
             // 
-            this.btnActualizar.Location = new System.Drawing.Point(1006, 133);
+            this.btnActualizar.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnActualizar.FlatAppearance.BorderSize = 2;
+            this.btnActualizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnActualizar.ForeColor = System.Drawing.Color.White;
+            this.btnActualizar.Location = new System.Drawing.Point(989, 133);
             this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(75, 23);
+            this.btnActualizar.Size = new System.Drawing.Size(92, 37);
             this.btnActualizar.TabIndex = 35;
             this.btnActualizar.Text = "Modificar";
             this.btnActualizar.UseVisualStyleBackColor = true;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // btnRegistrar
             // 
-            this.btnRegistrar.Location = new System.Drawing.Point(1006, 80);
+            this.btnRegistrar.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnRegistrar.FlatAppearance.BorderSize = 2;
+            this.btnRegistrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegistrar.ForeColor = System.Drawing.Color.White;
+            this.btnRegistrar.Location = new System.Drawing.Point(989, 80);
             this.btnRegistrar.Name = "btnRegistrar";
-            this.btnRegistrar.Size = new System.Drawing.Size(75, 23);
+            this.btnRegistrar.Size = new System.Drawing.Size(92, 37);
             this.btnRegistrar.TabIndex = 34;
             this.btnRegistrar.Text = "Registrar";
             this.btnRegistrar.UseVisualStyleBackColor = true;
@@ -256,6 +273,7 @@ namespace ProyectoFinal.VISTA
             this.txtFkGrado.Name = "txtFkGrado";
             this.txtFkGrado.Size = new System.Drawing.Size(35, 22);
             this.txtFkGrado.TabIndex = 3;
+            this.txtFkGrado.Visible = false;
             // 
             // txtFkSeccion
             // 
@@ -263,6 +281,7 @@ namespace ProyectoFinal.VISTA
             this.txtFkSeccion.Name = "txtFkSeccion";
             this.txtFkSeccion.Size = new System.Drawing.Size(35, 22);
             this.txtFkSeccion.TabIndex = 2;
+            this.txtFkSeccion.Visible = false;
             // 
             // txtFkAlumno
             // 
@@ -270,6 +289,7 @@ namespace ProyectoFinal.VISTA
             this.txtFkAlumno.Name = "txtFkAlumno";
             this.txtFkAlumno.Size = new System.Drawing.Size(35, 22);
             this.txtFkAlumno.TabIndex = 1;
+            this.txtFkAlumno.Visible = false;
             // 
             // txtIdMatricula
             // 
@@ -277,6 +297,7 @@ namespace ProyectoFinal.VISTA
             this.txtIdMatricula.Name = "txtIdMatricula";
             this.txtIdMatricula.Size = new System.Drawing.Size(35, 22);
             this.txtIdMatricula.TabIndex = 0;
+            this.txtIdMatricula.Visible = false;
             // 
             // dtgMatricula
             // 
@@ -301,6 +322,7 @@ namespace ProyectoFinal.VISTA
             this.dtgMatricula.ReadOnly = true;
             this.dtgMatricula.Size = new System.Drawing.Size(1057, 252);
             this.dtgMatricula.TabIndex = 31;
+            this.dtgMatricula.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgMatricula_CellClick);
             // 
             // Column1
             // 

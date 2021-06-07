@@ -143,6 +143,7 @@ namespace ProyectoFinal.VISTA
                 ClsDDireccion direccion = new ClsDDireccion();
                 Direccion direccionModificar = new Direccion();
 
+
                 ClsDEncargado encargado = new ClsDEncargado();
                 Encargado encargadoModificar = new Encargado();
 
