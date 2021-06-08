@@ -89,7 +89,7 @@ namespace ProyectoFinal.VISTA
             this.dtgAlumnoBuscar.Location = new System.Drawing.Point(33, 188);
             this.dtgAlumnoBuscar.Name = "dtgAlumnoBuscar";
             this.dtgAlumnoBuscar.ReadOnly = true;
-            this.dtgAlumnoBuscar.Size = new System.Drawing.Size(1195, 250);
+            this.dtgAlumnoBuscar.Size = new System.Drawing.Size(959, 250);
             this.dtgAlumnoBuscar.TabIndex = 7;
             this.dtgAlumnoBuscar.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAlumno_CellDoubleClick);
             // 
@@ -224,7 +224,7 @@ namespace ProyectoFinal.VISTA
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtFiltro.Location = new System.Drawing.Point(463, 70);
             this.txtFiltro.Name = "txtFiltro";
-            this.txtFiltro.Size = new System.Drawing.Size(493, 20);
+            this.txtFiltro.Size = new System.Drawing.Size(317, 20);
             this.txtFiltro.TabIndex = 40;
             this.txtFiltro.TextChanged += new System.EventHandler(this.txtFiltro_TextChanged);
             // 
@@ -247,7 +247,7 @@ namespace ProyectoFinal.VISTA
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(68)))), ((int)(((byte)(106)))));
-            this.ClientSize = new System.Drawing.Size(1293, 450);
+            this.ClientSize = new System.Drawing.Size(1117, 450);
             this.Controls.Add(this.txtFiltro);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dtgAlumnoBuscar);

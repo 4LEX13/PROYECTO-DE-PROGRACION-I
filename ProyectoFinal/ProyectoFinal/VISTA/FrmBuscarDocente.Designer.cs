@@ -29,7 +29,9 @@ namespace ProyectoFinal.VISTA
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmBuscarDocente));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dgvDocente = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,12 +50,14 @@ namespace ProyectoFinal.VISTA
             this.txtFiltro = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDocente)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(68)))), ((int)(((byte)(106)))));
+            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.dgvDocente);
             this.panel1.Controls.Add(this.txtFiltro);
             this.panel1.Controls.Add(this.label2);
@@ -62,6 +66,15 @@ namespace ProyectoFinal.VISTA
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(912, 433);
             this.panel1.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(271, 45);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox1.TabIndex = 40;
+            this.pictureBox1.TabStop = false;
             // 
             // dgvDocente
             // 
@@ -90,7 +103,7 @@ namespace ProyectoFinal.VISTA
             this.dgvDocente.Location = new System.Drawing.Point(12, 152);
             this.dgvDocente.Name = "dgvDocente";
             this.dgvDocente.ReadOnly = true;
-            this.dgvDocente.Size = new System.Drawing.Size(897, 269);
+            this.dgvDocente.Size = new System.Drawing.Size(877, 269);
             this.dgvDocente.TabIndex = 39;
             // 
             // dataGridViewTextBoxColumn1
@@ -197,7 +210,7 @@ namespace ProyectoFinal.VISTA
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(112, 57);
+            this.label2.Location = new System.Drawing.Point(70, 55);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(191, 20);
             this.label2.TabIndex = 37;
@@ -214,6 +227,7 @@ namespace ProyectoFinal.VISTA
             this.Load += new System.EventHandler(this.FrmBuscarDocente_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDocente)).EndInit();
             this.ResumeLayout(false);
 
@@ -239,5 +253,6 @@ namespace ProyectoFinal.VISTA
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

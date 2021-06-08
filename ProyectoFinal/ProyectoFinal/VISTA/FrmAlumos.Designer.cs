@@ -29,7 +29,9 @@ namespace ProyectoFinal.VISTA
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAlumos));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtAlumnoId = new System.Windows.Forms.TextBox();
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.txtFiltrarAlumnos = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
@@ -101,18 +103,20 @@ namespace ProyectoFinal.VISTA
             this.Column19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnRegistarAlumnos = new System.Windows.Forms.Button();
-            this.txtAlumnoId = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.gbxDatosAlumno.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAlumno)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(68)))), ((int)(((byte)(106)))));
+            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.txtAlumnoId);
             this.panel1.Controls.Add(this.btnLimpiar);
             this.panel1.Controls.Add(this.txtFiltrarAlumnos);
@@ -131,13 +135,28 @@ namespace ProyectoFinal.VISTA
             this.panel1.Size = new System.Drawing.Size(1187, 652);
             this.panel1.TabIndex = 0;
             // 
+            // txtAlumnoId
+            // 
+            this.txtAlumnoId.Location = new System.Drawing.Point(403, 14);
+            this.txtAlumnoId.Name = "txtAlumnoId";
+            this.txtAlumnoId.Size = new System.Drawing.Size(31, 20);
+            this.txtAlumnoId.TabIndex = 35;
+            this.txtAlumnoId.Visible = false;
+            // 
             // btnLimpiar
             // 
-            this.btnLimpiar.Location = new System.Drawing.Point(707, 198);
+            this.btnLimpiar.FlatAppearance.BorderSize = 2;
+            this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpiar.ForeColor = System.Drawing.Color.White;
+            this.btnLimpiar.Image = ((System.Drawing.Image)(resources.GetObject("btnLimpiar.Image")));
+            this.btnLimpiar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnLimpiar.Location = new System.Drawing.Point(716, 198);
             this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(75, 23);
+            this.btnLimpiar.Size = new System.Drawing.Size(122, 40);
             this.btnLimpiar.TabIndex = 34;
             this.btnLimpiar.Text = "Limpiar";
+            this.btnLimpiar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLimpiar.UseVisualStyleBackColor = true;
             this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
@@ -356,11 +375,14 @@ namespace ProyectoFinal.VISTA
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.ForeColor = System.Drawing.Color.White;
-            this.btnEliminar.Location = new System.Drawing.Point(1033, 261);
+            this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
+            this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnEliminar.Location = new System.Drawing.Point(1042, 261);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(105, 40);
+            this.btnEliminar.Size = new System.Drawing.Size(122, 40);
             this.btnEliminar.TabIndex = 18;
             this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEliminar.UseVisualStyleBackColor = true;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
@@ -371,11 +393,14 @@ namespace ProyectoFinal.VISTA
             this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModificar.ForeColor = System.Drawing.Color.White;
-            this.btnModificar.Location = new System.Drawing.Point(903, 261);
+            this.btnModificar.Image = ((System.Drawing.Image)(resources.GetObject("btnModificar.Image")));
+            this.btnModificar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnModificar.Location = new System.Drawing.Point(905, 261);
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(105, 40);
+            this.btnModificar.Size = new System.Drawing.Size(122, 40);
             this.btnModificar.TabIndex = 17;
             this.btnModificar.Text = "Modificar";
+            this.btnModificar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnModificar.UseVisualStyleBackColor = true;
             this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
@@ -637,7 +662,7 @@ namespace ProyectoFinal.VISTA
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(260, 347);
+            this.label2.Location = new System.Drawing.Point(212, 347);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(191, 20);
             this.label2.TabIndex = 8;
@@ -813,21 +838,25 @@ namespace ProyectoFinal.VISTA
             this.btnRegistarAlumnos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegistarAlumnos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistarAlumnos.ForeColor = System.Drawing.Color.White;
+            this.btnRegistarAlumnos.Image = ((System.Drawing.Image)(resources.GetObject("btnRegistarAlumnos.Image")));
+            this.btnRegistarAlumnos.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnRegistarAlumnos.Location = new System.Drawing.Point(769, 261);
             this.btnRegistarAlumnos.Name = "btnRegistarAlumnos";
-            this.btnRegistarAlumnos.Size = new System.Drawing.Size(105, 40);
+            this.btnRegistarAlumnos.Size = new System.Drawing.Size(122, 40);
             this.btnRegistarAlumnos.TabIndex = 16;
             this.btnRegistarAlumnos.Text = "Registrar";
+            this.btnRegistarAlumnos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRegistarAlumnos.UseVisualStyleBackColor = true;
             this.btnRegistarAlumnos.Click += new System.EventHandler(this.btnRegistarAlumnos_Click);
             // 
-            // txtAlumnoId
+            // pictureBox1
             // 
-            this.txtAlumnoId.Location = new System.Drawing.Point(403, 14);
-            this.txtAlumnoId.Name = "txtAlumnoId";
-            this.txtAlumnoId.Size = new System.Drawing.Size(31, 20);
-            this.txtAlumnoId.TabIndex = 35;
-            this.txtAlumnoId.Visible = false;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(419, 335);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox1.TabIndex = 39;
+            this.pictureBox1.TabStop = false;
             // 
             // FrmAlumos
             // 
@@ -851,6 +880,7 @@ namespace ProyectoFinal.VISTA
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAlumno)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -930,5 +960,6 @@ namespace ProyectoFinal.VISTA
         private System.Windows.Forms.ComboBox cbxGenero;
         private System.Windows.Forms.Button btnLimpiar;
         private System.Windows.Forms.TextBox txtAlumnoId;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

@@ -140,12 +140,6 @@
     <Compile Include="VISTA\FrmBuscarMatricula.Designer.cs">
       <DependentUpon>FrmBuscarMatricula.cs</DependentUpon>
     </Compile>
-    <Compile Include="VISTA\FrmConfiguracion.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="VISTA\FrmConfiguracion.Designer.cs">
-      <DependentUpon>FrmConfiguracion.cs</DependentUpon>
-    </Compile>
     <Compile Include="VISTA\FrmDocente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -206,9 +200,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="VISTA\FrmBuscarMatricula.resx">
       <DependentUpon>FrmBuscarMatricula.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="VISTA\FrmConfiguracion.resx">
-      <DependentUpon>FrmConfiguracion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VISTA\FrmDocente.resx">
       <DependentUpon>FrmDocente.cs</DependentUpon>

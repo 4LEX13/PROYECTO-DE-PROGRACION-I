@@ -138,8 +138,8 @@ namespace ProyectoFinal.VISTA
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            try
-            {
+            //try
+            //{
                 ClsDDireccion direccion = new ClsDDireccion();
                 Direccion direccionModificar = new Direccion();
 
@@ -181,11 +181,11 @@ namespace ProyectoFinal.VISTA
                 encargado.modificarEncargado(encargadoModificar);
                 alumnos.ModificarAlunmos(alumnoModificar);
 
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("error " + ex);
-            }
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show("error " + ex);
+            //}
             
 
             Carga();

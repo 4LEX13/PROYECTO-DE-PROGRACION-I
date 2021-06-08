@@ -109,9 +109,9 @@ namespace ProyectoFinal.DAO
                 }
 
             }
-            catch (Exception ex)
+            catch (Exception ex )
             {
-
+                System.Windows.Forms.MessageBox.Show("Error" + ex);
             }
         }
 

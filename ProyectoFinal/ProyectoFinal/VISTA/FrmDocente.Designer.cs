@@ -29,9 +29,11 @@ namespace ProyectoFinal.VISTA
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmDocente));
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtFiltro = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtIdDireccion = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -40,6 +42,20 @@ namespace ProyectoFinal.VISTA
             this.txtRecidencia = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dgvDocente = new System.Windows.Forms.DataGridView();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnEliminarDocente = new System.Windows.Forms.Button();
             this.btnModificarDocente = new System.Windows.Forms.Button();
             this.btnRegistarDocente = new System.Windows.Forms.Button();
@@ -67,31 +83,19 @@ namespace ProyectoFinal.VISTA
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtIdDireccion = new System.Windows.Forms.TextBox();
-            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDocente)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(68)))), ((int)(((byte)(106)))));
+            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.txtFiltro);
             this.panel1.Controls.Add(this.groupBox2);
             this.panel1.Controls.Add(this.label2);
@@ -112,7 +116,7 @@ namespace ProyectoFinal.VISTA
             this.txtFiltro.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtFiltro.Location = new System.Drawing.Point(477, 319);
+            this.txtFiltro.Location = new System.Drawing.Point(420, 316);
             this.txtFiltro.Name = "txtFiltro";
             this.txtFiltro.Size = new System.Drawing.Size(298, 20);
             this.txtFiltro.TabIndex = 27;
@@ -132,6 +136,14 @@ namespace ProyectoFinal.VISTA
             this.groupBox2.Size = new System.Drawing.Size(399, 218);
             this.groupBox2.TabIndex = 26;
             this.groupBox2.TabStop = false;
+            // 
+            // txtIdDireccion
+            // 
+            this.txtIdDireccion.Location = new System.Drawing.Point(315, 178);
+            this.txtIdDireccion.Name = "txtIdDireccion";
+            this.txtIdDireccion.Size = new System.Drawing.Size(34, 20);
+            this.txtIdDireccion.TabIndex = 54;
+            this.txtIdDireccion.Visible = false;
             // 
             // label12
             // 
@@ -195,7 +207,7 @@ namespace ProyectoFinal.VISTA
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(254, 317);
+            this.label2.Location = new System.Drawing.Point(170, 316);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(196, 20);
             this.label2.TabIndex = 23;
@@ -232,17 +244,106 @@ namespace ProyectoFinal.VISTA
             this.dgvDocente.TabIndex = 22;
             this.dgvDocente.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDocente_CellClick);
             // 
+            // Column9
+            // 
+            this.Column9.HeaderText = "Id";
+            this.Column9.Name = "Column9";
+            this.Column9.ReadOnly = true;
+            this.Column9.Visible = false;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Nombre";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Apellido";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Dui";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column10
+            // 
+            this.Column10.HeaderText = "Genero";
+            this.Column10.Name = "Column10";
+            this.Column10.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Fecha de nacimiento";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // Column11
+            // 
+            this.Column11.HeaderText = "idDireccion";
+            this.Column11.Name = "Column11";
+            this.Column11.ReadOnly = true;
+            this.Column11.Visible = false;
+            // 
+            // Column12
+            // 
+            this.Column12.HeaderText = "Recidencia";
+            this.Column12.Name = "Column12";
+            this.Column12.ReadOnly = true;
+            // 
+            // Column13
+            // 
+            this.Column13.HeaderText = "Municipio";
+            this.Column13.Name = "Column13";
+            this.Column13.ReadOnly = true;
+            // 
+            // Column14
+            // 
+            this.Column14.HeaderText = "Departamento";
+            this.Column14.Name = "Column14";
+            this.Column14.ReadOnly = true;
+            // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "Telefono";
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Email";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Activo";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            // 
+            // Column8
+            // 
+            this.Column8.HeaderText = "Fecha de registro";
+            this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
+            // 
             // btnEliminarDocente
             // 
             this.btnEliminarDocente.FlatAppearance.BorderSize = 2;
             this.btnEliminarDocente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminarDocente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminarDocente.ForeColor = System.Drawing.Color.White;
-            this.btnEliminarDocente.Location = new System.Drawing.Point(673, 268);
+            this.btnEliminarDocente.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminarDocente.Image")));
+            this.btnEliminarDocente.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnEliminarDocente.Location = new System.Drawing.Point(1067, 266);
             this.btnEliminarDocente.Name = "btnEliminarDocente";
-            this.btnEliminarDocente.Size = new System.Drawing.Size(105, 30);
+            this.btnEliminarDocente.Size = new System.Drawing.Size(124, 45);
             this.btnEliminarDocente.TabIndex = 21;
             this.btnEliminarDocente.Text = "Eliminar";
+            this.btnEliminarDocente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEliminarDocente.UseVisualStyleBackColor = true;
             this.btnEliminarDocente.Click += new System.EventHandler(this.btnEliminarDocente_Click);
             // 
@@ -252,11 +353,14 @@ namespace ProyectoFinal.VISTA
             this.btnModificarDocente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnModificarDocente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModificarDocente.ForeColor = System.Drawing.Color.White;
-            this.btnModificarDocente.Location = new System.Drawing.Point(548, 268);
+            this.btnModificarDocente.Image = ((System.Drawing.Image)(resources.GetObject("btnModificarDocente.Image")));
+            this.btnModificarDocente.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnModificarDocente.Location = new System.Drawing.Point(925, 266);
             this.btnModificarDocente.Name = "btnModificarDocente";
-            this.btnModificarDocente.Size = new System.Drawing.Size(105, 30);
+            this.btnModificarDocente.Size = new System.Drawing.Size(124, 45);
             this.btnModificarDocente.TabIndex = 20;
             this.btnModificarDocente.Text = "Modificar";
+            this.btnModificarDocente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnModificarDocente.UseVisualStyleBackColor = true;
             this.btnModificarDocente.Click += new System.EventHandler(this.btnModificarDocente_Click);
             // 
@@ -266,11 +370,14 @@ namespace ProyectoFinal.VISTA
             this.btnRegistarDocente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegistarDocente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistarDocente.ForeColor = System.Drawing.Color.White;
-            this.btnRegistarDocente.Location = new System.Drawing.Point(416, 268);
+            this.btnRegistarDocente.Image = ((System.Drawing.Image)(resources.GetObject("btnRegistarDocente.Image")));
+            this.btnRegistarDocente.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnRegistarDocente.Location = new System.Drawing.Point(773, 266);
             this.btnRegistarDocente.Name = "btnRegistarDocente";
-            this.btnRegistarDocente.Size = new System.Drawing.Size(105, 30);
+            this.btnRegistarDocente.Size = new System.Drawing.Size(124, 45);
             this.btnRegistarDocente.TabIndex = 19;
             this.btnRegistarDocente.Text = "Registrar";
+            this.btnRegistarDocente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRegistarDocente.UseVisualStyleBackColor = true;
             this.btnRegistarDocente.Click += new System.EventHandler(this.btnRegistarDocente_Click);
             // 
@@ -547,99 +654,14 @@ namespace ProyectoFinal.VISTA
             this.label1.TabIndex = 0;
             this.label1.Text = "REGISTRAR DOCENTE";
             // 
-            // txtIdDireccion
+            // pictureBox1
             // 
-            this.txtIdDireccion.Location = new System.Drawing.Point(315, 178);
-            this.txtIdDireccion.Name = "txtIdDireccion";
-            this.txtIdDireccion.Size = new System.Drawing.Size(34, 20);
-            this.txtIdDireccion.TabIndex = 54;
-            this.txtIdDireccion.Visible = false;
-            // 
-            // Column9
-            // 
-            this.Column9.HeaderText = "Id";
-            this.Column9.Name = "Column9";
-            this.Column9.ReadOnly = true;
-            this.Column9.Visible = false;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Nombre";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Apellido";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Dui";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column10
-            // 
-            this.Column10.HeaderText = "Genero";
-            this.Column10.Name = "Column10";
-            this.Column10.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Fecha de nacimiento";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            // 
-            // Column11
-            // 
-            this.Column11.HeaderText = "idDireccion";
-            this.Column11.Name = "Column11";
-            this.Column11.ReadOnly = true;
-            this.Column11.Visible = false;
-            // 
-            // Column12
-            // 
-            this.Column12.HeaderText = "Recidencia";
-            this.Column12.Name = "Column12";
-            this.Column12.ReadOnly = true;
-            // 
-            // Column13
-            // 
-            this.Column13.HeaderText = "Municipio";
-            this.Column13.Name = "Column13";
-            this.Column13.ReadOnly = true;
-            // 
-            // Column14
-            // 
-            this.Column14.HeaderText = "Departamento";
-            this.Column14.Name = "Column14";
-            this.Column14.ReadOnly = true;
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "Telefono";
-            this.Column7.Name = "Column7";
-            this.Column7.ReadOnly = true;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Email";
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Activo";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            // 
-            // Column8
-            // 
-            this.Column8.HeaderText = "Fecha de registro";
-            this.Column8.Name = "Column8";
-            this.Column8.ReadOnly = true;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(382, 304);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox1.TabIndex = 39;
+            this.pictureBox1.TabStop = false;
             // 
             // FrmDocente
             // 
@@ -661,6 +683,7 @@ namespace ProyectoFinal.VISTA
             this.groupBox1.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -720,5 +743,6 @@ namespace ProyectoFinal.VISTA
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
