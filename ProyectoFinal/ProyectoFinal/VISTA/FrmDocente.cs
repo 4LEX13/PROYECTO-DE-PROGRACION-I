@@ -86,6 +86,7 @@ namespace ProyectoFinal.VISTA
             txtRecidencia.Clear();
             txtMunicipio.Clear();
             txtDepartamento.Clear();
+            dtpFechaDeRegistro.Value = DateTime.Now.Date;
 
         }
 
@@ -239,8 +240,14 @@ namespace ProyectoFinal.VISTA
 
         private void FrmDocente_Load(object sender, EventArgs e)
         {
+            cbxGenero.Text = "Sin especificar";
             cbxGenero.Items.Add("Femenino");
             cbxGenero.Items.Add("Masculino");
+        }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            clear();
         }
     }
 }

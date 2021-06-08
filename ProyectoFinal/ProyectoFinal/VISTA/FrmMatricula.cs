@@ -106,6 +106,7 @@ namespace ProyectoFinal.VISTA
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
+            try { 
             ClsDMatricula matricula = new ClsDMatricula();
             Matricula guardarMatricula = new Matricula();
 
@@ -116,7 +117,11 @@ namespace ProyectoFinal.VISTA
             guardarMatricula.fechaRegistroMatricula = DateTime.Now.Date;
 
             matricula.guardarMatricula(guardarMatricula);
-
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Error" + ex);
+            }
             Carga();
             //clear();
         }

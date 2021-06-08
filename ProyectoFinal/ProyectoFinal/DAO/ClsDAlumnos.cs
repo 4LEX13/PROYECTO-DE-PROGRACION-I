@@ -100,7 +100,7 @@ namespace ProyectoFinal.DAO
                     alumnoUpdate.apellidoMaterno = alumno.apellidoMaterno;
                     alumnoUpdate.genero = alumno.genero;
                     alumnoUpdate.fechaNacimiento = alumno.fechaNacimiento;
-                    alumnoUpdate.direccionFk = alumno.direccionFk;
+                    //alumnoUpdate.direccionFk = alumno.direccionFk;
                     alumnoUpdate.contacto = alumno.contacto;
                     alumnoUpdate.correo = alumno.correo;
                     alumnoUpdate.activo = alumno.activo;
